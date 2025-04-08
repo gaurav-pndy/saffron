@@ -1,0 +1,53 @@
+{
+    "header": {
+        "home": "Home",
+        "about": "About",
+        "contact": "Contact",
+ 
+        "menu": "Menu",
+        "whatsapp": "WhatsApp",
+        "yandex": "Yandex"
+    },
+    "hero": {
+    "heading": "EXPERIENCE THE FLAVOURS OF INDIA"
+  },
+  "dishGallery": {
+    "at": "AT",
+    "saffron": "SAFFRON",
+    "title": "EXPERIENCE THE REAL <br/> RECIPE TASTE",
+    "button": "View menu"
+  },
+  "menu": {
+    "heading": "EXPLORE OUR MENU",
+    "text": "Our Menu will be Updated soon"
+  },
+  "about": {
+    "heading": "ABOUT US",
+    "subheading": "SAFFRON – Where Tradition Meets Taste",
+    "text": "Welcome to SAFFRON, a culinary destination where the vibrant flavors of India come alive. Nestled in the heart of the city, SAFFRON offers an elevated dining experience that artfully blends timeless Indian recipes with modern flair. <br/> <br/> Our menu is a celebration of India's rich culinary heritage—featuring signature dishes like our velvety Butter Chicken, fragrant Hyderabadi Biryani, and bold, spiced Rogan Josh. From the sizzling tandoori kebabs to indulgent vegetarian favorites like Paneer Tikka Masala and Dal Makhani, every dish is thoughtfully prepared using authentic spices and the freshest ingredients. <br/> <br/> At SAFFRON, we invite you to savor the essence of India, where every meal is a journey and every bite tells a story."
+  },
+  "reviews":{
+    "heading": "OUR CUSTOMERS SAY!"
+  },
+  "contact": {
+    "title": "CONTACT",
+    "order": "ORDER NOW",
+    "find": "FIND US"
+  },
+  "footer": {
+    "home": "Home",
+    "order": "Order",
+    "sale": "Sale",
+    "about": "About us",
+    "customers": "For customers",
+    "contacts": "Contacts",
+    "whatsapp": "WhatsApp",
+    "contactUs": "Contact us",
+    "email": "Email",
+    "hours": "Opening hours",
+    "addressTitle": "Address",
+    "addressValue": "Moscow, Mira Avenue, 211k2",
+    "orderNow": "ORDER NOW",
+    "rights": "All rights reserved."
+  }
+}

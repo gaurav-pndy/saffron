@@ -141,7 +141,7 @@ export default function ReviewsCarousel() {
             return (
               <SwiperSlide key={index}>
                 <div
-                  className={`bg-white rounded shadow-xl overflow-hidden flex flex-col p-4 my-7 md:mx-5 lg:my-0 ${
+                  className={`bg-white rounded shadow-xl overflow-hidden flex flex-col p-4 my-7 md:mx-5 lg:mx-0 ${
                     isExpanded ? "max-h-auto" : "max-h-80"
                   }h-full`}
                 >

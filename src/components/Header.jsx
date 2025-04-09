@@ -29,7 +29,7 @@ export default function Header() {
   };
 
   return (
-    <header className="w-full px-4 xl:px-0 py-5 fixed top-0 z-50 bg-white shadow-sm">
+    <header className="w-full px-6  py-5 fixed top-0 z-50 bg-white shadow-sm">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center gap-1 text-3xl font-bold text-orange-600">
@@ -79,21 +79,50 @@ export default function Header() {
           </select>
         </div>
 
-        {/* Mobile Menu Icon */}
-        <div className="lg:hidden">
-          <button onClick={toggleMobileMenu}>
-            {isMobileMenuOpen ? (
-              <X className="w-8 h-8" />
-            ) : (
-              <Menu className="w-8 h-8" />
-            )}
-          </button>
+        <div className="flex lg:hidden gap-4 items-center">
+          <a href="https://wa.me/message/6R3F4MT7S7ZPN1" target="_blank">
+            <button className="bg-green-500 hover:bg-green-600 text-white px-2 py-2 rounded-md font-quicksand font-bold flex gap-2 items-center justify-center uppercase w-full">
+              <IoLogoWhatsapp size={20} />
+            </button>
+          </a>
+
+          <a
+            href="https://eda.yandex.ru/restaurant/saffron_t8lmvv"
+            target="_blank"
+          >
+            <button className=" bg-[#ffe300] px-2 py-2 font-bold rounded-md font-quicksand flex gap-2 items-center justify-center uppercase w-full">
+              <img src="/yandex.png" alt="" className="h-5" />
+            </button>
+          </a>
+
+          <div className="flex items-center">
+            <button onClick={toggleMobileMenu}>
+              {isMobileMenuOpen ? (
+                <X className="w-9 h-9" />
+              ) : (
+                <Menu className="w-9 h-9" />
+              )}
+            </button>
+          </div>
         </div>
+        {/* Mobile Menu Icon */}
       </div>
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden mt-10 space-y-4 px-4 pb-4">
+        <div className="lg:hidden mt-10 space-y-4  px-4 pb-4">
+          <select
+            value={selectedLang}
+            onChange={(e) => changeLanguage(e.target.value)}
+            className="border border-orange-500 text-orange-600 rounded-md px-4 font-bold py-2 hover:bg-orange-50 font-quicksand cursor-pointer w-full"
+          >
+            <option className="font-quicksand" value="en">
+              English
+            </option>
+            <option className="font-quicksand" value="ru">
+              Русский
+            </option>
+          </select>
           <nav className="flex flex-col gap-4 text-base font-medium">
             {["home", "menu", "about", "contact"].map((key) => (
               <span
@@ -109,34 +138,10 @@ export default function Header() {
             ))}
           </nav>
 
-          <div className="flex flex-col gap-3 pt-4">
-            <a href="https://wa.me/message/6R3F4MT7S7ZPN1" target="_blank">
-              <button className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-md font-quicksand font-bold flex gap-2 items-center justify-center uppercase w-full">
-                {t("header.whatsapp")} <IoLogoWhatsapp size={16} />
-              </button>
-            </a>
-            <a
-              href="https://eda.yandex.ru/restaurant/saffron_t8lmvv"
-              target="_blank"
-            >
-              <button className="border border-red-500 text-red-500 hover:bg-red-100 px-4 py-2 font-bold rounded-md font-quicksand flex gap-2 items-center justify-center uppercase w-full">
-                {t("header.yandex")}{" "}
-                <img src="/yandex.png" alt="" className="h-4" />
-              </button>
-            </a>
-            <select
-              value={selectedLang}
-              onChange={(e) => changeLanguage(e.target.value)}
-              className="border border-orange-500 text-orange-600 rounded-md px-4 font-bold py-2 hover:bg-orange-50 font-quicksand cursor-pointer w-full"
-            >
-              <option className="font-quicksand" value="en">
-                English
-              </option>
-              <option className="font-quicksand" value="ru">
-                Русский
-              </option>
-            </select>
-          </div>
+          {/* <div className="flex flex-col gap-3 pt-4">
+          
+            
+          </div> */}
         </div>
       )}
     </header>

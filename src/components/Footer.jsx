@@ -39,19 +39,21 @@ const Footer = () => {
             <p className="text-sm text-gray-400 font-quicksand mb-2">
               {t("footer.whatsapp")}
             </p>
-            <p className="font-quicksand text-[#D4D5D9]">+1 999 888-76-54</p>
+            <p className="font-quicksand text-[#D4D5D9]">+79999669995</p>
           </div>
           <div>
             <p className="text-sm text-gray-400 font-quicksand mb-2">
               {t("footer.contactUs")}
             </p>
-            <p className="font-quicksand text-[#D4D5D9]">+1 999 888-76-54</p>
+            <p className="font-quicksand text-[#D4D5D9]">79852311172</p>
           </div>
           <div>
             <p className="text-sm text-gray-400 font-quicksand mb-2">
               {t("footer.email")}
             </p>
-            <p className="font-quicksand text-[#D4D5D9]">hello@saffron.com</p>
+            <p className="font-quicksand text-[#D4D5D9]">
+              saffronmoscow@mail.ru
+            </p>
           </div>
         </div>
 

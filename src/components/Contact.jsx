@@ -1,6 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { ImWhatsapp } from "react-icons/im";
+import { IoLocation } from "react-icons/io5";
 
 const ContactSection = () => {
   const { t } = useTranslation();
@@ -45,10 +46,10 @@ const ContactSection = () => {
                   <ImWhatsapp className="w-8 h-8" />
                 </a>
                 <a
-                  href="https://wa.me/message/6R3F4MT7S7ZPN1"
+                  href="https://eda.yandex.ru/restaurant/saffron_t8lmv"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-[#19bd56] text-white px-4 py-3 rounded-md font-medium"
+                  className="bg-[#ffd600] text-white px-4 py-3 rounded-md font-medium"
                 >
                   <img src="/yandex.png" alt="" className="h-8" />
                 </a>
@@ -66,7 +67,7 @@ const ContactSection = () => {
                 rel="noopener noreferrer"
                 className="border bg-[#1D1D1D]/80 text-xl border-[#F40C00] text-[#F40C00] px-8 py-2 rounded-md font-semibold inline-flex items-center gap-3"
               >
-                YANDEX <img src="/yandex.png" alt="" className="h-6" />
+                YANDEX <IoLocation className="w-6 h-6" />
               </a>
             </div>
           </div>

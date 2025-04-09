@@ -184,10 +184,10 @@ export default function ReviewsCarousel() {
         </Swiper>
 
         {/* Navigation Arrows */}
-        <button className="swiper-prev absolute top-1/2 -left-3 xl:left-32 -translate-y-1/2 z-10 p-2 cursor-pointer">
+        <button className="swiper-prev absolute top-1/2 left-0 xl:left-32 -translate-y-1/2 z-10  p-2 cursor-pointer">
           <ChevronLeft className="text-[#DFE0DF] w-12 h-12" />
         </button>
-        <button className="swiper-next absolute top-1/2 -right-3 xl:right-32 -translate-y-1/2 z-10 p-2 cursor-pointer">
+        <button className="swiper-next absolute top-1/2 right-0 xl:right-32 -translate-y-1/2 z-10 p-2 cursor-pointer">
           <ChevronRight className="text-[#DFE0DF] w-12 h-12" />
         </button>
       </div>

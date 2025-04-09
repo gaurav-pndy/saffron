@@ -7,17 +7,18 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative h-[70vh] md:h-[calc(100vh-5rem)] w-full"
+      className="relative w-full xl:h-[calc(100vh-5rem)] overflow-hidden"
     >
       {/* Background image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center brightness-[0.7]"
-        style={{ backgroundImage: "url('/hero-section.png')" }}
+      <img
+        src="/hero-section.png"
+        alt="Hero"
+        className="w-full h-auto lg:h-full brightness-[0.7]"
       />
 
       {/* Overlay content */}
-      <div className="relative z-10  flex items-end pb-10 md:px-40 justify-center h-full">
-        <h1 className="text-white text-4xl md:text-[5rem] text-center leading-14 md:leading-28 font-serif font-[700] px-4">
+      <div className="absolute inset-0 z-10 flex items-end justify-center py-10 md:pb-10 md:px-10 lg:px-40">
+        <h1 className="text-white text-3xl md:text-5xl lg:text-[5rem] text-center leading-14 lg:leading-28 font-serif font-[700] px-4">
           {t("hero.heading")}
         </h1>
       </div>

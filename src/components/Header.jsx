@@ -111,18 +111,21 @@ export default function Header() {
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="lg:hidden mt-10 space-y-4  px-4 pb-4">
-          <select
-            value={selectedLang}
-            onChange={(e) => changeLanguage(e.target.value)}
-            className="border border-orange-500 text-orange-600 rounded-md px-4 font-bold py-2 hover:bg-orange-50 font-quicksand cursor-pointer w-full"
-          >
-            <option className="font-quicksand" value="en">
-              English
-            </option>
-            <option className="font-quicksand" value="ru">
-              Русский
-            </option>
-          </select>
+          <div className="flex justify-end">
+            <select
+              value={selectedLang}
+              onChange={(e) => changeLanguage(e.target.value)}
+              className="border border-orange-500 text-orange-600 rounded-md px-4 font-bold py-2 hover:bg-orange-50 font-quicksand cursor-pointer w-fit "
+            >
+              <option className="font-quicksand" value="en">
+                English
+              </option>
+              <option className="font-quicksand" value="ru">
+                Русский
+              </option>
+            </select>
+          </div>
+
           <nav className="flex flex-col gap-4 text-base font-medium">
             {["home", "menu", "about", "contact"].map((key) => (
               <span
@@ -137,11 +140,6 @@ export default function Header() {
               </span>
             ))}
           </nav>
-
-          {/* <div className="flex flex-col gap-3 pt-4">
-          
-            
-          </div> */}
         </div>
       )}
     </header>

@@ -17,7 +17,7 @@ const Footer = () => {
 
   return (
     <footer className="bg-[#18191b] text-[#D4D5D9] px-6 py-10 lg:px-8">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1fr_1fr_1fr_auto] gap-10">
         {/* Logo & Links */}
         <div>
           <img src="/dark-logo.png" alt="Saffron Logo" className="h-10 mb-4" />
@@ -99,16 +99,16 @@ const Footer = () => {
         </div>
 
         {/* Order Now + Copyright */}
-        <div className="flex flex-col justify-between h-full space-y-6 sm:space-y-10 text-sm">
-          <div className="flex sm:justify-start lg:justify-end">
+        <div className="flex flex-col justify-center h-full space-y-6 sm:space-y-10 text-sm">
+          {/* <div className="flex sm:justify-start lg:justify-end">
             <button
               className="text-[#CFA247] font-quicksand text-xl sm:text-2xl xl:px-5 py-2 rounded-full tracking-wide flex items-center gap-2 cursor-pointer"
               onClick={() => scrollToSection("contact")}
             >
               {t("footer.orderNow")} <FaCircleArrowUp />
             </button>
-          </div>
-          <p className="text-xs font-quicksand text-gray-400 text-center md:text-left lg:text-right">
+          </div> */}
+          <p className="text-xs font-quicksand text-gray-400 text-center md:text-left ">
             Copyright @ - SAFFRON
             <br />
             {t("footer.rights")}

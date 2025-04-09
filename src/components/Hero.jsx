@@ -11,7 +11,7 @@ export default function Hero() {
     >
       {/* Background image */}
       <img
-        src="/hero-section.png"
+        src="/hero-section.jpg"
         alt="Hero"
         className="w-full h-auto lg:h-full brightness-[0.7]"
       />

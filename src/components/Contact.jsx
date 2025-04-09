@@ -25,7 +25,7 @@ const ContactSection = () => {
           {/* Contact */}
           <div className="bg-[#D9D9D9]/20 md:w-fit h-fit text-white p-6 rounded-md text-center w-full ">
             <h3 className="text-3xl font-medium mb-5">{t("contact.title")}</h3>
-            <button className="bg-[#1D1D1D]/80 text-xl font-semibold px-8 py-2 rounded-md">
+            <button className="bg-[#1D1D1D]/80 text-xl font-quicksand font-semibold px-8 py-2 rounded-md">
               +7(985)-231-11-72
             </button>
           </div>
@@ -65,7 +65,7 @@ const ContactSection = () => {
                 href="https://yandex.com/maps"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="border bg-[#1D1D1D]/80 text-xl border-[#F40C00] text-[#F40C00] px-8 py-2 rounded-md font-semibold inline-flex items-center gap-3"
+                className="border bg-[#1D1D1D]/80 text-xl border-[#F40C00] text-[#F40C00] px-8 py-2 rounded-md font-semibold inline-flex items-center gap-3 font-quicksand"
               >
                 YANDEX <IoLocation className="w-6 h-6" />
               </a>

@@ -1,14 +1,14 @@
 import React from "react";
 
 const images = [
-  "/collage/image1.webp",
-  "/collage/image2.webp",
-  "/collage/image5.webp",
-  "/collage/image6.webp",
-  "/collage/image8.webp",
-  "/collage/image9.webp",
-  "/collage/image10.webp",
-  "/collage/image15.webp",
+  "/collage/img1.jpg",
+  "/collage/img2.jpg",
+  "/collage/img3.jpg",
+  "/collage/img4.jpg",
+  "/collage/img5.jpg",
+  "/collage/img6.jpg",
+  // "/collage/image10.webp",
+  // "/collage/image15.webp",
   "/collage/aboutus.webp",
 ];
 
@@ -50,27 +50,27 @@ const CollageGrid = () => {
         {/* Center Large */}
         <div className="col-span-2 row-span-3 col-start-2 row-start-3 rounded-xl overflow-hidden shadow-md">
           <img
-            src={images[8]}
+            src={images[6]}
             alt="aboutus"
             className="w-full h-full object-cover"
           />
         </div>
 
         {/* Left */}
-        <div className="col-span-1 row-span-2 col-start-1 row-start-3 rounded-xl overflow-hidden shadow-md">
+        <div className="col-span-1 row-span-3 col-start-1 row-start-3 rounded-xl overflow-hidden shadow-md">
           <img src={images[4]} alt="5" className="w-full h-full object-cover" />
         </div>
-        <div className="col-span-1 row-span-1 col-start-1 row-start-5 rounded-xl overflow-hidden shadow-md">
+        {/* <div className="col-span-1 row-span-1 col-start-1 row-start-5 rounded-xl overflow-hidden shadow-md">
           <img src={images[7]} alt="6" className="w-full h-full object-cover" />
-        </div>
+        </div> */}
 
         {/* Right */}
-        <div className="col-span-1 row-span-1 row-start-3 rounded-xl overflow-hidden shadow-md">
+        <div className="col-span-1 row-span-3 row-start-3 rounded-xl overflow-hidden shadow-md">
           <img src={images[5]} alt="7" className="w-full h-full object-cover" />
         </div>
-        <div className="col-span-1 row-span-2 row-start-4 rounded-xl overflow-hidden shadow-md">
+        {/* <div className="col-span-1 row-span-2 row-start-4 rounded-xl overflow-hidden shadow-md">
           <img src={images[6]} alt="8" className="w-full h-full object-cover" />
-        </div>
+        </div> */}
       </div>
 
       {/* Mobile & Tablet Responsive Layout */}
@@ -96,17 +96,14 @@ const CollageGrid = () => {
         <div className="col-span-1 row-span-1 rounded-xl overflow-hidden shadow-md">
           <img src={images[5]} alt="6" className="w-full h-full object-cover" />
         </div>
-        <div className="col-span-1 row-span-2 rounded-xl overflow-hidden shadow-md">
-          <img src={images[6]} alt="7" className="w-full h-full object-cover" />
-        </div>
-        <div className="col-span-1 row-span-1 rounded-xl overflow-hidden shadow-md">
-          <img src={images[7]} alt="8" className="w-full h-full object-cover" />
-        </div>
+        {/* <div className="col-span-1 row-span-2 rounded-xl overflow-hidden shadow-md">
+          <img src={images[]} alt="7" className="w-full h-full object-cover" />
+        </div> */}
 
         {/* Center Large Image */}
         <div className="col-span-2 sm:col-span-3 md:col-span-2 row-span-2 rounded-xl overflow-hidden shadow-md">
           <img
-            src={images[8]}
+            src={images[6]}
             alt="aboutus"
             className="w-full h-full object-cover"
           />

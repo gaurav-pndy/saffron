@@ -62,7 +62,7 @@ const ContactSection = () => {
             <div className="bg-[#D9D9D9]/20 w-full md:w-fit p-6 text-white  rounded-md text-center ">
               <h3 className="text-3xl font-medium mb-5">{t("contact.find")}</h3>
               <a
-                href="https://yandex.com/maps"
+                href="https://yandex.com/maps/-/CHVsAEmk"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="border bg-[#1D1D1D]/80 text-xl border-[#F40C00] text-[#F40C00] px-8 py-2 rounded-md font-semibold inline-flex items-center gap-3 font-quicksand"

@@ -28,17 +28,17 @@ const DishGallery = () => {
           <img
             src="/dishGallery/dish1.png"
             alt="Dish 1"
-            className="w-full max-w-xs sm:max-w-sm"
+            className="w-full h-96 object-cover md:h-auto max-w-xs sm:max-w-sm"
           />
           <img
             src="/dishGallery/dish2.png"
             alt="Dish 2"
-            className="w-full max-w-xs sm:max-w-sm sm:-mt-32"
+            className="w-full h-96 object-cover md:h-auto max-w-xs sm:max-w-sm sm:-mt-32"
           />
           <img
             src="/dishGallery/dish3.png"
             alt="Dish 3"
-            className="w-full max-w-xs sm:max-w-sm"
+            className="w-full h-96 object-cover md:h-auto max-w-xs sm:max-w-sm"
           />
         </div>
       </div>

@@ -42,13 +42,13 @@ const Footer = () => {
             <p className="text-sm text-gray-400 font-quicksand mb-2">
               {t("footer.whatsapp")}
             </p>
-            <p className="font-quicksand text-[#D4D5D9]">+79999669995</p>
+            <p className="font-quicksand text-[#D4D5D9]">+7(999)-966-99-95</p>
           </div>
           <div>
             <p className="text-sm text-gray-400 font-quicksand mb-2">
               {t("footer.contactUs")}
             </p>
-            <p className="font-quicksand text-[#D4D5D9]">79852311172</p>
+            <p className="font-quicksand text-[#D4D5D9]">+7(985)-231-11-72</p>
           </div>
           <div>
             <p className="text-sm text-gray-400 font-quicksand mb-2">
@@ -66,7 +66,7 @@ const Footer = () => {
             <p className="text-sm text-gray-400 font-quicksand mb-2">
               {t("footer.hours")}
             </p>
-            <p className="font-quicksand text-[#D4D5D9]">9am—11pm</p>
+            <p className="font-quicksand text-[#D4D5D9]">10:00 - 22:00</p>
           </div>
           <div>
             <p className="text-sm text-gray-400 font-quicksand mb-2">

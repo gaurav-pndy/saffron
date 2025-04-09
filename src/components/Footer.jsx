@@ -5,31 +5,34 @@ import { FaCircleArrowUp } from "react-icons/fa6";
 const Footer = () => {
   const { t } = useTranslation();
 
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      const yOffset = -80; // Adjust based on header height
+      const y =
+        element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }
+  };
+
   return (
     <footer className="bg-[#18191b] text-[#D4D5D9] px-6 py-10 lg:px-8">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
         {/* Logo & Links */}
         <div>
-          <img src="/dark-logo.png" alt="Saffron Logo" className="h-10 mb-6" />
-          <div className="text-sm font-[300] space-y-1">
-            <span className="font-quicksand">
-              {t("footer.home")} &nbsp;/&nbsp;
-            </span>
-            <span className="font-quicksand">
-              {t("footer.order")} &nbsp;/&nbsp;
-            </span>
-            <span className="font-quicksand">
-              {t("footer.sale")} &nbsp;/&nbsp;
-              <br />
-            </span>
-            <span className="font-quicksand">
-              {t("footer.about")} &nbsp;/&nbsp;
-            </span>
-            <span className="font-quicksand">
-              {t("footer.customers")} &nbsp;/&nbsp;
-              <br />
-            </span>
-            <span className="font-quicksand">{t("footer.contacts")}</span>
+          <img src="/dark-logo.png" alt="Saffron Logo" className="h-10 mb-4" />
+          <div className=" text-sm md:mt-12 font-[300] space-y-1">
+            <nav className="flex gap-6 font-medium">
+              {["home", "menu", "about", "contact"].map((key) => (
+                <span
+                  key={key}
+                  onClick={() => scrollToSection(key)}
+                  className="font-quicksand cursor-pointer hover:underline text-gray-400"
+                >
+                  {t(`header.${key}`)}
+                </span>
+              ))}
+            </nav>
           </div>
         </div>
 
@@ -98,11 +101,14 @@ const Footer = () => {
         {/* Order Now + Copyright */}
         <div className="flex flex-col justify-between h-full space-y-6 sm:space-y-10 text-sm">
           <div className="flex sm:justify-start lg:justify-end">
-            <button className="text-[#CFA247] font-quicksand text-xl sm:text-2xl xl:px-5 py-2 rounded-full tracking-wide flex items-center gap-2">
+            <button
+              className="text-[#CFA247] font-quicksand text-xl sm:text-2xl xl:px-5 py-2 rounded-full tracking-wide flex items-center gap-2 cursor-pointer"
+              onClick={() => scrollToSection("contact")}
+            >
               {t("footer.orderNow")} <FaCircleArrowUp />
             </button>
           </div>
-          <p className="text-xs font-quicksand text-gray-400 text-left sm:text-right">
+          <p className="text-xs font-quicksand text-gray-400 text-center md:text-left lg:text-right">
             Copyright @ - SAFFRON
             <br />
             {t("footer.rights")}

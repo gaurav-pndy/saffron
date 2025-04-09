@@ -26,7 +26,7 @@ const ContactSection = () => {
           <div className="bg-[#D9D9D9]/20 md:w-fit h-fit text-white p-6 rounded-md text-center w-full ">
             <h3 className="text-3xl font-medium mb-5">{t("contact.title")}</h3>
             <button className="bg-[#1D1D1D]/80 text-xl font-semibold px-8 py-2 rounded-md">
-              +7 123456789
+              79852311172
             </button>
           </div>
 

@@ -33,7 +33,7 @@ export default function Header() {
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center gap-1 text-3xl font-bold text-orange-600">
-          <img src="/logo.jpg" alt="logo" className="h-10" />
+          <img src="/logo.png" alt="logo" className="h-10" />
         </div>
 
         {/* Desktop Nav */}

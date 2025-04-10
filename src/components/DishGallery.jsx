@@ -1,5 +1,9 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
 
 const DishGallery = () => {
   const { t } = useTranslation();
@@ -23,8 +27,35 @@ const DishGallery = () => {
           dangerouslySetInnerHTML={{ __html: t("dishGallery.title") }}
         />
 
-        {/* Dish Images */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-12 mt-16 sm:mt-40 items-start justify-items-center">
+        {/* Mobile Swiper Slider */}
+        <div className="block sm:hidden mt-16 relative">
+          <Swiper
+            spaceBetween={20}
+            slidesPerView={1}
+            navigation={{
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+            }}
+            modules={[Navigation]}
+          >
+            {["dish1", "dish2", "dish3"].map((dish, index) => (
+              <SwiperSlide key={index}>
+                <img
+                  src={`/dishGallery/${dish}.png`}
+                  alt={`Dish ${index + 1}`}
+                  className="w-full h-96 object-cover max-w-xs mx-auto rounded-lg"
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+
+          {/* Navigation Arrows */}
+          <div className="swiper-button-prev !text-[#CFA247] !-left-2" />
+          <div className="swiper-button-next !text-[#CFA247] !-right-2" />
+        </div>
+
+        {/* Desktop Grid */}
+        <div className="hidden sm:grid grid-cols-3 gap-12 mt-40 items-start justify-items-center">
           <img
             src="/dishGallery/dish1.png"
             alt="Dish 1"

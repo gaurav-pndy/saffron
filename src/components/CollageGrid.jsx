@@ -9,6 +9,7 @@ const images = [
   "/collage/img6.jpg",
   "/collage/image10.webp",
   "/collage/image15.webp",
+  "/collage/image18.webp",
   // "/collage/aboutus.webp",
 ];
 
@@ -68,36 +69,43 @@ const CollageGrid = () => {
       </div>
 
       {/* Mobile & Tablet Responsive Layout */}
-      <div className="grid md:hidden grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 mx-auto max-w-7xl">
+      <div className="grid md:hidden grid-cols-2 sm:grid-cols-3 md:grid-cols-4  gap-4 mx-auto max-w-7xl">
         {/* Top 4 Images */}
-        <div className="col-span-1 row-span-2 rounded-xl overflow-hidden shadow-md">
+        <div className="rounded-xl overflow-hidden shadow-md">
           <img src={images[0]} alt="1" className="w-full h-full object-cover" />
         </div>
-        <div className="col-span-1 row-span-2 rounded-xl overflow-hidden shadow-md">
+        <div className=" rounded-xl overflow-hidden shadow-md">
           <img src={images[1]} alt="2" className="w-full h-full object-cover" />
         </div>
-        <div className="col-span-1 row-span-2 rounded-xl overflow-hidden shadow-md">
+        <div className="rounded-xl overflow-hidden shadow-md">
           <img src={images[2]} alt="3" className="w-full h-full object-cover" />
         </div>
-        <div className="col-span-1 row-span-2 rounded-xl overflow-hidden shadow-md">
+        <div className="rounded-xl overflow-hidden shadow-md">
           <img src={images[3]} alt="4" className="w-full h-full object-cover" />
         </div>
 
         {/* Left and Right + Bottom Images */}
-        <div className="col-span-1 row-span-2 rounded-xl overflow-hidden shadow-md">
-          <img src={images[4]} alt="5" className="w-full h-full object-cover" />
+        <div className=" rounded-xl overflow-hidden shadow-md">
+          <img src={images[8]} alt="5" className="w-full h-full object-cover" />
         </div>
-        <div className="col-span-1 row-span-1 rounded-xl overflow-hidden shadow-md">
-          <img src={images[5]} alt="6" className="w-full h-full object-cover" />
+        <div className=" rounded-xl overflow-hidden shadow-md">
+          <img src={images[7]} alt="6" className="w-full h-full object-cover" />
         </div>
         {/* <div className="col-span-1 row-span-2 rounded-xl overflow-hidden shadow-md">
           <img src={images[]} alt="7" className="w-full h-full object-cover" />
         </div> */}
 
         {/* Center Large Image */}
-        <div className="col-span-2 sm:col-span-3 md:col-span-2 row-span-2 rounded-xl overflow-hidden shadow-md">
+        <div className=" rounded-xl row-span-1 overflow-hidden shadow-md">
           <img
-            src={images[6]}
+            src={images[4]}
+            alt="aboutus"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className=" rounded-xl overflow-hidden shadow-md">
+          <img
+            src={images[5]}
             alt="aboutus"
             className="w-full h-full object-cover"
           />

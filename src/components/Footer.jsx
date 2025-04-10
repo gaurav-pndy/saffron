@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaYoutube, FaVk } from "react-icons/fa";
 import { FaCircleArrowUp } from "react-icons/fa6";
 
 const Footer = () => {
@@ -89,11 +89,8 @@ const Footer = () => {
             >
               <FaInstagram />
             </a>
-            <a
-              href="https://www.youtube.com/saffronmoscow?igsh=MTlvN3VndHhqb21xZQ=="
-              target="_blank"
-            >
-              <FaYoutube />
+            <a href="https://vk.com/saffronmoscow" target="_blank">
+              <FaVk />
             </a>
           </div>
         </div>

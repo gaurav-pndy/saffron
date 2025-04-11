@@ -1,11 +1,21 @@
 import React from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Hero() {
   return (
     <section className="bg-[#181818] text-white w-full px-4 py-10  relative overflow-hidden min-h-screen">
       <div className="max-w-7xl pt-24 lg:pt-30 mx-auto grid grid-cols-1 xl:grid-cols-2 gap-10  md:gap-20 xl:gap-10 items-end lg:px-10 ">
         {/* Left content */}
-        <div className="flex flex-col gap-5 text-center xl:text-left">
+        <motion.div
+          initial={{ opacity: 0, y: "100%", scale: 0.5 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{
+            duration: 1.5,
+            ease: [0.77, 0, 0.175, 1],
+            delay: 2,
+          }}
+          className="flex flex-col gap-5 text-center xl:text-left"
+        >
           <div>
             <h1 className="text-5xl md:text-6xl lg:text-[5rem] xl:text-[4.8rem]  leading-tight  font-contrail font-[400]">
               A World of{" "}
@@ -29,10 +39,19 @@ export default function Hero() {
             className="mt-4 mx-auto xl:mx-0 xl:mt-12 w-60 lg:w-96"
           />
           {/* </div> */}
-        </div>
+        </motion.div>
 
         {/* Right content */}
-        <div className="relative w-full flex justify-center ">
+        <motion.div
+          initial={{ opacity: 0, y: "-100%", scale: 0.5 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{
+            duration: 1.5,
+            ease: [0.77, 0, 0.175, 1],
+            delay: 2,
+          }}
+          className="relative w-full flex justify-center "
+        >
           {/* Main dish image */}
           <img
             src="/hero images/hero-image.png"
@@ -65,7 +84,7 @@ export default function Hero() {
             className="h-26 md:h-34 lg:h-38 object-cover absolute bottom-0 right-0 md:right-32 xl:right-0 rounded-md"
           />
           {/* </div> */}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

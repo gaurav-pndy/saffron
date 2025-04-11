@@ -22,7 +22,7 @@ const LandingReveal = ({ onComplete }) => {
         <>
           {/* Top reveal */}
           <motion.div
-            className={`fixed flex items-end justify-center pb-4 top-0 left-0 w-full h-[50vh] z-[100] bg-gradient-to-t from-[#26140a] to-[#4d240f]`}
+            className={`fixed flex items-end justify-center pb-4 top-0 left-0 w-full h-[50svh] z-[100] bg-gradient-to-t from-[#26140a] to-[#4d240f]`}
             initial={{ y: 0 }}
             animate={{ y: "-100%" }}
             exit={{ y: "-100%" }}
@@ -44,7 +44,7 @@ const LandingReveal = ({ onComplete }) => {
 
           {/* Bottom reveal */}
           <motion.div
-            className={`fixed flex items-start justify-center pt-4 bottom-0 left-0 w-full h-[50vh] z-[100] bg-gradient-to-b from-[#26140a] to-[#4d240f]`}
+            className={`fixed flex items-start justify-center pt-4 bottom-0 left-0 w-full h-[50svh] z-[100] bg-gradient-to-b from-[#26140a] to-[#4d240f]`}
             initial={{ y: 0 }}
             animate={{ y: "100%" }}
             exit={{ y: "100%" }}

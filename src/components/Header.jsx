@@ -52,7 +52,7 @@ export default function Header() {
         {/* Desktop Buttons & Language */}
         <div className="hidden lg:flex items-center text-sm gap-4">
           <a href="https://wa.me/message/6R3F4MT7S7ZPN1" target="_blank">
-            <button className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-md font-quicksand font-bold flex gap-2 items-center cursor-pointer uppercase">
+            <button className="border border-orange-400 hover:bg-orange-400 text-orange-400 hover:text-white font-[400] px-4 py-2 rounded-md font-quicksand transition-all duration-300 flex gap-2 items-center cursor-pointer uppercase">
               {t("header.whatsapp")} <IoLogoWhatsapp size={16} />
             </button>
           </a>
@@ -60,7 +60,7 @@ export default function Header() {
             href="https://eda.yandex.ru/restaurant/saffron_t8lmvv"
             target="_blank"
           >
-            <button className="border border-red-500 text-red-500 hover:bg-red-100 px-4 py-2 font-bold rounded-md font-quicksand flex gap-2 items-center cursor-pointer uppercase">
+            <button className="border border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white transition-all duration-300 px-4 py-2 font-[400] rounded-md font-quicksand flex gap-2 items-center cursor-pointer uppercase">
               {t("header.yandex")}{" "}
               <img src="/yandex.png" alt="" className="h-4" />
             </button>
@@ -68,7 +68,7 @@ export default function Header() {
           <select
             value={selectedLang}
             onChange={(e) => changeLanguage(e.target.value)}
-            className="border border-orange-500 text-orange-600 rounded-md px-4 font-bold py-2 hover:bg-orange-50 font-quicksand cursor-pointer"
+            className="border border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white rounded-md px-4 font-bold py-2 transition-all duration-300 font-quicksand cursor-pointer"
           >
             <option className="font-quicksand" value="en">
               English

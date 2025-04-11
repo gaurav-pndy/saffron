@@ -29,20 +29,20 @@ export default function Header() {
   };
 
   return (
-    <header className="w-full px-6  py-5 fixed top-0 z-50 bg-white shadow-sm">
-      <div className="max-w-7xl mx-auto flex items-center justify-between">
+    <header className="w-full px-4  py-5 fixed top-0 z-50 bg-[#181818] text-white ">
+      <div className="max-w-7xl  mx-auto h-18 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center gap-1 text-3xl font-bold text-orange-600">
-          <img src="/logo.png" alt="logo" className="h-10" />
+          <img src="/logo.png" alt="logo" className="h-10 lg:h-12" />
         </div>
 
         {/* Desktop Nav */}
-        <nav className="hidden lg:flex gap-8 text-lg font-medium">
+        <nav className="hidden lg:flex gap-8 h-full items-end pb-4 text-xl ">
           {["home", "menu", "about", "contact"].map((key) => (
             <span
               key={key}
               onClick={() => scrollToSection(key)}
-              className="hover:text-orange-600 underline underline-offset-4 font-quicksand cursor-pointer"
+              className="hover:text-orange-600  font-poppins cursor-pointer"
             >
               {t(`header.${key}`)}
             </span>

@@ -6,10 +6,12 @@ import CollageGrid from "../components/CollageGrid";
 import About from "../components/About";
 import Reviews from "../components/Reviews";
 import Contact from "../components/Contact";
+import LandingReveal from "../components/LandingReveal";
 
 const Home = () => {
   return (
-    <div className="mt-20">
+    <div>
+      <LandingReveal />
       <Hero />
       <DishGallery />
       <Menu />

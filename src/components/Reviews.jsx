@@ -7,6 +7,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { ArrowRight, ChevronLeft, ChevronRight, Star } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
 
 const reviews = [
   {
@@ -109,7 +110,7 @@ export default function ReviewsCarousel() {
   };
 
   return (
-    <section className="bg-gradient-to-b from-[#f8f5ed] to-[#f0e9d8] py-16 relative overflow-hidden">
+    <section className="bg-gradient-to-b from-[#f8f5ed] to-[#f0e9d8] py-16 relative overflow-clip">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#053420] tracking-tight">
@@ -120,7 +121,16 @@ export default function ReviewsCarousel() {
           </div>
         </div>
 
-        <div className="relative">
+        <motion.div
+          initial={{ x: 50, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ amount: 0.5 }}
+          transition={{
+            duration: 0.7,
+            ease: [0.25, 0.1, 0.25, 1],
+          }}
+          className="relative"
+        >
           <Swiper
             modules={[Navigation, Autoplay]}
             navigation={{
@@ -207,7 +217,7 @@ export default function ReviewsCarousel() {
           <button className="review-next absolute top-1/2 -right-4 sm:-right-6 -translate-y-1/2 z-10 bg-white p-2 rounded-full shadow-lg hover:bg-gray-50 transition-colors">
             <ChevronRight className="text-[#053420] w-6 h-6" />
           </button>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

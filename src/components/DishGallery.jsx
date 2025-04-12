@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
+import { motion } from "framer-motion";
 
 const DishGallery = () => {
   const { t } = useTranslation();
@@ -28,7 +29,16 @@ const DishGallery = () => {
         />
 
         {/* Mobile Swiper Slider */}
-        <div className="block sm:hidden mt-16 relative">
+        <motion.div
+          initial={{ y: 50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ amount: 0.5 }}
+          transition={{
+            duration: 0.7,
+            ease: [0.25, 0.1, 0.25, 1],
+          }}
+          className="block sm:hidden mt-16 relative"
+        >
           <Swiper
             spaceBetween={20}
             slidesPerView={1}
@@ -52,21 +62,42 @@ const DishGallery = () => {
           {/* Navigation Arrows */}
           <div className="swiper-button-prev !text-[#CFA247] !-left-2" />
           <div className="swiper-button-next !text-[#CFA247] !-right-2" />
-        </div>
+        </motion.div>
 
         {/* Desktop Grid */}
         <div className="hidden sm:grid grid-cols-3 gap-12 mt-40 items-start justify-items-center">
-          <img
+          <motion.img
+            initial={{ y: 50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ amount: 0.5 }}
+            transition={{
+              duration: 0.7,
+              ease: [0.25, 0.1, 0.25, 1],
+            }}
             src="/dishGallery/dish1.png"
             alt="Dish 1"
             className="w-full h-96 object-cover md:h-auto max-w-xs sm:max-w-sm"
           />
-          <img
+          <motion.img
+            initial={{ y: -50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ amount: 0.5 }}
+            transition={{
+              duration: 0.7,
+              ease: [0.25, 0.1, 0.25, 1],
+            }}
             src="/dishGallery/dish2.png"
             alt="Dish 2"
             className="w-full h-96 object-cover md:h-auto max-w-xs sm:max-w-sm sm:-mt-32"
           />
-          <img
+          <motion.img
+            initial={{ y: 50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ amount: 0.5 }}
+            transition={{
+              duration: 0.7,
+              ease: [0.25, 0.1, 0.25, 1],
+            }}
             src="/dishGallery/dish3.png"
             alt="Dish 3"
             className="w-full h-96 object-cover md:h-auto max-w-xs sm:max-w-sm"

@@ -2,6 +2,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import { ImWhatsapp } from "react-icons/im";
 import { IoLocation } from "react-icons/io5";
+import { motion } from "framer-motion";
 
 const ContactSection = () => {
   const { t } = useTranslation();
@@ -23,15 +24,33 @@ const ContactSection = () => {
         />
         <div className="relative z-10 w-full max-w-7xl px-4 flex flex-col gap-4 md:gap-0">
           {/* Contact */}
-          <div className="bg-[#D9D9D9]/20 md:w-fit h-fit text-white p-6 rounded-md text-center w-full ">
+          <motion.div
+            initial={{ scale: 0.7, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            viewport={{ amount: 0.3 }}
+            transition={{
+              duration: 0.7,
+              ease: [0.25, 0.1, 0.25, 1],
+            }}
+            className="bg-[#D9D9D9]/20 md:w-fit h-fit text-white p-6 rounded-md text-center w-full "
+          >
             <h3 className="text-3xl font-medium mb-5">{t("contact.title")}</h3>
             <button className="bg-[#1D1D1D]/80 text-xl font-quicksand font-semibold px-8 py-2 rounded-md">
               +7(985)-231-11-72
             </button>
-          </div>
+          </motion.div>
 
           {/* Logo + Order Now */}
-          <div className="text-center flex flex-col items-center justify-center ">
+          <motion.div
+            initial={{ scale: 0.7, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            viewport={{ amount: 0.3 }}
+            transition={{
+              duration: 0.7,
+              ease: [0.25, 0.1, 0.25, 1],
+            }}
+            className="text-center flex flex-col items-center justify-center "
+          >
             <div className="bg-[#D9D9D9]/20 p-6 w-full md:w-fit rounded-md border ">
               <h4 className="text-white mb-5 text-3xl font-medium">
                 {t("contact.order")}
@@ -55,10 +74,19 @@ const ContactSection = () => {
                 </a>
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* Find Us */}
-          <div className="w-full flex justify-end">
+          <motion.div
+            initial={{ scale: 0.7, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            viewport={{ amount: 0.3 }}
+            transition={{
+              duration: 0.7,
+              ease: [0.25, 0.1, 0.25, 1],
+            }}
+            className="w-full flex justify-end"
+          >
             <div className="bg-[#D9D9D9]/20 w-full md:w-fit p-6 text-white  rounded-md text-center ">
               <h3 className="text-3xl font-medium mb-5">{t("contact.find")}</h3>
               <a
@@ -70,7 +98,7 @@ const ContactSection = () => {
                 YANDEX <IoLocation className="w-6 h-6" />
               </a>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
 

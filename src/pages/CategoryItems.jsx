@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import allItems from "../data/allItemsData";
 import { useTranslation } from "react-i18next";
 import i18next from "i18next";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 const CategoryItems = () => {
   const { t } = useTranslation();

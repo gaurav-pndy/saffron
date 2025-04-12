@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import allItems from "../data/allItemsData";
 import { useTranslation } from "react-i18next";
 import i18next from "i18next";
+import { motion, AnimatePresence } from "framer-motion";
 
 const CategoryItems = () => {
   const { t } = useTranslation();
@@ -30,7 +31,14 @@ const CategoryItems = () => {
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10">
         {filteredItems.map((item, index) => (
-          <div
+          <motion.div
+            initial={{ scale: 0.7, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{
+              duration: 0.6,
+              ease: [0.25, 0.1, 0.25, 1],
+            }}
             key={index}
             className="rounded-2xl overflow-hidden shadow-md  transition-all duration-300 bg-white border border-gray-100 flex flex-col justify-between p-4 gap-4"
           >
@@ -62,7 +70,7 @@ const CategoryItems = () => {
                 Order Now
               </button>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>

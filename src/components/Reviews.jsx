@@ -2,10 +2,10 @@
 
 import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
-import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowRight, ChevronLeft, ChevronRight, Star } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 const reviews = [
@@ -65,7 +65,7 @@ const reviews = [
   {
     name: "Ирина Зубанова",
     review:
-      "Очень вкусно 🙏🥰🥰🥰🥰 Впервые попробовала индийскую кузню ❤️🔥🔥🔥 Готовят индусы и все специи у них из Индии! Приходите и получите гастрономическое удовольствие 👍👍👍👍👍",
+      "Очень вкусно 🙏🥰🥰🥰🥰 Впервые попробовала индийскую кузню ❤🔥🔥🔥 Готовят индусы и все специи у них из Индии! Приходите и получите гастрономическое удовольствие 👍👍👍👍👍",
     image: "/collage/image10.webp",
   },
   {
@@ -102,94 +102,112 @@ const reviews = [
 
 export default function ReviewsCarousel() {
   const { t } = useTranslation();
-
-  const [expandedIndex, setExpandedIndex] = useState();
+  const [expandedIndex, setExpandedIndex] = useState(null);
 
   const handleToggle = (index) => {
     setExpandedIndex(index === expandedIndex ? null : index);
   };
 
   return (
-    <section className="bg-[#fcfaf5] py-16 relative">
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="flex justify-between items-center mb-8">
-          <h2 className="text-3xl sm:text-5xl font-[400] text-[#053420] tracking-wide">
+    <section className="bg-gradient-to-b from-[#f8f5ed] to-[#f0e9d8] py-16 relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#053420] tracking-tight">
             {t("reviews.heading")}
           </h2>
+          <div className="flex justify-center mt-4">
+            <div className="w-24 h-1 bg-[#CFA247] rounded-full"></div>
+          </div>
         </div>
 
-        <Swiper
-          modules={[Navigation]}
-          navigation={{ nextEl: ".swiper-next", prevEl: ".swiper-prev" }}
-          spaceBetween={20}
-          slidesPerView={1}
-          breakpoints={{
-            640: { slidesPerView: 1 },
-            768: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 },
-            1280: { slidesPerView: 4 },
-          }}
-          // className="border"
-        >
-          {reviews.map((item, index) => {
-            const isExpanded = expandedIndex === index;
-            const shouldTruncate = item.review.length > 50;
-            const displayReview = isExpanded
-              ? item.review
-              : item.review.slice(0, 50) + (shouldTruncate ? "..." : "");
+        <div className="relative">
+          <Swiper
+            modules={[Navigation, Autoplay]}
+            navigation={{
+              nextEl: ".review-next",
+              prevEl: ".review-prev",
+            }}
+            autoplay={{
+              delay: 5000,
+              disableOnInteraction: false,
+            }}
+            spaceBetween={30}
+            slidesPerView={1}
+            loop={true}
+            breakpoints={{
+              640: { slidesPerView: 1 },
+              768: { slidesPerView: 2 },
+              1024: { slidesPerView: 3 },
+            }}
+            className="pb-12"
+          >
+            {reviews.map((item, index) => {
+              const isExpanded = expandedIndex === index;
+              const shouldTruncate = item.review.length > 120;
+              const displayReview = isExpanded
+                ? item.review
+                : item.review.slice(0, 120) + (shouldTruncate ? "..." : "");
 
-            return (
-              <SwiperSlide key={index}>
-                <div
-                  className={`bg-white rounded shadow-xl overflow-hidden flex flex-col p-4 my-7 md:mx-5 lg:mx-0 ${
-                    isExpanded ? "max-h-auto" : "max-h-80"
-                  }h-full`}
-                >
-                  {/* Image */}
-
-                  {/* Text Section */}
-                  <div className="mb-4 flex flex-col justify-between flex-1">
-                    <h3 className="text-[#053420] font-quicksand font-medium underline mb-2">
-                      {item.name}
-                    </h3>
-
-                    <div
-                      className={`text-[#053420] text-sm font-quicksand transition-all duration-300  overflow-hidden`}
-                    >
-                      {displayReview}
+              return (
+                <SwiperSlide key={index}>
+                  <div className="bg-white rounded-xl shadow-lg overflow-hidden h-full flex flex-col transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                    {/* Image */}
+                    <div className="relative h-48 overflow-hidden">
+                      <img
+                        src={item.image}
+                        alt={item.name}
+                        className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+                      <div className="absolute bottom-4 left-4">
+                        <div className="flex">
+                          {[...Array(5)].map((_, i) => (
+                            <Star
+                              key={i}
+                              className="w-5 h-5 fill-[#fff01d] text-[#eee236]"
+                            />
+                          ))}
+                        </div>
+                      </div>
                     </div>
 
-                    {/* Read More Button */}
-                    {shouldTruncate && (
-                      <button
-                        onClick={() => handleToggle(index)}
-                        className="text-[#CFA247] font-quicksand cursor-pointer text-sm font-medium mt-2 flex items-center gap-1"
+                    {/* Content */}
+                    <div className="p-6 flex-1 flex flex-col">
+                      <h3 className="text-xl font-bold text-[#053420] mb-2">
+                        {item.name}
+                      </h3>
+                      <p
+                        className={`text-gray-600 mb-4 ${
+                          isExpanded ? "" : "line-clamp-3"
+                        }`}
                       >
-                        {isExpanded ? "show less" : "read more"}
-                        <ArrowRight className="w-4 h-4" />
-                      </button>
-                    )}
-                  </div>
-                  <div className="w-full h-40 sm:h-44 md:h-48 overflow-hidden">
-                    <img
-                      src={item.image}
-                      alt={item.name}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                </div>
-              </SwiperSlide>
-            );
-          })}
-        </Swiper>
+                        {item.review}
+                      </p>
 
-        {/* Navigation Arrows */}
-        <button className="swiper-prev absolute top-1/2 left-0 xl:left-32 -translate-y-1/2 z-10  p-2 cursor-pointer">
-          <ChevronLeft className="text-[#DFE0DF] w-12 h-12" />
-        </button>
-        <button className="swiper-next absolute top-1/2 right-0 xl:right-32 -translate-y-1/2 z-10 p-2 cursor-pointer">
-          <ChevronRight className="text-[#DFE0DF] w-12 h-12" />
-        </button>
+                      {shouldTruncate && (
+                        <button
+                          onClick={() => handleToggle(index)}
+                          className="mt-auto text-[#CFA247] font-medium flex items-center hover:text-[#053420] transition-colors"
+                        >
+                          {isExpanded ? "Show less" : "Read more"}
+                          <ArrowRight className="ml-1 w-4 h-4" />
+                        </button>
+                      )}
+                    </div>
+                  </div>
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>
+
+          {/* Navigation Arrows */}
+          <button className="review-prev absolute top-1/2 -left-4 sm:-left-6 -translate-y-1/2 z-10 bg-white p-2 rounded-full shadow-lg hover:bg-gray-50 transition-colors">
+            <ChevronLeft className="text-[#053420] w-6 h-6" />
+          </button>
+          <button className="review-next absolute top-1/2 -right-4 sm:-right-6 -translate-y-1/2 z-10 bg-white p-2 rounded-full shadow-lg hover:bg-gray-50 transition-colors">
+            <ChevronRight className="text-[#053420] w-6 h-6" />
+          </button>
+        </div>
       </div>
     </section>
   );

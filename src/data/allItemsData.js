@@ -425,28 +425,28 @@ const allItems = [
     category: "menu.categories.cold.heading",
     image:
       "https://static.wixstatic.com/media/df6cc5_f11e3c3bd3944191a296bfb99e36e4ab~mv2.jpg",
-    price: 390 / 490,
+    price: "390/490",
   },
   {
     name: "menu.categories.cold.item2",
     category: "menu.categories.cold.heading",
     image:
       "https://static.wixstatic.com/media/df6cc5_d787639456c2486abd4c6f2c06a25907~mv2.jpg",
-    price: 390 / 490,
+    price: "390/490",
   },
   {
     name: "menu.categories.cold.item3",
     category: "menu.categories.cold.heading",
     image:
       "https://static.wixstatic.com/media/df6cc5_d88f6e190c4445ffb817720bf52de8a2~mv2.jpg",
-    price: 250 / 300,
+    price: "250/300",
   },
   {
     name: "menu.categories.cold.item4",
     category: "menu.categories.cold.heading",
     image:
       "https://static.wixstatic.com/media/df6cc5_f11e3c3bd3944191a296bfb99e36e4ab~mv2.jpg",
-    price: 350 / 450,
+    price: "350/450",
   },
 
   //tea
@@ -456,28 +456,28 @@ const allItems = [
     category: "menu.categories.tea.heading",
     image:
       "https://static.wixstatic.com/media/df6cc5_c49e282286794808bba7c9af3fdb0541~mv2.jpg",
-    price: 250 / 550,
+    price: "250/550",
   },
   {
     name: "menu.categories.tea.item2",
     category: "menu.categories.tea.heading",
     image:
       "https://static.wixstatic.com/media/df6cc5_522841bf96e74a68a9815be85474d2e0~mv2.jpg",
-    price: 190 / 450,
+    price: "190/450",
   },
   {
     name: "menu.categories.tea.item3",
     category: "menu.categories.tea.heading",
     image:
       "https://static.wixstatic.com/media/df6cc5_522841bf96e74a68a9815be85474d2e0~mv2.jpg",
-    price: 190 / 450,
+    price: "190/450",
   },
   {
     name: "menu.categories.tea.item4",
     category: "menu.categories.tea.heading",
     image:
       "https://static.wixstatic.com/media/df6cc5_522841bf96e74a68a9815be85474d2e0~mv2.jpg",
-    price: 190 / 450,
+    price: "190/450",
   },
 
   //desserts

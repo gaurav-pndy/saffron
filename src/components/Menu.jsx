@@ -96,6 +96,20 @@ const Menu = () => {
     navigate(`/category/${categoryName.toLowerCase()}`);
   };
 
+  const handleButtonClick = () => {
+    if (showAll) {
+      const element = document.getElementById("menu");
+      if (element) {
+        const yOffset = -80; // Adjust based on header height
+        const y =
+          element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: "smooth" });
+      }
+    }
+
+    setShowAll((prev) => !prev);
+  };
+
   const slideVariants = {
     hiddenLeft: {
       opacity: 0,
@@ -131,10 +145,11 @@ const Menu = () => {
             className={`cursor-pointer rounded-xl overflow-hidden shadow hover:shadow-lg group ${category.col}`}
             initial={index % 2 === 0 ? "hiddenLeft" : "hiddenRight"}
             whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
+            // viewport={{ once: true, amount: 0.3 }}
             variants={slideVariants}
           >
             <div
+              onClick={() => handleClick(category.name)}
               className="relative w-full h-52 lg:h-60 bg-cover flex flex-col justify-between p-5 text-white"
               style={{
                 backgroundImage: `url(${category.image})`,
@@ -147,10 +162,7 @@ const Menu = () => {
                 <h3 className="text-3xl text-shadow-lg font-semibold mb-2 font-poppins">
                   {category.name}
                 </h3>
-                <button
-                  onClick={() => handleClick(category.name)}
-                  className="px-4 w-fit transition-all duration-300 cursor-pointer py-2 bg-orange-500 text-white rounded-2xl hover:bg-orange-600 font-poppins"
-                >
+                <button className="px-4 w-fit transition-all duration-300 cursor-pointer py-2 bg-orange-500 text-white font-[500] rounded-2xl hover:bg-orange-600 font-poppins">
                   Explore Items
                 </button>
               </div>
@@ -161,7 +173,7 @@ const Menu = () => {
 
       <div className="text-center mt-6">
         <button
-          onClick={() => setShowAll(!showAll)}
+          onClick={handleButtonClick}
           className="px-6 transition-all duration-300 cursor-pointer py-2 bg-[#181818] text-white rounded hover:bg-black font-poppins"
         >
           {showAll ? "View Less" : "View All"}

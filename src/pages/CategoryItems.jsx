@@ -1,5 +1,5 @@
 // pages/CategoryPage.tsx
-import React from "react";
+import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import allItems from "../data/allItemsData";
 import { useTranslation } from "react-i18next";
@@ -22,14 +22,18 @@ const CategoryItems = () => {
     );
   });
 
-  console.log("Mounted");
+  // console.log("Mounted");
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
 
   return (
-    <div className="max-w-5xl mx-auto px-4 py-8  pt-36">
+    <div className="max-w-7xl mx-auto px-4 lg:px-10 xl:px-4 py-8  pt-36">
       <h2 className="text-4xl md:text-5xl font-bold mb-10 text-[#CFA247]  font-poppins capitalize">
         {t(filteredItems[0].category)}
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8">
         {filteredItems.map((item, index) => (
           <motion.div
             initial={{ scale: 0.7, opacity: 0 }}
@@ -42,7 +46,7 @@ const CategoryItems = () => {
             key={index}
             className="rounded-2xl overflow-hidden shadow-md  transition-all duration-300 bg-white border border-gray-100 flex flex-col justify-between p-4 gap-4"
           >
-            <div className=" bg-white flex items-center justify-center ">
+            <div className=" bg-white flex max-h-56 lg:max-h-60  overflow-hidden items-center justify-center rounded-2xl ">
               <img
                 src={item.image || "/static-food.jpg"}
                 alt={t(item.name)}
@@ -67,9 +71,9 @@ const CategoryItems = () => {
                   </p>
                 )}
 
-                <button className=" px-6 font-poppins py-2 bg-orange-500 text-white w-fit rounded-lg hover:bg-orange-600 transition-colors duration-300 cursor-pointer">
+                {/* <button className=" px-6 font-poppins py-2 bg-orange-500 text-white w-fit rounded-lg hover:bg-orange-600 transition-colors duration-300 cursor-pointer">
                   {t("menu.button")}
-                </button>
+                </button> */}
               </div>
             </div>
           </motion.div>

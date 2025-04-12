@@ -19,7 +19,116 @@
   },
   "menu": {
     "heading": "EXPLORE OUR MENU",
-    "text": "Our Menu will be Updated soon"
+    "text": "Our Menu will be Updated soon",
+    "categories": {
+      "tandoor":{
+"heading": "Tandoor Dishes",
+        "item1": { "name": "Paneer Tikka", "desc": "Cheese in a marinade of yogurt and spices,baked in a tandoor.  Served with chutney sauce"},
+        "item2": { "name": "Tandoori Chicken", "desc": "Chicken legs baked in tandoor.  Served with salad  and the sauce"},
+        "item3": { "name": "Prawns Tandoori", "desc": "Spicy shrimp, baked on a skewer. Served with chutney sauce"},
+        "item4": { "name": "Afghani Chicken", "desc": "Marinated in cashews, cardamom and cream"},
+        "item5": { "name": "Saffron Salmon Tandoori", "desc": "Baked salmon on a skewer. Served with salad and sauce  chutney"},
+        "item6": { "name": "Saffron Chicken Tikka", "desc": "Baked tandoor chicken potatoes S. V. S. V. saffron sauce"},
+        "item7": { "name": "Seabas Tandoori", "desc": "Whole fish baked in tandoor.  Served with lemon, salad and sauce"}
+       
+      },
+      "snacks":{
+"heading": "Snacks",
+"item1": { "name": "Samosa", "desc": "Spicy pies  with potatoes and cashews"},
+"item2": { "name": "Prawns Pakoda", "desc": "Shrimp tempura  in Indian"},
+"item3": "Chicken Lollipop",
+"item4": "French Fries",
+"item5": {"name":"Squid Pakoda", "desc": "Squid Pakoda" },
+"item6": {"name": "Mushroom Tikka", "desc": "Mushroom Tikka"}
+       
+      },
+      "veg":{
+"heading": "Vegetarian",
+"item1": { "name": "Palak Paneer", "desc": "Paneer cheese in spinach sauce"},
+        "item2": { "name": "Paneer Butter Masala", "desc": "Baked paneer cheese in tomato cream sauce"},
+        "item3": { "name": "Punjabi Mushroom Curry", "desc": "Mushrooms cooked  in Punjabi sauce"},
+        "item4": { "name": "Bhara Baingan", "desc": "Baked eggplant A dish from the chef"},
+        "item5": { "name": "Chole Masala", "desc": "ТStewed chickpeas with masala sauce"},
+        "item6": { "name": "Dal Makhani", "desc": "Dal, black mash, beans in a delicate sauce"},
+        "item7": { "name": "Veg Curry", "desc": "Cauliflower, green peas, green beans in vegetable curry sauce"}
+      
+      },
+      "biryani":{
+"heading": "Biryani",
+        "item1": "Lamb",
+        "item2": "Chicken",
+        "item3": "Prawns",
+        "item4": "Vegetarian",
+        "item5": "Raita",
+        "item6": "Mutton"
+      },
+      "salads" :{
+        "heading": "Salads",
+        "item1": "Veg Salad",
+        "item2": "Paneer Salad",
+        "item3": "Brinjal Salad",
+        "item4": "Prawns Salad",
+        "item5": "Chikpeas Salad"
+      },
+      "soups" :{
+        "heading": "Soups",
+        "item1": { "name":"Mulligatawny" , "desc": "Lentil Soup"} ,
+        "item2": "Indiski Tom Yam",
+        "item3": "Mutton soup with potatoes",
+        "item4": "Chicken and chickpea soup"
+       
+      },
+      "hotter" :{
+        "heading": "Hotter",
+        "item1": { "name": "Kerala Fish Molly", "desc": "Tender salmon fillet cooked in Kerala with coconut"},
+        "item2": { "name": "Rogan Josh", "desc": "Stewed lamb in vegetable sauce. Served with rice"},
+        "item3": { "name": "Prawns Korma", "desc": "Shrimp in cashew sauce  and coconut cream. Served with saffron rice"},
+        "item4": { "name": "Mutton Vindaloo", "desc": "Juicy mutton  with potatoes in sauce"},
+        "item5": { "name": "Chicken / Chicken tikka masala", "desc": "Baked tandoor chicken, cooked   in tomato and vegetable sauce  with cream"},
+        "item6": { "name": "Prawns Masala", "desc": "Shrimps in spicy sauce"},
+        "item7": { "name": "Chicken Curry", "desc": "Chicken fillet in vegetable curry sauce"}
+      
+      },
+      "sides" :{
+        "heading": "Side Dishes",
+        "item1": "Saffron rice",
+        "item2": "Lemon rice",
+        "item3": "Basmati rice",
+        "item4": "Biryani rice"
+      },
+      "naan" :{
+        "heading": "Naan",
+        "item1": "Butter Naan",
+        "item2": "Cheese and garlic Naan",
+        "item3": "Cheese and spinach Naan",
+        "item4": "Potatoes Naan",
+        "item5": "Meat and cheese Naan",
+        "item6": "Chicken and cheese Naan"
+      },
+      "cold" :{
+        "heading": "Cold Drinks",
+        "item1": "Mango lassy",
+        "item2": "Strawberry Lassy",
+        "item3": "Mint Lemonade",
+        "item4": "Mango Lemonade"      },
+      "tea" :{
+        "heading": "Tea",
+        "item1": "Masala Tea",
+        "item2": "Bengal Tea",
+        "item3": "Ginger Tea",
+        "item4": "Assam Tea"      },
+      "desserts" :{
+        "heading": "Desserts",
+        "item1": "Gulab Jamun",
+        "item2": "Laddu coconut",
+        "item3": "Boondi Laddu",
+        "item4": {"name": "Saffron Special", "desc": "Chef's special"}      },
+      "thali" :{
+        "heading": "Thali",
+        "item1": "Royal Thali Non veg",
+        "item2": "Royal Thali Veg"
+            }
+    }
   },
   "about": {
     "heading": "ABOUT US",

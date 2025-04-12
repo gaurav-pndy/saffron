@@ -4,14 +4,27 @@ import viteLogo from "/vite.svg";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import CategoryItems from "./pages/CategoryItems";
 
 function App() {
-  const [count, setCount] = useState(0);
+  // const [count, setCount] = useState(0);
+  const router = createBrowserRouter([
+    {
+      element: <Home />,
+      path: "/",
+    },
+    {
+      element: <CategoryItems />,
+      path: "/category/:name",
+    },
+  ]);
 
   return (
     <>
       <Header />
-      <Home />
+      <RouterProvider router={router} />
+
       <Footer />
     </>
   );

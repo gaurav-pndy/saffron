@@ -33,7 +33,9 @@ export default function Header() {
       <div className="max-w-7xl  mx-auto h-18 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center gap-1 text-3xl font-bold text-orange-600">
-          <img src="/logo.png" alt="logo" className="h-10 lg:h-12" />
+          <a href="/">
+            <img src="/logo.png" alt="logo" className="h-10 lg:h-12" />
+          </a>
         </div>
 
         {/* Desktop Nav */}
@@ -57,7 +59,7 @@ export default function Header() {
             </button>
           </a>
           <a
-            href="https://eda.yandex.ru/restaurant/saffron_t8lmvv"
+            href="https://eda.yandex.ru/restaurant/saffron_t8lmv"
             target="_blank"
           >
             <button className="border border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white transition-all duration-300 px-4 py-2 font-[400] rounded-md font-quicksand flex gap-2 items-center cursor-pointer uppercase">

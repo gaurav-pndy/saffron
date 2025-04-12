@@ -26,8 +26,8 @@ const CategoryItems = () => {
 
   return (
     <div className="max-w-5xl mx-auto px-4 py-8  pt-36">
-      <h2 className="text-5xl font-bold mb-10 text-[#CFA247]  font-poppins capitalize">
-        {name}
+      <h2 className="text-4xl md:text-5xl font-bold mb-10 text-[#CFA247]  font-poppins capitalize">
+        {t(filteredItems[0].category)}
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10">
         {filteredItems.map((item, index) => (
@@ -55,20 +55,22 @@ const CategoryItems = () => {
               </h3>
 
               {item.desc && (
-                <p className=" font-poppins text-gray-500 mb-2">
+                <p className="text-sm md:text-base font-poppins text-gray-500 mb-2">
                   {t(item.desc)}
                 </p>
               )}
 
-              {item.price && (
-                <p className="text-xl font-poppins font-semibold text-orange-500 mb-2">
-                  ₽{item.price}
-                </p>
-              )}
+              <div className="flex md:flex-col justify-between items-center md:items-start ">
+                {item.price && (
+                  <p className="text-xl font-poppins font-semibold text-orange-500 md:mb-2">
+                    ₽{item.price}
+                  </p>
+                )}
 
-              <button className=" px-6 font-poppins py-2 bg-orange-500 text-white w-fit rounded-lg hover:bg-orange-600 transition-colors duration-300 cursor-pointer">
-                Order Now
-              </button>
+                <button className=" px-6 font-poppins py-2 bg-orange-500 text-white w-fit rounded-lg hover:bg-orange-600 transition-colors duration-300 cursor-pointer">
+                  {t("menu.button")}
+                </button>
+              </div>
             </div>
           </motion.div>
         ))}

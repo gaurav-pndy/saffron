@@ -34,6 +34,8 @@
     "heading": "EXPLORE OUR MENU",
     "text": "Our Menu will be Updated soon",
     "button": "Explore Items",
+    "viewall": "View all",
+    "viewless": "View less",
     "categories": {
       "tandoor":{
 "heading": "Tandoor Dishes",

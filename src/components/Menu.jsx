@@ -176,7 +176,7 @@ const Menu = () => {
           onClick={handleButtonClick}
           className="px-6 transition-all duration-300 cursor-pointer py-2 bg-[#181818] text-white rounded hover:bg-black font-poppins"
         >
-          {showAll ? "View Less" : "View All"}
+          {showAll ? t("menu.viewless") : t("menu.viewall")}
         </button>
       </div>
     </div>

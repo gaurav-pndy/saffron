@@ -199,7 +199,7 @@ export default function ReviewsCarousel() {
                           onClick={() => handleToggle(index)}
                           className="mt-auto text-[#CFA247] font-medium flex items-center hover:text-[#053420] transition-colors"
                         >
-                          {isExpanded ? "Show less" : "Read more"}
+                          {isExpanded ? t("reviews.hide") : t("reviews.read")}
                           <ArrowRight className="ml-1 w-4 h-4" />
                         </button>
                       )}

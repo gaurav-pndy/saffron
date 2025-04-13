@@ -135,7 +135,7 @@ const Menu = () => {
       className="px-4 md:px-6 lg:px-10 xl:px-20 py-8 max-w-7xl mx-auto overflow-clip"
     >
       <h2 className="text-3xl sm:text-4xl md:text-5xl font-cinzel font-[400] text-[#CFA247] leading-20 mt-8">
-        Explore Our Menu
+        {t("menu.heading")}
       </h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-5 mt-8">
@@ -163,7 +163,7 @@ const Menu = () => {
                   {category.name}
                 </h3>
                 <button className="px-4 w-fit transition-all duration-300 cursor-pointer py-2 bg-orange-500 text-white font-[500] rounded-2xl hover:bg-orange-600 font-poppins">
-                  Explore Items
+                  {t("menu.button")}
                 </button>
               </div>
             </div>

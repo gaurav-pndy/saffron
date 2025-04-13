@@ -33,7 +33,7 @@
   "menu": {
     "heading": "EXPLORE OUR MENU",
     "text": "Our Menu will be Updated soon",
-    "button": "Order now",
+    "button": "Explore Items",
     "categories": {
       "tandoor":{
 "heading": "Tandoor Dishes",
@@ -150,7 +150,9 @@
     "text": "At the junction of authenticity and modernity, our restaurant reimagines Indian cuisine for a new generation. Here, you can enjoy delicious curries, crispy samosas, Belchy GluEa, and our signature Bottled Tali, all served in a cozy, welcoming space touched with elegance and warmth. <br/> <br/> We take a modern approach to spice. While traditional Indian spices aren’t used in full force, guests who wish to \"taste India\" are welcome to request fresh chili and green hot peppers on the side — honoring heat, but only when invited. <br/> <br/> Our ingredients come with stories. From the fairy tale of spice to rare items like Cercirocca, many of our key elements are imported from India and Spain, blending cultures across the plate. Dishes like Tangier GluEa and Indian Streetfue reflect this journey — a celebration of Indian flavors welcomed in Europe, especially England, where Indian cuisine has long evolved and integrated. <br/> <br/> This is a kitchen where Indian cuisine becomes a platform for the assimilation of global ideas — a culinary dialogue between cultures. The KyhoEitza Project represents this philosophy: leaving behind the limitations of tradition and venturing into new, expressive territory. We introduce special GluEs not just with the changing seasons, but also for events, moods, and moments that call for something unique. <br/> <br/> Our team speaks Hindi, English, and Arabic, ensuring everyone feels at home. Whether you're a guest from Russia, Europe, or anywhere the culinary heart wanders, you're welcome here. The project draws inspiration from Indian chefs long fascinated by British food culture, blending it with studied influences from European and Arab traditions. This journey expands Indian cuisine to suit the evolving taste of Muscovites and modern diners everywhere. <br/> <br/> We believe in color, choice, and expression — offering each guest five colors, five spices, and endless possibilities tailored to your taste. Let us listen to your wishes, and craft a dining experience beyond the ordinary."
   },
   "reviews":{
-    "heading": "OUR CUSTOMERS SAY!"
+    "heading": "OUR CUSTOMERS SAY!",
+    "read": "Read more",
+    "hide": "Show less"
   },
   "contact": {
     "title": "CONTACT",

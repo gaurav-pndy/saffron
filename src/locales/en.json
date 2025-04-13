@@ -12,7 +12,8 @@
     "heading": "A World of Flavors <br/> on <span class='text-[#F7B41A] font-contrail'> Your Plate! </span>",
     "text": "Discover dishes that take your taste buds on a global adventure."
     ,
-    "button": "Get Started"
+    "button": "Get Started",
+    "thali": "Royal Thali Veg"
   },
   "dishGallery": {
     "at": "AT",

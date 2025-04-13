@@ -35,12 +35,30 @@ export default function Hero() {
           </button>
 
           {/* Reviews */}
-          {/* <div className="flex items-center gap-4 mt-6"> */}
-          <img
-            src="/hero images/happy-customers.png"
-            alt="Happy Customers"
-            className="mt-4 mx-auto xl:mx-0 xl:mt-12 w-60 lg:w-96"
-          />
+          {/* <div className="flex items-center  mt-6"> */}
+          <div className="mt-4 flex items-center gap-2 lg:gap-4 mx-auto xl:mx-0 xl:mt-12">
+            <img
+              src="/hero images/Frame 13.png"
+              alt="Happy Customers"
+              className="w-32 lg:w-48"
+            />
+            <div className="flex flex-col  gap-2 h-full">
+              <h3 className="text-xs lg:text-[1.05rem]  font-[500] font-poppins">
+                {t("hero.happycustomers")}
+              </h3>
+
+              <div className="flex gap-2 items-center">
+                <Star className="w-3 lg:w-5 h-3 lg:h-5 fill-yellow-400 stroke-yellow-400" />{" "}
+                <span className="text-sm font-poppins lg:text-lg font-[500]">
+                  4.9
+                </span>
+                <span className="text-xs font-poppins lg:text-sm text-gray-600">
+                  {" "}
+                  ({t("hero.reviews")} )
+                </span>
+              </div>
+            </div>
+          </div>
           {/* </div> */}
         </motion.div>
 

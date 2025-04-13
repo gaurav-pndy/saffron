@@ -113,9 +113,18 @@ export default function ReviewsCarousel() {
     <section className="bg-gradient-to-b from-[#f8f5ed] to-[#f0e9d8] py-16 relative overflow-clip">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#053420] tracking-tight">
+          <motion.h2
+            initial={{ opacity: 0, filter: "blur(8px)" }}
+            whileInView={{ opacity: 1, filter: "blur(0px)" }}
+            viewport={{ amount: 0.3 }}
+            transition={{
+              duration: 0.8,
+              ease: "easeInOut",
+            }}
+            className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#053420] tracking-tight"
+          >
             {t("reviews.heading")}
-          </h2>
+          </motion.h2>
           <div className="flex justify-center mt-4">
             <div className="w-24 h-1 bg-[#CFA247] rounded-full"></div>
           </div>

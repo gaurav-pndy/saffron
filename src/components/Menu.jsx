@@ -134,9 +134,18 @@ const Menu = () => {
       id="menu"
       className="px-4 md:px-6 lg:px-10 xl:px-20 py-8 max-w-7xl mx-auto overflow-clip"
     >
-      <h2 className="text-3xl sm:text-4xl md:text-5xl font-cinzel font-[400] text-[#CFA247] leading-20 mt-8">
+      <motion.h2
+        initial={{ opacity: 0, filter: "blur(8px)" }}
+        whileInView={{ opacity: 1, filter: "blur(0px)" }}
+        viewport={{ amount: 0.4 }}
+        transition={{
+          duration: 0.8,
+          ease: "easeInOut",
+        }}
+        className="text-3xl sm:text-4xl md:text-5xl font-cinzel font-[400] text-[#CFA247] leading-20 mt-8"
+      >
         {t("menu.heading")}
-      </h2>
+      </motion.h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-5 mt-8">
         {visibleCategories.map((category, index) => (

@@ -1,13 +1,34 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { useTranslation } from "react-i18next";
 import i18n from "../utils/i18n";
+import { AnimatePresence, motion } from "framer-motion";
 
 export default function Header() {
   const { t } = useTranslation();
   const [selectedLang, setSelectedLang] = useState(i18n.language);
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const mobileMenuRef = useRef(null);
+
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (
+        mobileMenuRef.current &&
+        !mobileMenuRef.current.contains(event.target)
+      ) {
+        setMobileMenuOpen(false);
+      }
+    }
+
+    if (isMobileMenuOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isMobileMenuOpen]);
 
   const changeLanguage = (lang) => {
     i18n.changeLanguage(lang);
@@ -111,39 +132,48 @@ export default function Header() {
       </div>
 
       {/* Mobile Menu */}
-      {isMobileMenuOpen && (
-        <div className="lg:hidden mt-10 space-y-4  px-4 pb-4">
-          <div className="flex justify-end">
-            <select
-              value={selectedLang}
-              onChange={(e) => changeLanguage(e.target.value)}
-              className="border border-orange-500 text-orange-600 rounded-md px-4 font-bold py-2 hover:bg-orange-50 font-quicksand cursor-pointer w-fit "
-            >
-              <option className="font-quicksand" value="en">
-                English
-              </option>
-              <option className="font-quicksand" value="ru">
-                Русский
-              </option>
-            </select>
-          </div>
-
-          <nav className="flex flex-col gap-4 text-base font-medium">
-            {["home", "menu", "about", "contact"].map((key) => (
-              <span
-                key={key}
-                onClick={() => {
-                  scrollToSection(key);
-                  setMobileMenuOpen(false);
-                }}
-                className="hover:text-orange-600 font-quicksand cursor-pointer"
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ y: -20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: -20, opacity: 0 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            ref={mobileMenuRef}
+            className="lg:hidden mt-10 space-y-4  px-4 pb-4"
+          >
+            <div className="flex justify-end">
+              <select
+                value={selectedLang}
+                onChange={(e) => changeLanguage(e.target.value)}
+                className="border border-orange-500 text-orange-600 rounded-md px-4 font-bold py-2 hover:bg-orange-50 font-quicksand cursor-pointer w-fit "
               >
-                {t(`header.${key}`)}
-              </span>
-            ))}
-          </nav>
-        </div>
-      )}
+                <option className="font-quicksand" value="en">
+                  English
+                </option>
+                <option className="font-quicksand" value="ru">
+                  Русский
+                </option>
+              </select>
+            </div>
+
+            <nav className="flex flex-col gap-4 text-base font-medium">
+              {["home", "menu", "about", "contact"].map((key) => (
+                <span
+                  key={key}
+                  onClick={() => {
+                    scrollToSection(key);
+                    setMobileMenuOpen(false);
+                  }}
+                  className="hover:text-orange-600 font-quicksand cursor-pointer"
+                >
+                  {t(`header.${key}`)}
+                </span>
+              ))}
+            </nav>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 }

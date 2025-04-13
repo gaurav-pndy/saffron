@@ -150,14 +150,25 @@ const DishGallery = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h3 className="text-base sm:text-lg md:text-xl text-[#800D1B] font-semibold tracking-widest font-cinzel uppercase mb-2">
-            {t("dishGallery.at")} –{" "}
-            <span className="font-light">{t("dishGallery.saffron")}</span>
-          </h3>
-          <h2
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-cinzel font-medium text-[#CFA247] leading-tight"
-            dangerouslySetInnerHTML={{ __html: t("dishGallery.title") }}
-          />
+          <motion.div
+            initial={{ opacity: 0, filter: "blur(8px)" }}
+            whileInView={{ opacity: 1, filter: "blur(0px)" }}
+            viewport={{ amount: 0.4 }}
+            transition={{
+              duration: 0.8,
+              ease: "easeInOut",
+            }}
+          >
+            <h3 className="text-base sm:text-lg md:text-xl text-[#800D1B] font-semibold tracking-widest font-cinzel uppercase mb-2">
+              {t("dishGallery.at")} –{" "}
+              <span className="font-light">{t("dishGallery.saffron")}</span>
+            </h3>
+
+            <motion.h2
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-cinzel font-medium text-[#CFA247] leading-tight"
+              dangerouslySetInnerHTML={{ __html: t("dishGallery.title") }}
+            />
+          </motion.div>
           <motion.div
             className="w-20 md:w-24 h-1 bg-[#CFA247] mx-auto mt-3 md:mt-4 rounded"
             initial={{ scaleX: 0 }}

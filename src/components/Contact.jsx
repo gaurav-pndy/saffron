@@ -60,7 +60,7 @@ const ContactSection = () => {
                   href="https://wa.me/message/6R3F4MT7S7ZPN1"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-[#19bd56] text-white px-4 py-3 rounded-md font-medium"
+                  className="bg-[#19bd56] text-white px-4 py-3 rounded-md font-medium hover:scale-110 transition-all duration-300"
                 >
                   <ImWhatsapp className="w-8 h-8" />
                 </a>
@@ -68,7 +68,7 @@ const ContactSection = () => {
                   href="https://eda.yandex.ru/restaurant/saffron_t8lmv"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-[#ffd600] text-white px-4 py-3 rounded-md font-medium"
+                  className="bg-[#ffd600] text-white px-4 py-3 rounded-md font-medium hover:scale-110 transition-all duration-300"
                 >
                   <img src="/yandex.png" alt="" className="h-8" />
                 </a>
@@ -93,7 +93,7 @@ const ContactSection = () => {
                 href="https://yandex.com/maps/-/CHVsAEmk"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="border bg-[#1D1D1D]/80 text-xl border-[#F40C00] text-[#F40C00] px-8 py-2 rounded-md font-semibold inline-flex items-center gap-3 font-quicksand"
+                className="border bg-[#1D1D1D]/80 text-xl border-[#F40C00] text-[#F40C00] px-8 py-2 rounded-md font-semibold inline-flex items-center gap-3 font-quicksand hover:bg-black transition-all duration-300"
               >
                 YANDEX <IoLocation className="w-6 h-6" />
               </a>

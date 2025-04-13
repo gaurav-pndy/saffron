@@ -7,7 +7,7 @@ const About = () => {
 
   return (
     <section id="about" className="my-20 ">
-      <div className="max-w-7xl bg-[#FEFAF3] px-6 py-16 lg:px-16 mx-auto flex flex-col md:flex-row gap-10 items-center text-center lg:text-left">
+      <div className="max-w-7xl bg-[#FEFAF3] px-6 py-16  mx-auto flex flex-col md:flex-row gap-10 items-center text-center lg:text-left">
         {/* Text Content */}
         <motion.div
           initial={{ scale: 0.7, opacity: 0 }}
@@ -48,7 +48,7 @@ const About = () => {
           <img
             src="/collage/aboutus.webp" // update path as per your file
             alt="Team behind Saffron restaurant"
-            className="rounded h-[35rem] object-cover w-auto"
+            className="rounded h-[30rem] md:h-[45rem] object-cover w-auto"
           />
         </motion.div>
       </div>

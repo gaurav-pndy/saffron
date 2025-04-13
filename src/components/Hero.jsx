@@ -1,7 +1,9 @@
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 export default function Hero() {
+  const { t } = useTranslation();
   return (
     <section className="bg-[#181818] text-white w-full px-4 py-10  relative overflow-hidden min-h-screen">
       <div className="max-w-7xl pt-24 lg:pt-30 mx-auto grid grid-cols-1 xl:grid-cols-2 gap-10  md:gap-20 xl:gap-10 items-end lg:px-10 ">
@@ -17,18 +19,18 @@ export default function Hero() {
           className="flex flex-col gap-5 text-center xl:text-left"
         >
           <div>
-            <h1 className="text-5xl md:text-6xl lg:text-[5rem] xl:text-[4.8rem]  leading-tight  font-contrail font-[400]">
-              A World of{" "}
-              <span className="text-white font-contrail">Flavors</span> <br />
-              on{" "}
-              <span className="text-[#F7B41A] font-contrail">Your Plate!</span>
+            <h1
+              className="text-5xl md:text-6xl lg:text-[5rem] xl:text-[4.8rem]  leading-tight  font-contrail font-[400] "
+              dangerouslySetInnerHTML={{ __html: t("hero.heading") }}
+            >
+              {/* {t("hero.heading")} */}
             </h1>
             <p className="text-base lg:text-2xl xl:text-xl mt-2 sm:text-xl text-gray-300 xl:max-w-lg font-poppins ">
-              Discover dishes that take your taste buds on a global adventure.
+              {t("hero.text")}
             </p>
           </div>
           <button className="bg-[#F7B41A] cursor-pointer transition-all duration-300 font-poppins font-[600] px-6 py-3 rounded-full w-fit md:mt-4 hover:bg-orange-500 mx-auto lg:text-lg xl:mx-0">
-            Get Started
+            {t("hero.button")}
           </button>
 
           {/* Reviews */}
@@ -50,8 +52,13 @@ export default function Hero() {
             ease: [0.77, 0, 0.175, 1],
             delay: 2,
           }}
-          className="relative w-full flex justify-center "
+          className="relative w-full  flex justify-center "
         >
+          <img
+            className="absolute w-24 md:w-36  -top-5 left-20 md:left-48 xl:left-28 -rotate-[20deg]"
+            src="/halal.png"
+            alt="Halal certified"
+          />
           {/* Main dish image */}
           <img
             src="/hero images/hero-image.png"

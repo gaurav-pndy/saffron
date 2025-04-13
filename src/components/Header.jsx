@@ -44,7 +44,7 @@ export default function Header() {
             <span
               key={key}
               onClick={() => scrollToSection(key)}
-              className="hover:text-orange-600  font-poppins cursor-pointer"
+              className="hover:text-orange-600 transition-all duration-300 font-poppins cursor-pointer"
             >
               {t(`header.${key}`)}
             </span>

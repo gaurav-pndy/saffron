@@ -27,7 +27,7 @@ const Footer = () => {
                 <span
                   key={key}
                   onClick={() => scrollToSection(key)}
-                  className="font-quicksand cursor-pointer hover:underline text-gray-400"
+                  className="font-quicksand cursor-pointer hover:underline text-gray-400 transition-all duration-300 hover:text-orange-500"
                 >
                   {t(`header.${key}`)}
                 </span>
@@ -80,16 +80,22 @@ const Footer = () => {
             <a
               href="https://www.facebook.com/share/1AAKfBcRYt/"
               target="_blank"
+              className="hover:scale-125 hover:text-orange-400 transition-all duration-300"
             >
               <FaFacebookF />
             </a>
             <a
               href="https://www.instagram.com/saffronmoscow?igsh=MTlvN3VndHhqb21xZQ=="
               target="_blank"
+              className="hover:scale-125 hover:text-orange-400 transition-all duration-300"
             >
               <FaInstagram />
             </a>
-            <a href="https://vk.com/saffronmoscow" target="_blank">
+            <a
+              href="https://vk.com/saffronmoscow"
+              target="_blank"
+              className="hover:scale-125 hover:text-orange-400 transition-all duration-300"
+            >
               <FaVk />
             </a>
           </div>

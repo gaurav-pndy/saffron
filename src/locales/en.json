@@ -55,7 +55,7 @@
 "item1": { "name": "Samosa", "desc": "Spicy pies  with potatoes and cashews"},
 "item2": { "name": "Prawns Pakoda", "desc": "Shrimp tempura  in Indian"},
 "item3": "Chicken Lollipop",
-"item4": "French Fries",
+"item4": "Indian French Fries",
 "item5": {"name":"Squid Pakoda", "desc": "Squid Pakoda" },
 "item6": {"name": "Mushroom Tikka", "desc": "Mushroom Tikka"}
        
@@ -77,8 +77,8 @@
         "item2": "Chicken",
         "item3": "Prawns",
         "item4": "Vegetarian",
-        "item5": "Raita",
-        "item6": "Mutton"
+        "item5": "Raita"
+    
       },
       "salads" :{
         "heading": "Salads",
@@ -91,18 +91,18 @@
       "soups" :{
         "heading": "Soups",
         "item1": { "name":"Mulligatawny" , "desc": "Lentil Soup"} ,
-        "item2": "Indiski Tom Yam",
+        "item2": "Indian Tom Yam",
         "item3": "Mutton soup with potatoes",
-        "item4": "Chicken and chickpea soup"
+        "item4": "Chicken and chickpeas soup"
        
       },
-      "hotter" :{
-        "heading": "Hotter",
+      "nonveg" :{
+        "heading": "Non Veg",
         "item1": { "name": "Kerala Fish Molly", "desc": "Tender salmon fillet cooked in Kerala with coconut"},
         "item2": { "name": "Rogan Josh", "desc": "Stewed lamb in vegetable sauce. Served with rice"},
         "item3": { "name": "Prawns Korma", "desc": "Shrimp in cashew sauce  and coconut cream. Served with saffron rice"},
         "item4": { "name": "Mutton Vindaloo", "desc": "Juicy mutton  with potatoes in sauce"},
-        "item5": { "name": "Chicken / Chicken tikka masala", "desc": "Baked tandoor chicken, cooked   in tomato and vegetable sauce  with cream"},
+        "item5": { "name": "Chicken tikka masala", "desc": "Baked tandoor chicken, cooked   in tomato and vegetable sauce  with cream"},
         "item6": { "name": "Prawns Masala", "desc": "Shrimps in spicy sauce"},
         "item7": { "name": "Chicken Curry", "desc": "Chicken fillet in vegetable curry sauce"}
       

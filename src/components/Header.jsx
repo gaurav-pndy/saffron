@@ -36,7 +36,7 @@ export default function Header() {
   };
 
   const toggleMobileMenu = () => {
-    setMobileMenuOpen((prev) => !prev);
+    setMobileMenuOpen(!isMobileMenuOpen);
   };
 
   const scrollToSection = (id) => {
@@ -123,12 +123,33 @@ export default function Header() {
           </a>
 
           <div className="flex items-center">
-            <button onClick={toggleMobileMenu}>
-              {isMobileMenuOpen ? (
-                <X className="w-9 h-9" />
-              ) : (
-                <Menu className="w-9 h-9" />
-              )}
+            <button
+              onClick={toggleMobileMenu}
+              className="p-2 focus:outline-none rounded-md  transition-colors"
+              aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+            >
+              <div className="relative w-8 h-8 flex items-center justify-center">
+                {/* Top bar */}
+                <span
+                  className={`absolute h-0.5 w-8 bg-white transform transition-all duration-300 ease-in-out ${
+                    isMobileMenuOpen ? "rotate-45" : "-translate-y-3"
+                  }`}
+                />
+
+                {/* Middle bar */}
+                <span
+                  className={`absolute h-0.5 w-8 bg-white transition-all duration-300 ease-in-out ${
+                    isMobileMenuOpen ? "opacity-0" : "opacity-100"
+                  }`}
+                />
+
+                {/* Bottom bar */}
+                <span
+                  className={`absolute h-0.5 w-8 bg-white transform transition-all duration-300 ease-in-out ${
+                    isMobileMenuOpen ? "-rotate-45" : "translate-y-3"
+                  }`}
+                />
+              </div>
             </button>
           </div>
         </div>

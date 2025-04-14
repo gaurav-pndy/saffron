@@ -172,7 +172,8 @@ const allItems = [
   {
     name: "menu.categories.biryani.item1",
     category: "menu.categories.biryani.heading",
-    // image: "/images/veg.jpg",
+    image:
+      "https://static.wixstatic.com/media/df6cc5_16f50f103add46c89b5e4dbce92b551f~mv2.jpg",
     price: 750,
   },
   {
@@ -201,13 +202,6 @@ const allItems = [
     category: "menu.categories.biryani.heading",
     // image: "/images/veg.jpg",
     price: 250,
-  },
-  {
-    name: "menu.categories.biryani.item6",
-    category: "menu.categories.biryani.heading",
-    image:
-      "https://static.wixstatic.com/media/df6cc5_16f50f103add46c89b5e4dbce92b551f~mv2.jpg",
-    price: 230,
   },
 
   //salads
@@ -244,7 +238,7 @@ const allItems = [
     category: "menu.categories.salads.heading",
     image:
       "https://static.wixstatic.com/media/df6cc5_b5642265869e46228b9a63d49043d7a4~mv2.jpg",
-    price: 200,
+    price: 350,
   },
 
   //soups
@@ -280,63 +274,63 @@ const allItems = [
 
   //hotter
   {
-    name: "menu.categories.hotter.item1.name",
-    desc: "menu.categories.hotter.item1.desc",
-    category: "menu.categories.hotter.heading",
+    name: "menu.categories.nonveg.item1.name",
+    desc: "menu.categories.nonveg.item1.desc",
+    category: "menu.categories.nonveg.heading",
     image:
       "https://static.wixstatic.com/media/df6cc5_a2d01a3d9991448897822dcb7769eb80~mv2.jpg",
     price: 750,
   },
   {
-    name: "menu.categories.hotter.item2.name",
-    desc: "menu.categories.hotter.item2.desc",
+    name: "menu.categories.nonveg.item2.name",
+    desc: "menu.categories.nonveg.item2.desc",
 
-    category: "menu.categories.hotter.heading",
+    category: "menu.categories.nonveg.heading",
     image:
       "https://static.wixstatic.com/media/df6cc5_e0cc2c1ec3b54fd4b807d3236a19b1b9~mv2.jpg",
     price: 750,
   },
   {
-    name: "menu.categories.hotter.item3.name",
-    desc: "menu.categories.hotter.item3.desc",
+    name: "menu.categories.nonveg.item3.name",
+    desc: "menu.categories.nonveg.item3.desc",
 
-    category: "menu.categories.hotter.heading",
+    category: "menu.categories.nonveg.heading",
     image:
       "https://static.wixstatic.com/media/df6cc5_5654a5bc5ce945a890c662e9fee3206e~mv2.jpg",
     price: 750,
   },
   {
-    name: "menu.categories.hotter.item4.name",
-    desc: "menu.categories.hotter.item4.desc",
+    name: "menu.categories.nonveg.item4.name",
+    desc: "menu.categories.nonveg.item4.desc",
 
-    category: "menu.categories.hotter.heading",
+    category: "menu.categories.nonveg.heading",
     image:
-      "https://static.wixstatic.com/media/df6cc5_7f27db67a2694efb86f11544652c7b72~mv2.jpg",
+      "https://static.wixstatic.com/media/df6cc5_0b6585bdbeca49d6abc24f1f0e77b52c~mv2.jpg",
     price: 690,
   },
   {
-    name: "menu.categories.hotter.item5.name",
-    desc: "menu.categories.hotter.item5.desc",
+    name: "menu.categories.nonveg.item5.name",
+    desc: "menu.categories.nonveg.item5.desc",
 
-    category: "menu.categories.hotter.heading",
+    category: "menu.categories.nonveg.heading",
     image:
       "https://static.wixstatic.com/media/df6cc5_c49e6123788a423ebc193d7146c6f589~mv2.jpg",
     price: 690,
   },
   {
-    name: "menu.categories.hotter.item6.name",
-    desc: "menu.categories.hotter.item6.desc",
+    name: "menu.categories.nonveg.item6.name",
+    desc: "menu.categories.nonveg.item6.desc",
 
-    category: "menu.categories.hotter.heading",
+    category: "menu.categories.nonveg.heading",
     image:
       "https://static.wixstatic.com/media/df6cc5_7f27db67a2694efb86f11544652c7b72~mv2.jpg",
     price: 720,
   },
   {
-    name: "menu.categories.hotter.item7.name",
-    desc: "menu.categories.hotter.item7.desc",
+    name: "menu.categories.nonveg.item7.name",
+    desc: "menu.categories.nonveg.item7.desc",
 
-    category: "menu.categories.hotter.heading",
+    category: "menu.categories.nonveg.heading",
     image:
       "https://static.wixstatic.com/media/df6cc5_cbf94f4e070b4ec88a29df377dfb1695~mv2.jpg",
     price: 650,
@@ -500,7 +494,7 @@ const allItems = [
     name: "menu.categories.desserts.item3",
     category: "menu.categories.desserts.heading",
     image:
-      "https://static.wixstatic.com/media/df6cc5_2aca55e36d814f1a9b8225776d7cdfb8~mv2.jpg",
+      "https://static.wixstatic.com/media/df6cc5_1f782dae5ba54bafaa9dec8b22cada9c~mv2.jpg",
     price: 250,
   },
   {

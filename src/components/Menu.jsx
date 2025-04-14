@@ -12,22 +12,22 @@ const Menu = () => {
       name: t("menu.categories.salads.heading"),
       image:
         "https://static.wixstatic.com/media/df6cc5_cc8d7abd1c714d3691e5e56e67210b7b~mv2.jpg",
-      col: "lg:col-span-5",
+      col: "lg:col-span-7",
     },
     {
       name: t("menu.categories.soups.heading"),
       image:
         "https://static.wixstatic.com/media/df6cc5_c28aafc0d28e405f93983c9fe4424d63~mv2.jpg",
-      col: "lg:col-span-7",
+      col: "lg:col-span-5",
     },
     {
       name: t("menu.categories.snacks.heading"),
       image:
         "https://static.wixstatic.com/media/df6cc5_298758b168d84391b683ec0a57673560~mv2.jpg",
-      col: "lg:col-span-5",
+      col: "lg:col-span-6",
     },
     {
-      name: t("menu.categories.hotter.heading"),
+      name: t("menu.categories.nonveg.heading"),
       image:
         "https://static.wixstatic.com/media/df6cc5_a2d01a3d9991448897822dcb7769eb80~mv2.jpg",
       col: "lg:col-span-6",
@@ -36,51 +36,51 @@ const Menu = () => {
       name: t("menu.categories.veg.heading"),
       image:
         "https://static.wixstatic.com/media/df6cc5_50568d18f0cf4722879bfb59c981e8e9~mv2.jpg",
-      col: "lg:col-span-6",
+      col: "lg:col-span-5",
     },
     {
       name: t("menu.categories.biryani.heading"),
       image:
         "https://static.wixstatic.com/media/df6cc5_5841e455c862446394686368ed716a11~mv2.jpg",
-      col: "lg:col-span-6",
+      col: "lg:col-span-7",
     },
     {
       name: t("menu.categories.tandoor.heading"),
       image:
         "https://static.wixstatic.com/media/df6cc5_5aa9c66a4b824310992df0779fc0d36b~mv2.jpg",
-      col: "lg:col-span-7",
+      col: "lg:col-span-6",
     },
     {
       name: t("menu.categories.tea.heading"),
       image:
         "https://static.wixstatic.com/media/df6cc5_c49e282286794808bba7c9af3fdb0541~mv2.jpg",
-      col: "lg:col-span-4",
+      col: "lg:col-span-6",
     },
     {
       name: t("menu.categories.cold.heading"),
       image:
         "https://static.wixstatic.com/media/df6cc5_f11e3c3bd3944191a296bfb99e36e4ab~mv2.jpg",
-      col: "lg:col-span-5",
+      col: "lg:col-span-7",
     },
 
     {
       name: t("menu.categories.desserts.heading"),
       image:
         "https://static.wixstatic.com/media/df6cc5_60d2e0c503b84fc6a49c29e123ca132e~mv2.jpg",
-      col: "lg:col-span-4",
+      col: "lg:col-span-5",
     },
 
     {
       name: t("menu.categories.sides.heading"),
       image:
         "https://static.wixstatic.com/media/df6cc5_ce54de88e7d8420d9bac8dd14886edfe~mv2.jpg",
-      col: "lg:col-span-6",
+      col: "lg:col-span-4",
     },
     {
       name: t("menu.categories.naan.heading"),
       image:
         "https://static.wixstatic.com/media/df6cc5_fd74b822faae48279d0b0823b50a1d7a~mv2.jpg",
-      col: "lg:col-span-7",
+      col: "lg:col-span-4",
     },
 
     {

@@ -5,6 +5,16 @@ import { Star } from "lucide-react";
 
 export default function Hero() {
   const { t } = useTranslation();
+
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      const yOffset = -80; // Adjust based on header height
+      const y =
+        element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }
+  };
   return (
     <section className="bg-[#181818] text-white w-full px-4 py-10  relative overflow-hidden min-h-screen">
       <div className="max-w-7xl pt-24 lg:pt-30 mx-auto grid grid-cols-1 xl:grid-cols-2 gap-10  md:gap-20 xl:gap-10 items-end lg:px-10 ">
@@ -30,7 +40,10 @@ export default function Hero() {
               {t("hero.text")}
             </p>
           </div>
-          <button className="bg-[#F7B41A] cursor-pointer transition-all duration-300 font-poppins font-[600] px-6 py-3 rounded-full w-fit md:mt-4 hover:bg-orange-500 mx-auto lg:text-lg xl:mx-0">
+          <button
+            onClick={() => scrollToSection("menu")}
+            className="bg-[#F7B41A] cursor-pointer transition-all duration-300 font-poppins font-[600] px-6 py-3 rounded-full w-fit md:mt-4 hover:bg-orange-500 mx-auto lg:text-lg xl:mx-0"
+          >
             {t("hero.button")}
           </button>
 

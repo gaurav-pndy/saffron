@@ -102,7 +102,7 @@ const Footer = () => {
         </div>
 
         {/* Order Now + Copyright */}
-        <div className="flex flex-col justify-center h-full space-y-6 sm:space-y-10 text-sm">
+        <div className="flex flex-col justify-center h-full space-y-6 sm:space-y-10 text-sm  ">
           {/* <div className="flex sm:justify-start lg:justify-end">
             <button
               className="text-[#CFA247] font-quicksand text-xl sm:text-2xl xl:px-5 py-2 rounded-full tracking-wide flex items-center gap-2 cursor-pointer"
@@ -112,9 +112,19 @@ const Footer = () => {
             </button>
           </div> */}
           <p className="text-xs font-quicksand text-gray-400 text-center md:text-left ">
-            Copyright @ - SAFFRON
+            Copyright @ - SAFFRON - 2025
             <br />
             {t("footer.rights")}
+          </p>
+          <p className="font-quicksand text-gray-400 text-xs text-center md:text-left ">
+            Digital Partner <br />
+            <a
+              className="font-quicksand hover:underline text-[#D4D5D9]"
+              target="_blank"
+              href="https://www.pasovit.com/"
+            >
+              Pasovit Technologies
+            </a>
           </p>
         </div>
       </div>

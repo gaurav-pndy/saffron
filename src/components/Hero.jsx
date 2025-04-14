@@ -74,8 +74,8 @@ export default function Hero() {
           className="relative w-full  flex justify-center "
         >
           <img
-            className="absolute w-24 md:w-36  -top-5 left-20 md:left-48 xl:left-28 -rotate-[20deg]"
-            src="/halal.png"
+            className="absolute w-24 md:w-36  -top-5 left-20 md:left-48 xl:left-28 -rotate-[20deg] rounded-full"
+            src="/halal.jpg"
             alt="Halal certified"
           />
           {/* Main dish image */}

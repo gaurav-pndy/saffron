@@ -93,7 +93,7 @@ const Menu = () => {
   const visibleCategories = showAll ? categories : categories.slice(0, 6);
 
   const handleClick = (categoryName) => {
-    navigate(`/category/${categoryName.toLowerCase()}`);
+    navigate(`/menu/${categoryName.toLowerCase()}`);
   };
 
   const handleButtonClick = () => {

@@ -83,9 +83,13 @@ export default function Header() {
             href="https://eda.yandex.ru/restaurant/saffron_t8lmv"
             target="_blank"
           >
-            <button className="border border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white transition-all duration-300 px-4 py-2 font-[400] rounded-md font-quicksand flex gap-2 items-center cursor-pointer uppercase">
+            <button className="border border-orange-500  text-orange-500 hover:bg-orange-500 hover:text-white transition-all duration-300 px-4 py-2 font-[400] rounded-md font-quicksand flex gap-2 items-center cursor-pointer uppercase">
               {t("header.yandex")}{" "}
-              <img src="/yandex.png" alt="" className="h-4" />
+              <img
+                src="/yandex.png"
+                alt=""
+                className="h-4 bg-[#ffe300] rounded"
+              />
             </button>
           </a>
           <select
@@ -110,7 +114,7 @@ export default function Header() {
           </a>
 
           <a
-            href="https://eda.yandex.ru/restaurant/saffron_t8lmvv"
+            href="https://eda.yandex.ru/restaurant/saffron_t8lmv"
             target="_blank"
           >
             <button className=" bg-[#ffe300] px-2 py-2 font-bold rounded-md font-quicksand flex gap-2 items-center justify-center uppercase w-full">

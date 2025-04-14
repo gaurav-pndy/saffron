@@ -13,9 +13,14 @@ export default function Header() {
 
   useEffect(() => {
     function handleClickOutside(event) {
+      const toggleButton = document.querySelector(
+        '[aria-label="Close menu"], [aria-label="Open menu"]'
+      );
       if (
         mobileMenuRef.current &&
-        !mobileMenuRef.current.contains(event.target)
+        !mobileMenuRef.current.contains(event.target) &&
+        toggleButton !== event.target &&
+        !toggleButton.contains(event.target)
       ) {
         setMobileMenuOpen(false);
       }
@@ -35,8 +40,12 @@ export default function Header() {
     setSelectedLang(lang);
   };
 
-  const toggleMobileMenu = () => {
-    setMobileMenuOpen(!isMobileMenuOpen);
+  const toggleMobileMenu = (event) => {
+    // Stop event from propagating to document listener
+    if (event) {
+      event.stopPropagation();
+    }
+    setMobileMenuOpen((prev) => !prev);
   };
 
   const scrollToSection = (id) => {
@@ -124,7 +133,7 @@ export default function Header() {
 
           <div className="flex items-center">
             <button
-              onClick={toggleMobileMenu}
+              onClick={(e) => toggleMobileMenu(e)}
               className="p-2 focus:outline-none rounded-md  transition-colors"
               aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
             >

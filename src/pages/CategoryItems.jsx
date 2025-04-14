@@ -5,6 +5,7 @@ import allItems from "../data/allItemsData";
 import { useTranslation } from "react-i18next";
 import i18next from "i18next";
 import { motion } from "framer-motion";
+import SEO from "../components/SEO";
 
 const CategoryItems = () => {
   const { t } = useTranslation();
@@ -30,6 +31,15 @@ const CategoryItems = () => {
 
   return (
     <div className="max-w-7xl mx-auto px-4 lg:px-10 xl:px-4 py-8  pt-36">
+      <SEO
+        title="Saffron Menu | Authentic Indian Dishes in Moscow | Tandoori, Biryani & Curries"
+        description="Explore Saffron's award-winning menu—Moscow's finest Indian cuisine. From tandoori specialties to biryanis, vegetarian curries, and royal thalis, savor authentic flavors crafted with premium spices."
+        keywords="Indian food menu Moscow, Saffron restaurant menu Moscow, best biryani in Moscow, tandoori dishes Moscow, paneer tikka Moscow, lamb rogan josh Moscow, prawns korma Moscow, chicken tikka masala Moscow, vegetarian Indian food Moscow, dal makhani Moscow, palak paneer Moscow, Indian desserts Moscow, gulab jamun Moscow, royal thali Moscow, Indian lunch specials Moscow, mango lassi Moscow, masala tea Moscow, индийское меню Москва, топ блюда индийской кухни Москва, тандури курица Москва, бирьяни Москва, вегетарианские карри Москва, королевский тали Москва, сафрановый десерт Москва, индийские закуски Москва, самоса Москва, индийские супы Москва"
+        url="https://saffronmoscow.com/menu"
+        canonical="https://saffronmoscow.com/menu"
+        ogTitle="Saffron Menu | Must-Try Indian Dishes in Moscow (2024)"
+        ogDescription="Discover Moscow’s #1 Indian restaurant menu—signature biryanis, tandoori grills, and curries made with traditional spices. Vegetarian & non-veg options available."
+      />
       <h2 className="text-4xl md:text-5xl font-bold mb-10 text-[#CFA247]  font-poppins capitalize">
         {t(filteredItems[0].category)}
       </h2>

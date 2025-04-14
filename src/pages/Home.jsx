@@ -1,5 +1,5 @@
 import React from "react";
-import Hero from "../components/Hero";
+import Hero2 from "../components/Hero2";
 import DishGallery from "../components/DishGallery";
 import Menu from "../components/Menu";
 import CollageGrid from "../components/CollageGrid";
@@ -22,7 +22,7 @@ const Home = () => {
         ogDescription="Moscow’s #1 ranked Indian restaurant—voted by critics and travelers for authentic flavors, impeccable service, and an unforgettable fine dining experience."
       />
       <LandingReveal />
-      <Hero />
+      <Hero2 />
       <DishGallery />
       <Menu />
       <CollageGrid />

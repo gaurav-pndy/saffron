@@ -4,6 +4,7 @@ import { IoLogoWhatsapp } from "react-icons/io";
 import { useTranslation } from "react-i18next";
 import i18n from "../utils/i18n";
 import { AnimatePresence, motion } from "framer-motion";
+import { PiWhatsappLogoBold } from "react-icons/pi";
 
 export default function Header() {
   const { t } = useTranslation();
@@ -83,23 +84,25 @@ export default function Header() {
 
         {/* Desktop Buttons & Language */}
         <div className="hidden lg:flex items-center text-sm gap-4">
-          <a href="https://wa.me/message/6R3F4MT7S7ZPN1" target="_blank">
-            <button className="border border-orange-400 hover:bg-orange-400 text-orange-400 hover:text-white font-[400] px-4 py-2 rounded-md font-quicksand transition-all duration-300 flex gap-2 items-center cursor-pointer uppercase">
-              {t("header.whatsapp")} <IoLogoWhatsapp size={16} />
+          <a
+            href="https://wa.me/message/6R3F4MT7S7ZPN1"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button className="icon-button whatsapp">
+              <PiWhatsappLogoBold size={20} />
             </button>
           </a>
+
           <a
-            href="https://eda.yandex.ru/restaurant/saffron_t8lmv"
+            href="https://eda.yandex.ru/restaurant/saffron_t8lmvv"
             target="_blank"
+            rel="noopener noreferrer"
           >
-            <button className="border border-orange-500  text-orange-500 hover:bg-orange-500 hover:text-white transition-all duration-300 px-4 py-2 font-[400] rounded-md font-quicksand flex gap-2 items-center cursor-pointer uppercase">
-              {t("header.yandex")}{" "}
-              <img
-                src="/yandex.png"
-                alt=""
-                className="h-4 bg-[#ffe300] rounded"
-              />
+            <button className="icon-button yandex">
+              <img src="/yandex.png" alt="Yandex" className="h-5" />
             </button>
+                      
           </a>
           <select
             value={selectedLang}

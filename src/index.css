@@ -18,3 +18,35 @@
 .font-contrail{
   font-family: "Contrail One", sans-serif;
 }
+
+.icon-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.icon-button:hover {
+  transform: scale(1.15) rotate(3deg);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.icon-button.whatsapp {
+  background-color: #25d366;
+  color: white;
+}
+
+.icon-button.whatsapp:hover {
+  background-color: #1ebe5d;
+}
+
+.icon-button.yandex {
+  background-color: #ffe300;
+}
+
+.icon-button.yandex:hover {
+  background-color: #ffdc00;
+}

@@ -15,7 +15,7 @@ const ContactSection = () => {
     <section id="contact" className="w-full bg-black text-[#ff8c00]">
       {/* Top section with background image */}
       <div
-        className="relative h-[85vh] lg:h-[40vh] xl:h-[75vh] md:h-[75vh] bg-cover bg-top flex items-center justify-center"
+        className="relative h-[85vh] lg:h-[40vh] xl:h-[90vh] md:h-[75vh] bg-cover bg-top flex items-center justify-center"
         style={{
           backgroundImage: `url("https://static.wixstatic.com/media/df6cc5_002c8e0839464d6ea4fe9aa3137fe4b1~mv2.png")`,
         }}

@@ -38,7 +38,7 @@ export default function Hero() {
             ease: "easeInOut",
             delay: 3,
           }}
-          className="text-[#ff8c00] text-shadow text-shadow-lg text-shadow-black/30 text-3xl md:text-5xl lg:text-[5rem] text-center leading-12  lg:leading-28 font-serif font-[700] px-4"
+          className="text-[#ff8c00] text-shadow text-shadow-lg text-shadow-black/30 text-3xl md:text-5xl lg:text-[5rem] text-center leading-12  lg:leading-28 font-serif font-[700] font-sofia px-4"
         >
           {t("hero.heading")}
         </motion.h1>

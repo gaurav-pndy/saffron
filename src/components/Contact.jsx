@@ -12,20 +12,22 @@ const ContactSection = () => {
   const { t } = useTranslation();
 
   return (
-    <section id="contact" className="w-full bg-black">
+    <section id="contact" className="w-full bg-black text-[#ff8c00]">
       {/* Top section with background image */}
       <div
-        className="relative h-[85vh] lg:h-[40vh] xl:h-[75vh] md:h-[75vh] bg-cover bg-center flex items-center justify-center"
-        style={{ backgroundImage: `url("/contact-bg.png")` }}
+        className="relative h-[85vh] lg:h-[40vh] xl:h-[75vh] md:h-[75vh] bg-cover bg-top flex items-center justify-center"
+        style={{
+          backgroundImage: `url("https://static.wixstatic.com/media/df6cc5_002c8e0839464d6ea4fe9aa3137fe4b1~mv2.png")`,
+        }}
       >
         {/* Overlay */}
-        {/* <div className="absolute inset-0 bg-black/0 z-0"></div> */}
+        {/* <div className="absolute inset-0 bg-black/70 z-0"></div> */}
 
-        <img
+        {/* <img
           src="/dark-logo.png"
           alt="Saffron Logo"
           className="w-[38rem] absolute top-10 md:top-20"
-        />
+        /> */}
         <div className="relative z-10 w-full max-w-7xl px-4 flex flex-col gap-4 md:gap-0">
           {/* Contact */}
           <motion.div
@@ -36,10 +38,10 @@ const ContactSection = () => {
               duration: 0.7,
               ease: [0.25, 0.1, 0.25, 1],
             }}
-            className="bg-[#D9D9D9]/20 md:w-fit h-fit text-white p-6 rounded-md text-center w-full "
+            className="bg-black/60 md:w-fit h-fit  p-6 rounded-md text-center w-full "
           >
             <h3 className="text-3xl font-medium mb-5">{t("contact.title")}</h3>
-            <button className="bg-[#1D1D1D]/80 text-xl font-quicksand font-semibold px-8 py-2 rounded-md">
+            <button className="bg-[#1D1D1D]/80 text-white text-xl font-quicksand font-semibold px-8 py-2 rounded-md">
               +7(985)-231-11-72
             </button>
           </motion.div>
@@ -55,8 +57,8 @@ const ContactSection = () => {
             }}
             className="text-center flex flex-col items-center justify-center "
           >
-            <div className="bg-[#D9D9D9]/20 p-6 w-full md:w-fit rounded-md border ">
-              <h4 className="text-white mb-5 text-3xl font-medium">
+            <div className="bg-black/60 p-6 w-full md:w-fit rounded-md border ">
+              <h4 className=" mb-5 text-3xl font-medium">
                 {t("contact.order")}
               </h4>
               <div className="flex justify-around">
@@ -75,7 +77,7 @@ const ContactSection = () => {
                   href="https://t.me/saffronmoskva"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className=" text-white rounded-md font-medium hover:scale-110 transition-all duration-300"
+                  className="  rounded-md font-medium hover:scale-110 transition-all duration-300"
                 >
                   <button className="p-1.5 rounded-full border-2 border-yellow-500 ">
                     <img src="/yandex.png" alt="" className="h-7 " />
@@ -96,7 +98,7 @@ const ContactSection = () => {
             }}
             className="w-full flex justify-end"
           >
-            <div className="bg-[#D9D9D9]/20 w-full md:w-fit p-6 text-white  rounded-md text-center ">
+            <div className="bg-black/60 w-full md:w-fit p-6   rounded-md text-center ">
               <h3 className="text-3xl font-medium mb-5">{t("contact.find")}</h3>
               <a
                 href="https://yandex.com/maps/-/CHVsAEmk"

@@ -59,6 +59,9 @@ const Footer = () => {
               <p className="font-quicksand text-[#D4D5D9]">
                 saffronmoscow@mail.ru
               </p>
+              <p className="font-quicksand text-[#D4D5D9]">
+                info@saffronmoscow.ru
+              </p>
             </div>
           </div>
           {/* <div className="md:hidden">

@@ -200,7 +200,8 @@ const allItems = [
   {
     name: "menu.categories.biryani.item5",
     category: "menu.categories.biryani.heading",
-    // image: "/images/veg.jpg",
+    image:
+      "https://static.wixstatic.com/media/df6cc5_9d8f5356cc7f4df9854def973d938430~mv2.png",
     price: 250,
   },
 
@@ -314,7 +315,7 @@ const allItems = [
 
     category: "menu.categories.nonveg.heading",
     image:
-      "https://static.wixstatic.com/media/df6cc5_c49e6123788a423ebc193d7146c6f589~mv2.jpg",
+      "https://static.wixstatic.com/media/df6cc5_cce6970703334f3e806752ec5e4b1f3f~mv2.jpg",
     price: 690,
   },
   {

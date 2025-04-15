@@ -27,7 +27,7 @@ const LandingReveal = () => {
           animate={{ y: "-100%" }}
           exit={{ y: "-100%" }}
           transition={{
-            duration: 1.2,
+            duration: 1.7,
             ease: [0.77, 0, 0.175, 1],
             delay: 2,
           }}
@@ -49,7 +49,7 @@ const LandingReveal = () => {
           animate={{ y: "100%" }}
           exit={{ y: "100%" }}
           transition={{
-            duration: 1.2,
+            duration: 1.7,
             ease: [0.77, 0, 0.175, 1],
             delay: 2,
           }}

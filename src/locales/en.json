@@ -9,7 +9,7 @@
         "yandex": "Yandex"
     },
     "hero": {
-    "heading": "Indian Modern Kitchen",
+    "heading": "Modern Indian kitchen",
     "text": "Discover dishes that take your taste buds on a global adventure."
     ,
     "button": "Get Started",
@@ -102,7 +102,7 @@
         "item2": { "name": "Rogan Josh", "desc": "Stewed lamb in vegetable sauce. Served with rice"},
         "item3": { "name": "Prawns Korma", "desc": "Shrimp in cashew sauce  and coconut cream. Served with saffron rice"},
         "item4": { "name": "Mutton Vindaloo", "desc": "Juicy mutton  with potatoes in sauce"},
-        "item5": { "name": "Chicken tikka masala", "desc": "Baked tandoor chicken, cooked   in tomato and vegetable sauce  with cream"},
+        "item5": { "name": "Butter Chicken", "desc": "Baked tandoor chicken, cooked   in tomato and vegetable sauce  with cream"},
         "item6": { "name": "Prawns Masala", "desc": "Shrimps in spicy sauce"},
         "item7": { "name": "Chicken Curry", "desc": "Chicken fillet in vegetable curry sauce"}
       

@@ -10,8 +10,8 @@ const imageGroups = [
   ["/collage/img5.jpg", "/collage/img14.jpg"],
   ["/collage/img4.jpg", "/collage/img13.jpg"],
   ["/collage/img9.jpg", "/collage/img11.jpg"],
-  ["/collage/img8.webp", "/collage/img17.jpg"],
-  ["/collage/img7.webp", "/collage/img18.webp"],
+  ["/collage/img19.jpg", "/collage/img17.jpg"],
+  ["/collage/img20.jpg", "/collage/img18.webp"],
 ];
 
 // Each layout is carefully designed to fill the entire container

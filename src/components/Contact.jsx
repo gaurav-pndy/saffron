@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { ImWhatsapp } from "react-icons/im";
 import { IoLocation } from "react-icons/io5";
 import { motion } from "framer-motion";
+import { PiWhatsappLogoBold } from "react-icons/pi";
 
 const ContactSection = () => {
   const { t } = useTranslation();
@@ -62,7 +63,7 @@ const ContactSection = () => {
                   rel="noopener noreferrer"
                   className="bg-[#19bd56] text-white px-4 py-3 rounded-md font-medium hover:scale-110 transition-all duration-300"
                 >
-                  <ImWhatsapp className="w-8 h-8" />
+                  <PiWhatsappLogoBold className="w-8 h-8" />
                 </a>
                 <a
                   href="https://eda.yandex.ru/restaurant/saffron_t8lmv"

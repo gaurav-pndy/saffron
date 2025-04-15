@@ -60,8 +60,8 @@ export default function Header() {
   };
 
   return (
-    <header className="w-full px-4  py-5 fixed top-0 z-50 bg-white  ">
-      <div className="max-w-7xl  mx-auto h-14 flex items-center justify-between">
+    <header className="w-full px-4 py-4 lg:py-5 fixed top-0 z-50 bg-white  ">
+      <div className="max-w-7xl  mx-auto h-12 lg:h-14 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center gap-1 text-3xl font-bold text-orange-600">
           <a href="/">

@@ -68,18 +68,18 @@ const ContactSection = () => {
                   rel="noopener noreferrer"
                   className="hover:scale-110 transition-all duration-300"
                 >
-                  <button className="p-2 rounded-full border-2 border-green-500  ">
-                    <FaWhatsapp size={24} className=" text-green-500" />
+                  <button className="p-2 rounded-full border-2 border-green-500  bg-green-500">
+                    <FaWhatsapp size={24} className=" text-black" />
                   </button>
                 </a>
 
                 <a
-                  href="https://t.me/saffronmoskva"
+                  href="https://eda.yandex.ru/restaurant/saffron_t8lmv"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="  rounded-md font-medium hover:scale-110 transition-all duration-300"
                 >
-                  <button className="p-1.5 rounded-full border-2 border-yellow-500 ">
+                  <button className="p-1.5 rounded-full border-2 border-yellow-500 bg-yellow-500">
                     <img src="/yandex.png" alt="" className="h-7 " />
                   </button>
                 </a>

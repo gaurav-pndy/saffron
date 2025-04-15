@@ -60,8 +60,8 @@ export default function Header() {
   };
 
   return (
-    <header className="w-full px-4  py-5 fixed top-0 z-50 bg-[#181818] text-white ">
-      <div className="max-w-7xl  mx-auto h-18 flex items-center justify-between">
+    <header className="w-full px-4  py-5 fixed top-0 z-50 bg-white  ">
+      <div className="max-w-7xl  mx-auto h-14 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center gap-1 text-3xl font-bold text-orange-600">
           <a href="/">
@@ -70,7 +70,7 @@ export default function Header() {
         </div>
 
         {/* Desktop Nav */}
-        <nav className="hidden lg:flex gap-8 h-full items-end pb-4 text-xl ">
+        <nav className="hidden lg:flex gap-8 h-full items-end pb-3 text-xl ">
           {["home", "menu", "about", "contact"].map((key) => (
             <span
               key={key}
@@ -143,21 +143,21 @@ export default function Header() {
               <div className="relative w-8 h-8 flex items-center justify-center">
                 {/* Top bar */}
                 <span
-                  className={`absolute h-0.5 w-8 bg-white transform transition-all duration-300 ease-in-out ${
+                  className={`absolute h-0.5 w-8 bg-black transform transition-all duration-300 ease-in-out ${
                     isMobileMenuOpen ? "rotate-45" : "-translate-y-3"
                   }`}
                 />
 
                 {/* Middle bar */}
                 <span
-                  className={`absolute h-0.5 w-8 bg-white transition-all duration-300 ease-in-out ${
+                  className={`absolute h-0.5 w-8 bg-black transition-all duration-300 ease-in-out ${
                     isMobileMenuOpen ? "opacity-0" : "opacity-100"
                   }`}
                 />
 
                 {/* Bottom bar */}
                 <span
-                  className={`absolute h-0.5 w-8 bg-white transform transition-all duration-300 ease-in-out ${
+                  className={`absolute h-0.5 w-8 bg-black transform transition-all duration-300 ease-in-out ${
                     isMobileMenuOpen ? "-rotate-45" : "translate-y-3"
                   }`}
                 />

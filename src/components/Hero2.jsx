@@ -42,11 +42,11 @@ export default function Hero() {
         >
           {t("hero.heading")}
         </motion.h1>
-        <img
+        {/* <img
           className=" absolute bottom-3 right-3 lg:bottom-40 lg:right-40 w-20 md:w-36  -rotate-[20deg] rounded-full"
           src="/halal.jpg"
           alt="Halal certified"
-        />
+        /> */}
       </div>
     </section>
   );

@@ -1,39 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
-import { motion, AnimatePresence } from "framer-motion";
-
-const dishes = [
-  ["dish1", "dish2", "dish3"], // for card 1
-  ["dish4", "dish5", "dish6"], // for card 2
-  ["dish7", "dish8", "dish9"], // for card 3
-];
-
-const dishImageMap = {
-  dish1:
-    "https://static.wixstatic.com/media/df6cc5_e0cc2c1ec3b54fd4b807d3236a19b1b9~mv2.jpg",
-  dish2:
-    "https://static.wixstatic.com/media/df6cc5_390bd97612364e54a6f6b0347a8381e7~mv2.jpg",
-  dish3:
-    "https://static.wixstatic.com/media/df6cc5_349bf4b5bb0b4c819e3620e0b8288dfb~mv2.jpg",
-  dish4:
-    "https://static.wixstatic.com/media/df6cc5_5841e455c862446394686368ed716a11~mv2.jpg",
-  dish5:
-    "https://static.wixstatic.com/media/df6cc5_842b0f5b24a743f7a7fe6750330e58ad~mv2.jpg",
-  dish6:
-    "https://static.wixstatic.com/media/df6cc5_b4b1ce3e3d114bea9a586ba5bd5d8456~mv2.jpg",
-  dish7:
-    "https://static.wixstatic.com/media/df6cc5_60d2e0c503b84fc6a49c29e123ca132e~mv2.jpg",
-  dish8:
-    "https://static.wixstatic.com/media/df6cc5_8474905862984f73aed0a71d2fb654a8~mv2.jpg",
-  dish9:
-    "https://static.wixstatic.com/media/df6cc5_bcf8e68e97824971857dd7ae77e9d6ae~mv2.jpg",
-};
+import { motion } from "framer-motion";
 
 const DishGallery = () => {
   const { t } = useTranslation();
-  const [currentIndices, setCurrentIndices] = useState([0, 0, 0]);
-  const [isHovered, setIsHovered] = useState([false, false, false]);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [isMuted, setIsMuted] = useState(true);
+  const [volume, setVolume] = useState(0.5);
+  const videoRef = useRef(null);
 
   // Handle window resize
   useEffect(() => {
@@ -45,96 +19,73 @@ const DishGallery = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Auto-rotate images every 3 seconds
+  // Handle volume change
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndices((prev) => {
-        return prev.map((index, cardIdx) => {
-          if (isHovered[cardIdx]) return index;
-          return (index + 1) % dishes[cardIdx].length;
-        });
-      });
-    }, 3000);
+    if (videoRef.current) {
+      videoRef.current.volume = volume;
+    }
+  }, [volume]);
 
-    return () => clearInterval(interval);
-  }, [isHovered]);
-
-  // Determine number of cards to display based on screen size
-  const getVisibleCards = () => {
-    if (windowWidth >= 1024) return 3; // Large devices - 3 cards
-    if (windowWidth >= 768) return 2; // Medium devices - 2 cards
-    return 1; // Small devices - 1 card
+  const toggleMute = () => {
+    if (videoRef.current) {
+      videoRef.current.muted = !isMuted;
+      setIsMuted(!isMuted);
+    }
   };
 
-  // Card layout variants - responsive elevation
-  const cardVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: (custom) => ({
+  const handleVolumeChange = (e) => {
+    const newVolume = parseFloat(e.target.value);
+    setVolume(newVolume);
+    if (newVolume > 0 && isMuted) {
+      setIsMuted(false);
+      if (videoRef.current) {
+        videoRef.current.muted = false;
+      }
+    }
+  };
+
+  // Adjust video height based on screen size
+  const videoHeight = windowWidth >= 768 ? "32rem" : "28rem";
+
+  // Text animation variants
+  const textVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
       opacity: 1,
-      y: getVisibleCards() === 3 && custom === 1 ? -30 : 0, // Only elevate center card when showing 3 cards
+      y: 0,
       transition: {
-        type: "spring",
-        stiffness: 100,
-        damping: 15,
-        delay: custom * 0.15,
+        duration: 0.8,
+        ease: "easeOut",
       },
-    }),
-    hover: {
-      y: 0, // All cards level out on hover
-      scale: 1.03,
-      transition: { type: "spring", stiffness: 400, damping: 10 },
     },
   };
 
-  // Custom flip directions for each card
-  const getFlipVariants = (cardIdx) => ({
-    enter: {
-      opacity: 0,
-      rotateY:
-        getVisibleCards() === 3
-          ? cardIdx === 0
-            ? 90
-            : cardIdx === 2
-            ? -90
-            : 90 // 3 cards: left/center/right flips
-          : getVisibleCards() === 2
-          ? cardIdx === 0
-            ? 90
-            : -90 // 2 cards: left/right flips
-          : 90, // 1 card: standard flip
-      scale: 0.8,
-    },
-    center: {
+  const titleVariants = {
+    hidden: { opacity: 0 },
+    visible: {
       opacity: 1,
-      rotateY: 0,
-      scale: 1,
       transition: {
-        duration: 0.7,
+        staggerChildren: 0.1,
+        delayChildren: 0.3,
       },
     },
-    exit: {
-      opacity: 0,
-      rotateY:
-        getVisibleCards() === 3
-          ? cardIdx === 0
-            ? -90
-            : cardIdx === 2
-            ? 90
-            : -90
-          : getVisibleCards() === 2
-          ? cardIdx === 0
-            ? -90
-            : 90
-          : -90,
-      scale: 0.8,
-      transition: {
-        duration: 0.7,
-      },
-    },
-  });
+  };
 
-  // Adjust card height based on screen size
-  const cardHeight = windowWidth >= 768 ? "32rem" : "28rem";
+  const letterVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        ease: [0.3, 0.1, 0.3, 1],
+      },
+    },
+  };
+
+  // Split title into letters for animation
+  const titleText = t("dishGallery.title");
+  const letters = titleText.split("");
 
   return (
     <motion.section
@@ -143,7 +94,7 @@ const DishGallery = () => {
       animate="visible"
     >
       <div className="max-w-7xl mx-auto">
-        {/* Header */}
+        {/* Animated Header */}
         <motion.div
           className="text-center mb-12 md:mb-16"
           initial={{ opacity: 0, y: -20 }}
@@ -177,89 +128,100 @@ const DishGallery = () => {
           />
         </motion.div>
 
-        {/* Responsive Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mt-8 md:mt-12 items-end">
-          {dishes.slice(0, getVisibleCards()).map((card, cardIdx) => (
-            <motion.div
-              key={cardIdx}
-              className="relative rounded-xl md:rounded-2xl overflow-hidden shadow-lg md:shadow-xl"
-              style={{
-                height: cardHeight,
-                perspective: "1200px",
-                transformStyle: "preserve-3d",
-              }}
-              custom={cardIdx}
-              variants={cardVariants}
-              initial="hidden"
-              animate="visible"
-              whileHover="hover"
-              onMouseEnter={() =>
-                setIsHovered((prev) => {
-                  const newHovered = [...prev];
-                  newHovered[cardIdx] = true;
-                  return newHovered;
-                })
-              }
-              onMouseLeave={() =>
-                setIsHovered((prev) => {
-                  const newHovered = [...prev];
-                  newHovered[cardIdx] = false;
-                  return newHovered;
-                })
-              }
+        {/* Video Container */}
+        <div className="flex justify-center">
+          <motion.div
+            className="relative rounded-xl md:rounded-2xl overflow-hidden shadow-lg md:shadow-xl"
+            style={{
+              height: videoHeight,
+              width: "100%",
+              maxWidth: "800px",
+            }}
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.7, delay: 0.4 }}
+          >
+            <video
+              ref={videoRef}
+              autoPlay
+              loop
+              muted={isMuted}
+              playsInline
+              className="w-full h-full object-cover"
             >
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={dishes[cardIdx][currentIndices[cardIdx]]}
-                  className="absolute inset-0"
-                  variants={getFlipVariants(cardIdx)}
-                  initial="enter"
-                  animate="center"
-                  exit="exit"
-                  style={{
-                    transformStyle: "preserve-3d",
-                    backfaceVisibility: "hidden",
-                  }}
-                >
-                  <img
-                    src={dishImageMap[dishes[cardIdx][currentIndices[cardIdx]]]}
-                    alt={`Dish ${cardIdx + 1}`}
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-4 md:p-6">
-                    <div>
-                      <h3 className="text-white text-xl md:text-2xl font-medium font-cinzel">
-                        {t(
-                          `dishGallery.${
-                            dishes[cardIdx][currentIndices[cardIdx]]
-                          }`
-                        )}
-                      </h3>
-                    </div>
-                  </div>
-                </motion.div>
-              </AnimatePresence>
+              <source
+                src="https://video.wixstatic.com/video/df6cc5_8e88f58257af47ed9276ca3645765d96/720p/mp4/file.mp4"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
 
-              {/* Navigation Dots */}
-              <div className="absolute bottom-3 md:bottom-4 left-0 right-0 flex justify-center gap-1 md:gap-2 z-10">
-                {dishes[cardIdx].map((_, idx) => (
-                  <button
-                    key={idx}
-                    className={`w-1.5 h-1.5 md:w-2 md:h-2 rounded-full transition-all ${
-                      currentIndices[cardIdx] === idx
-                        ? "bg-white md:w-4"
-                        : "bg-white/50"
-                    }`}
-                    onClick={() => {
-                      const newIndices = [...currentIndices];
-                      newIndices[cardIdx] = idx;
-                      setCurrentIndices(newIndices);
-                    }}
-                  />
-                ))}
-              </div>
+            {/* Audio Controls */}
+            <motion.div
+              className="absolute top-4 right-4 flex items-center gap-2 z-10"
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.8 }}
+            >
+              {!isMuted && (
+                <motion.input
+                  type="range"
+                  min="0"
+                  max="1"
+                  step="0.01"
+                  value={volume}
+                  onChange={handleVolumeChange}
+                  className="w-20 accent-white"
+                  initial={{ opacity: 0, width: 0 }}
+                  animate={{ opacity: 1, width: 80 }}
+                  exit={{ opacity: 0, width: 0 }}
+                  transition={{ duration: 0.2 }}
+                />
+              )}
+
+              <button
+                onClick={toggleMute}
+                className="p-2 bg-black/30 rounded-full text-white hover:bg-black/50 transition-all"
+                aria-label={isMuted ? "Unmute" : "Mute"}
+              >
+                {isMuted ? (
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-5 w-5"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM12.293 7.293a1 1 0 011.414 0L15 8.586l1.293-1.293a1 1 0 111.414 1.414L16.414 10l1.293 1.293a1 1 0 01-1.414 1.414L15 11.414l-1.293 1.293a1 1 0 01-1.414-1.414L13.586 10l-1.293-1.293a1 1 0 010-1.414z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                ) : (
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-5 w-5"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.984 5.984 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.983 3.983 0 00-1.172-2.828 1 1 0 010-1.415z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                )}
+              </button>
             </motion.div>
-          ))}
+
+            {/* Video Caption */}
+            <motion.div
+              className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-4 md:p-6"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.9 }}
+            ></motion.div>
+          </motion.div>
         </div>
       </div>
     </motion.section>

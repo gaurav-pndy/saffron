@@ -5,6 +5,8 @@ import { IoLocation } from "react-icons/io5";
 import { motion } from "framer-motion";
 import { PiWhatsappLogoBold } from "react-icons/pi";
 import { IoLogoWhatsapp } from "react-icons/io";
+import { FaWhatsapp } from "react-icons/fa";
+import { LiaTelegramPlane } from "react-icons/lia";
 
 const ContactSection = () => {
   const { t } = useTranslation();
@@ -14,7 +16,7 @@ const ContactSection = () => {
       {/* Top section with background image */}
       <div
         className="relative h-[85vh] lg:h-[40vh] xl:h-[75vh] md:h-[75vh] bg-cover bg-center flex items-center justify-center"
-        style={{ backgroundImage: `url('/contact-bg.png')` }}
+        style={{ backgroundImage: `url("/contact-bg.png")` }}
       >
         {/* Overlay */}
         {/* <div className="absolute inset-0 bg-black/0 z-0"></div> */}
@@ -62,17 +64,28 @@ const ContactSection = () => {
                   href="https://wa.me/message/6R3F4MT7S7ZPN1"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-[#19bd56] text-white px-4 py-3 rounded-md font-medium hover:scale-110 transition-all duration-300"
                 >
-                  <IoLogoWhatsapp className="w-8 h-8" />
+                  <button className="p-2 rounded-full border-2 border-green-500 neon-green bg-white">
+                    <FaWhatsapp
+                      size={22}
+                      className="glow-icon-green text-green-500"
+                    />
+                  </button>
                 </a>
+
                 <a
-                  href="https://eda.yandex.ru/restaurant/saffron_t8lmv"
+                  href="https://t.me/saffronmoskva"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-[#ffd600] text-white px-4 py-3 rounded-md font-medium hover:scale-110 transition-all duration-300"
+                  className=" text-white rounded-md font-medium hover:scale-110 transition-all duration-300"
                 >
-                  <img src="/yandex.png" alt="" className="h-8" />
+                  <button className="p-2 rounded-full border-2 border-yellow-500 neon-yellow">
+                    <img
+                      src="/yandex.png"
+                      alt=""
+                      className="h-7 glow-icon-yellow"
+                    />
+                  </button>
                 </a>
               </div>
             </div>

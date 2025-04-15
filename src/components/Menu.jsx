@@ -1,8 +1,8 @@
-// Menu.tsx
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { motion, AnimatePresence } from "framer-motion";
+import { FaArrowRight } from "react-icons/fa";
 
 const Menu = () => {
   const { t } = useTranslation();
@@ -150,14 +150,13 @@ const Menu = () => {
         {t("menu.heading")}
       </motion.h2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-5 mt-8">
+      <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-12 gap-5 mt-8">
         {visibleCategories.map((category, index) => (
           <motion.div
             key={index}
             className={`cursor-pointer rounded-xl overflow-hidden shadow hover:shadow-lg group ${category.col}`}
             initial={index % 2 === 0 ? "hiddenLeft" : "hiddenRight"}
             whileInView="visible"
-            // viewport={{ once: true, amount: 0.3 }}
             variants={slideVariants}
           >
             <div
@@ -165,18 +164,22 @@ const Menu = () => {
               className="relative w-full h-52 lg:h-60 bg-cover flex flex-col justify-between p-5 text-white"
               style={{
                 backgroundImage: `url(${category.image})`,
-                backgroundPosition: "85% center", // pushes image to the right
+                backgroundPosition: "85% center",
               }}
             >
               <div className="absolute inset-0 bg-black/60 group-hover:bg-opacity-40 transition-all duration-300"></div>
 
               <div className="relative flex flex-col justify-between h-full z-10">
-                <h3 className="text-3xl text-shadow-lg font-semibold mb-2 font-poppins">
+                <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold mb-2 font-poppins text-shadow-lg leading-snug">
                   {category.name}
                 </h3>
-                <button className="px-4 w-fit transition-all duration-300 cursor-pointer py-2 bg-orange-500 text-white font-[500] rounded-2xl hover:bg-orange-600 font-poppins">
-                  {t("menu.button")}
-                </button>
+
+                {/* Arrow Icon in Bottom Right */}
+                <div className="absolute bottom-4 right-4">
+                  <div className="bg-orange-500 hover:bg-orange-600 transition-all duration-300 p-3 rounded-full cursor-pointer shadow-lg">
+                    <FaArrowRight className="text-white" size={16} />
+                  </div>
+                </div>
               </div>
             </div>
           </motion.div>

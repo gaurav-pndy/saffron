@@ -50,3 +50,108 @@
 .icon-button.yandex:hover {
   background-color: #ffdc00;
 }
+
+/* Button effects */
+.neon-button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.neon-button:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+/* Neon glow animations */
+@keyframes neon-green-glow {
+  0%, 100% {
+    box-shadow: 0 0 5px #25D366, 0 0 10px #25D366, 0 0 15px #25D366;
+    background-color: white;
+    border-radius: 50%;
+  }
+  50% {
+    box-shadow: 0 0 10px #25D366, 0 0 20px #25D366, 0 0 30px #25D366;
+    background-color: rgba(37, 211, 102, 0.1);
+  }
+}
+
+@keyframes neon-blue-glow {
+  0%, 100% {
+    box-shadow: 0 0 5px #0088cc, 0 0 10px #0088cc, 0 0 15px #0088cc;
+    background-color: white;
+    border-radius: 50%;
+  }
+  50% {
+    box-shadow: 0 0 10px #0088cc, 0 0 20px #0088cc, 0 0 30px #0088cc;
+    background-color: rgba(0, 136, 204, 0.1);
+  }
+}
+
+/* Icon glow effects */
+.glow-icon-green {
+  filter: drop-shadow(0 0 2px #25D366);
+  animation: neon-green-glow 1.5s ease-in-out infinite alternate;
+}
+
+.glow-icon-blue {
+  filter: drop-shadow(0 0 2px #0088cc);
+  animation: neon-blue-glow 1.5s ease-in-out infinite alternate;
+}
+
+/* Button effects */
+.neon-green {
+  transition: all 0.3s ease;
+  animation: neon-green-glow 1.5s ease-in-out infinite alternate;
+  background-color: transparent;
+}
+
+.neon-blue {
+  transition: all 0.3s ease;
+  animation: neon-blue-glow 1.5s ease-in-out infinite alternate;
+  background-color: transparent;
+}
+
+.neon-green:hover {
+  transform: scale(1.1);
+  animation: neon-green-glow 0.5s ease-in-out infinite alternate;
+}
+
+.neon-blue:hover {
+  transform: scale(1.1);
+  animation: neon-blue-glow 0.5s ease-in-out infinite alternate;
+}
+/* Neon glow animation: Yellow */
+@keyframes neon-yellow-glow {
+  0%, 100% {
+    box-shadow: 0 0 5px #FFD700, 0 0 10px #FFD700, 0 0 15px #FFD700;
+    background-color: white;
+    border-radius: 50%;
+  }
+  50% {
+    box-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 30px #FFD700;
+    background-color: rgba(255, 215, 0, 0.1);
+  }
+}
+
+/* Icon glow effect: Yellow */
+.glow-icon-yellow {
+  filter: drop-shadow(0 0 2px #FFD700);
+  animation: neon-yellow-glow 1.5s ease-in-out infinite alternate;
+}
+
+/* Button effect: Neon Yellow */
+.neon-yellow {
+  transition: all 0.3s ease;
+  animation: neon-yellow-glow 1.5s ease-in-out infinite alternate;
+  background-color: transparent;
+}
+
+.neon-yellow:hover {
+  transform: scale(1.1);
+  animation: neon-yellow-glow 0.5s ease-in-out infinite alternate;
+}

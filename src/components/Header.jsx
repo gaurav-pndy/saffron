@@ -5,6 +5,8 @@ import { useTranslation } from "react-i18next";
 import i18n from "../utils/i18n";
 import { AnimatePresence, motion } from "framer-motion";
 import { PiWhatsappLogoBold } from "react-icons/pi";
+import { LiaTelegramPlane } from "react-icons/lia";
+import { FaWhatsapp } from "react-icons/fa";
 
 export default function Header() {
   const { t } = useTranslation();
@@ -89,21 +91,27 @@ export default function Header() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <button className="icon-button whatsapp">
-              <IoLogoWhatsapp size={20} />
+            <button className="p-2 rounded-full border-2 border-green-500 neon-green">
+              <FaWhatsapp
+                size={22}
+                className="glow-icon-green text-green-500"
+              />
             </button>
           </a>
 
           <a
-            href="https://eda.yandex.ru/restaurant/saffron_t8lmvv"
+            href="https://t.me/your_telegram_username"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <button className="icon-button yandex">
-              <img src="/yandex.png" alt="Yandex" className="h-5" />
+            <button className="p-2 rounded-full border-2 border-blue-500 neon-blue">
+              <LiaTelegramPlane
+                size={22}
+                className="glow-icon-blue text-blue-500"
+              />
             </button>
-                      
           </a>
+
           <select
             value={selectedLang}
             onChange={(e) => changeLanguage(e.target.value)}
@@ -119,21 +127,30 @@ export default function Header() {
         </div>
 
         <div className="flex lg:hidden gap-4 items-center">
-          <a href="https://wa.me/message/6R3F4MT7S7ZPN1" target="_blank">
-            <button className="bg-green-500 hover:bg-green-600 text-white px-2 py-2 rounded-md font-quicksand font-bold flex gap-2 items-center justify-center uppercase w-full">
-              <IoLogoWhatsapp size={20} />
-            </button>
-          </a>
-
           <a
-            href="https://eda.yandex.ru/restaurant/saffron_t8lmv"
+            href="https://wa.me/message/6R3F4MT7S7ZPN1"
             target="_blank"
+            rel="noopener noreferrer"
           >
-            <button className=" bg-[#ffe300] px-2 py-2 font-bold rounded-md font-quicksand flex gap-2 items-center justify-center uppercase w-full">
-              <img src="/yandex.png" alt="" className="h-5" />
+            <button className="p-2 rounded-full border-2 border-green-500 neon-green bg-white">
+              <FaWhatsapp
+                size={22}
+                className="glow-icon-green text-green-500"
+              />
             </button>
           </a>
-
+          <a
+            href="https://t.me/your_telegram_username"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button className="p-2 rounded-full border-2 border-blue-500 neon-blue">
+              <LiaTelegramPlane
+                size={22}
+                className="glow-icon-blue text-blue-500"
+              />
+            </button>
+          </a>
           <div className="flex items-center">
             <button
               onClick={(e) => toggleMobileMenu(e)}

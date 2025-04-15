@@ -21,6 +21,7 @@ const Footer = () => {
         {/* Logo & Links */}
         <div>
           <img src="/dark-logo.png" alt="Saffron Logo" className="h-10 mb-4" />
+
           <div className=" text-sm md:mt-12 font-[300] space-y-1">
             <nav className="flex gap-6 font-medium">
               {["home", "menu", "about", "contact"].map((key) => (
@@ -102,7 +103,7 @@ const Footer = () => {
         </div>
 
         {/* Order Now + Copyright */}
-        <div className="flex flex-col justify-center h-full space-y-6 sm:space-y-10 text-sm  ">
+        <div className="flex flex-col justify-center h-full space-y-6 sm:space-y-5 text-sm  ">
           {/* <div className="flex sm:justify-start lg:justify-end">
             <button
               className="text-[#CFA247] font-quicksand text-xl sm:text-2xl xl:px-5 py-2 rounded-full tracking-wide flex items-center gap-2 cursor-pointer"
@@ -111,6 +112,11 @@ const Footer = () => {
               {t("footer.orderNow")} <FaCircleArrowUp />
             </button>
           </div> */}
+          <img
+            className="mx-auto md:mx-auto bg-white w-20 md:w-20 rounded-full"
+            src="https://static.wixstatic.com/media/df6cc5_2129ef23a79b4294b90d8629f09ce50d~mv2.png"
+            alt="Halal certified"
+          />
           <p className="text-xs font-quicksand text-gray-400 text-center md:text-left ">
             Copyright @ - SAFFRON - 2025
             <br />

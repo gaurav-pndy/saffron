@@ -64,7 +64,7 @@ const About = () => {
           <img
             src="/collage/aboutus.webp" // update path as per your file
             alt="Team behind Saffron restaurant"
-            className="rounded h-[30rem] md:h-[45rem] object-cover w-auto"
+            className="rounded h-[30rem] md:h-[35rem] object-cover w-auto"
           />
         </motion.div>
       </div>

@@ -90,25 +90,21 @@ export default function Header() {
             href="https://wa.me/message/6R3F4MT7S7ZPN1"
             target="_blank"
             rel="noopener noreferrer"
+            className="hover:scale-110 transition-all duration-300"
           >
-            <button className="p-2 rounded-full border-2 border-green-500 neon-green">
-              <FaWhatsapp
-                size={22}
-                className="glow-icon-green text-green-500"
-              />
+            <button className="p-2 rounded-full border-3 border-green-500 ">
+              <FaWhatsapp size={22} className=" text-green-500" />
             </button>
           </a>
 
           <a
-            href="https://t.me/your_telegram_username"
+            href="https://t.me/saffronmoskva"
             target="_blank"
             rel="noopener noreferrer"
+            className="hover:scale-110 transition-all duration-300"
           >
-            <button className="p-2 rounded-full border-2 border-blue-500 neon-blue">
-              <LiaTelegramPlane
-                size={22}
-                className="glow-icon-blue text-blue-500"
-              />
+            <button className="p-2 rounded-full border-3 border-blue-500 ">
+              <LiaTelegramPlane size={22} className=" text-blue-500" />
             </button>
           </a>
 
@@ -132,23 +128,17 @@ export default function Header() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <button className="p-2 rounded-full border-2 border-green-500 neon-green bg-white">
-              <FaWhatsapp
-                size={22}
-                className="glow-icon-green text-green-500"
-              />
+            <button className="p-2 rounded-full border-2 border-green-500  bg-white">
+              <FaWhatsapp size={22} className=" text-green-500" />
             </button>
           </a>
           <a
-            href="https://t.me/your_telegram_username"
+            href="https://t.me/saffronmoskva"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <button className="p-2 rounded-full border-2 border-blue-500 neon-blue">
-              <LiaTelegramPlane
-                size={22}
-                className="glow-icon-blue text-blue-500"
-              />
+            <button className="p-2 rounded-full border-2 border-blue-500 ">
+              <LiaTelegramPlane size={22} className=" text-blue-500" />
             </button>
           </a>
           <div className="flex items-center">

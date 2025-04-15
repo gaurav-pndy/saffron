@@ -17,9 +17,9 @@ const Footer = () => {
 
   return (
     <footer className="bg-[#18191b] text-[#D4D5D9] px-6 py-10 lg:px-8">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1fr_1fr_1fr_auto] gap-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1fr_1fr_1fr] gap-10">
         {/* Logo & Links */}
-        <div>
+        <div className="md:col-span-2 lg:col-span-1">
           <img src="/dark-logo.png" alt="Saffron Logo" className="h-10 mb-4" />
 
           <div className=" text-sm md:mt-12 font-[300] space-y-1">
@@ -38,27 +38,36 @@ const Footer = () => {
         </div>
 
         {/* Contact Info */}
-        <div className="text-sm space-y-3">
-          <div>
-            <p className="text-sm text-gray-400 font-quicksand mb-2">
-              {t("footer.whatsapp")}
-            </p>
-            <p className="font-quicksand text-[#D4D5D9]">+7(999)-966-99-95</p>
+        <div className="flex justify-between ">
+          <div className="text-sm  space-y-3">
+            <div>
+              <p className="text-sm text-gray-400 font-quicksand mb-2">
+                {t("footer.whatsapp")}
+              </p>
+              <p className="font-quicksand text-[#D4D5D9]">+7(999)-966-99-95</p>
+            </div>
+            <div>
+              <p className="text-sm text-gray-400 font-quicksand mb-2">
+                {t("footer.contactUs")}
+              </p>
+              <p className="font-quicksand text-[#D4D5D9]">+7(985)-231-11-72</p>
+            </div>
+            <div>
+              <p className="text-sm text-gray-400 font-quicksand mb-2">
+                {t("footer.email")}
+              </p>
+              <p className="font-quicksand text-[#D4D5D9]">
+                saffronmoscow@mail.ru
+              </p>
+            </div>
           </div>
-          <div>
-            <p className="text-sm text-gray-400 font-quicksand mb-2">
-              {t("footer.contactUs")}
-            </p>
-            <p className="font-quicksand text-[#D4D5D9]">+7(985)-231-11-72</p>
-          </div>
-          <div>
-            <p className="text-sm text-gray-400 font-quicksand mb-2">
-              {t("footer.email")}
-            </p>
-            <p className="font-quicksand text-[#D4D5D9]">
-              saffronmoscow@mail.ru
-            </p>
-          </div>
+          {/* <div className="md:hidden">
+            <img
+              className=" bg-white w-28 md:w-20 rounded-full h-fit"
+              src="https://static.wixstatic.com/media/df6cc5_2129ef23a79b4294b90d8629f09ce50d~mv2.png"
+              alt="Halal certified"
+            />
+          </div> */}
         </div>
 
         {/* Opening Hours */}
@@ -102,8 +111,8 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Order Now + Copyright */}
-        <div className="flex flex-col justify-center h-full space-y-6 sm:space-y-5 text-sm  ">
+        {/* Copyright */}
+        <div className="flex flex-col justify-center h-full space-y-6 lg:space-y-0 text-sm  ">
           {/* <div className="flex sm:justify-start lg:justify-end">
             <button
               className="text-[#CFA247] font-quicksand text-xl sm:text-2xl xl:px-5 py-2 rounded-full tracking-wide flex items-center gap-2 cursor-pointer"
@@ -112,18 +121,42 @@ const Footer = () => {
               {t("footer.orderNow")} <FaCircleArrowUp />
             </button>
           </div> */}
-          <img
-            className="mx-auto md:mx-auto bg-white w-20 md:w-20 rounded-full"
+          {/* <img
+            className="mx-auto hidden lg:block md:mx-auto bg-white w-20 md:w-28 rounded-full"
             src="https://static.wixstatic.com/media/df6cc5_2129ef23a79b4294b90d8629f09ce50d~mv2.png"
             alt="Halal certified"
-          />
-          <p className="text-xs font-quicksand text-gray-400 text-center md:text-left ">
+          /> */}
+          <p className="text-xs lg:hidden font-quicksand text-gray-400 text-center md:text-left ">
             Copyright @ - SAFFRON - 2025
             <br />
             {t("footer.rights")}
           </p>
-          <p className="font-quicksand text-gray-400 text-xs text-center md:text-left ">
+          <p className="font-quicksand lg:hidden text-gray-400 text-xs text-center md:text-left ">
             Digital Partner <br />
+            <a
+              className="font-quicksand hover:underline text-[#D4D5D9]"
+              target="_blank"
+              href="https://www.pasovit.com/"
+            >
+              Pasovit Technologies
+            </a>
+          </p>
+        </div>
+
+        {/* <div className="hidden md:flex  lg:hidden">
+          <img
+            className=" bg-white w-20 md:w-28 rounded-full"
+            src="https://static.wixstatic.com/media/df6cc5_2129ef23a79b4294b90d8629f09ce50d~mv2.png"
+            alt="Halal certified"
+          />
+        </div> */}
+
+        <div className="col-span-4 w-fit mx-auto  lg:flex gap-20 hidden">
+          <p className="text-xs font-quicksand text-gray-400 ">
+            Copyright @ - SAFFRON - 2025 {t("footer.rights")}
+          </p>
+          <p className="font-quicksand text-gray-400 text-xs">
+            Digital Partner:{" "}
             <a
               className="font-quicksand hover:underline text-[#D4D5D9]"
               target="_blank"

@@ -64,12 +64,10 @@ const ContactSection = () => {
                   href="https://wa.me/message/6R3F4MT7S7ZPN1"
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="hover:scale-110 transition-all duration-300"
                 >
-                  <button className="p-2 rounded-full border-2 border-green-500 neon-green bg-white">
-                    <FaWhatsapp
-                      size={22}
-                      className="glow-icon-green text-green-500"
-                    />
+                  <button className="p-2 rounded-full border-2 border-green-500  ">
+                    <FaWhatsapp size={24} className=" text-green-500" />
                   </button>
                 </a>
 
@@ -79,12 +77,8 @@ const ContactSection = () => {
                   rel="noopener noreferrer"
                   className=" text-white rounded-md font-medium hover:scale-110 transition-all duration-300"
                 >
-                  <button className="p-2 rounded-full border-2 border-yellow-500 neon-yellow">
-                    <img
-                      src="/yandex.png"
-                      alt=""
-                      className="h-7 glow-icon-yellow"
-                    />
+                  <button className="p-1.5 rounded-full border-2 border-yellow-500 ">
+                    <img src="/yandex.png" alt="" className="h-7 " />
                   </button>
                 </a>
               </div>

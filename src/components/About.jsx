@@ -44,7 +44,7 @@ const About = () => {
               duration: 0.7,
               ease: [0.25, 0.1, 0.25, 1],
             }}
-            className="text-[#3B492F] font-[300] leading-relaxed mb-4 font-poppins text-justify"
+            className="text-[#3B492F] font-[300] leading-relaxed mb-4 font-poppins text-left"
             dangerouslySetInnerHTML={{ __html: t("about.text") }}
           ></motion.p>
         </motion.div>

@@ -90,7 +90,7 @@ export default function Header() {
             rel="noopener noreferrer"
           >
             <button className="icon-button whatsapp">
-              <PiWhatsappLogoBold size={20} />
+              <IoLogoWhatsapp size={20} />
             </button>
           </a>
 

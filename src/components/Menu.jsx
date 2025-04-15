@@ -87,7 +87,7 @@ const Menu = () => {
       name: t("menu.categories.thali.heading"),
       image:
         "https://static.wixstatic.com/media/df6cc5_33255e335df04b01938721d0c5b001ff~mv2.jpg",
-      col: "lg:col-span-4",
+      col: "col-span-2 lg:col-span-4",
     },
   ];
   const [showAll, setShowAll] = useState(false);
@@ -150,7 +150,7 @@ const Menu = () => {
         {t("menu.heading")}
       </motion.h2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-5 mt-8">
+      <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-12 gap-5 mt-8">
         {visibleCategories.map((category, index) => (
           <motion.div
             key={index}

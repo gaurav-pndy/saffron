@@ -57,7 +57,7 @@ const ContactSection = () => {
             }}
             className="text-center flex flex-col items-center justify-center "
           >
-            <div className="bg-black/60  p-6 w-full md:w-80 rounded-md border ">
+            <div className="bg-black/60  p-6 w-full md:w-80 rounded-md  ">
               <h4 className=" mb-5 text-3xl font-medium">
                 {t("contact.order")}
               </h4>

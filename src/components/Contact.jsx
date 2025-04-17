@@ -28,7 +28,7 @@ const ContactSection = () => {
           alt="Saffron Logo"
           className="w-[38rem] absolute top-10 md:top-20"
         /> */}
-        <div className="relative z-10 w-full max-w-7xl px-4 flex flex-col gap-4 md:gap-0">
+        <div className="relative z-10 w-full max-w-7xl px-4 flex flex-col gap-4 md:gap-4">
           {/* Contact */}
           <motion.div
             initial={{ scale: 0.7, opacity: 0 }}

@@ -38,7 +38,7 @@ const ContactSection = () => {
               duration: 0.7,
               ease: [0.25, 0.1, 0.25, 1],
             }}
-            className="bg-black/60 md:w-fit h-fit  p-6 rounded-md text-center w-full "
+            className="bg-black/60 md:w-80 h-fit  p-6 rounded-md text-center w-full "
           >
             <h3 className="text-3xl font-medium mb-5">{t("contact.title")}</h3>
             <button className="bg-[#1D1D1D]/80 text-white text-xl font-quicksand font-semibold px-8 py-2 rounded-md">
@@ -57,7 +57,7 @@ const ContactSection = () => {
             }}
             className="text-center flex flex-col items-center justify-center "
           >
-            <div className="bg-black/60 p-6 w-full md:w-fit rounded-md border ">
+            <div className="bg-black/60  p-6 w-full md:w-80 rounded-md border ">
               <h4 className=" mb-5 text-3xl font-medium">
                 {t("contact.order")}
               </h4>
@@ -98,7 +98,7 @@ const ContactSection = () => {
             }}
             className="w-full flex justify-end"
           >
-            <div className="bg-black/60 w-full md:w-fit p-6   rounded-md text-center ">
+            <div className="bg-black/60 w-full md:w-80 p-6   rounded-md text-center ">
               <h3 className="text-3xl font-medium mb-5">{t("contact.find")}</h3>
               <a
                 href="https://yandex.com/maps/-/CHVsAEmk"

@@ -5,7 +5,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { FaArrowRight } from "react-icons/fa";
 
 const Menu = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const isRussian = i18n.language === "ru";
 
   const categories = [
     {
@@ -150,7 +151,7 @@ const Menu = () => {
         {t("menu.heading")}
       </motion.h2>
 
-      <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-12 gap-5 mt-8">
+      <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-12 gap-3 sm:gap-5 mt-8">
         {visibleCategories.map((category, index) => (
           <motion.div
             key={index}
@@ -161,7 +162,7 @@ const Menu = () => {
           >
             <div
               onClick={() => handleClick(category.name)}
-              className="relative w-full h-52 lg:h-60 bg-cover flex flex-col justify-between p-5 text-white"
+              className="relative w-full h-52 lg:h-60 bg-cover flex flex-col justify-between p-3 md:p-5 text-white"
               style={{
                 backgroundImage: `url(${category.image})`,
                 backgroundPosition: "85% center",
@@ -170,7 +171,11 @@ const Menu = () => {
               <div className="absolute inset-0 bg-black/60 group-hover:bg-opacity-40 transition-all duration-300"></div>
 
               <div className="relative flex flex-col justify-between h-full z-10">
-                <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold mb-2 font-poppins text-shadow-lg leading-snug">
+                <h3
+                  className={`${
+                    isRussian ? "text-base" : "text-lg"
+                  } sm:text-xl md:text-2xl lg:text-3xl font-semibold mb-2 font-poppins text-shadow-lg leading-snug`}
+                >
                   {category.name}
                 </h3>
 

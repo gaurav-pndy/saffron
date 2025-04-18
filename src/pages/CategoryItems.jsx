@@ -40,7 +40,7 @@ const CategoryItems = () => {
         ogTitle="Saffron Menu | Must-Try Indian Dishes in Moscow (2024)"
         ogDescription="Discover Moscow’s #1 Indian restaurant menu—signature biryanis, tandoori grills, and curries made with traditional spices. Vegetarian & non-veg options available."
       />
-      <h2 className="text-4xl md:text-5xl font-bold mb-10 text-[#CFA247]  font-poppins capitalize">
+      <h2 className="text-4xl md:text-5xl font-bold mb-10 text-[#CFA247]  font-roboto-flex capitalize">
         {t(filteredItems[0].category)}
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8">
@@ -64,19 +64,19 @@ const CategoryItems = () => {
               />
             </div>
             <div className="  flex flex-col justify-around">
-              <h3 className="text-2xl font-poppins font-bold text-gray-800 ">
+              <h3 className="text-2xl font-roboto-flex font-[500] text-gray-800 ">
                 {t(item.name)}
               </h3>
 
               {item.desc && (
-                <p className="text-sm md:text-base font-poppins text-gray-500 mb-2">
+                <p className="text-sm md:text-base font-[500] font-roboto-flex text-gray-500 mb-2">
                   {t(item.desc)}
                 </p>
               )}
 
               <div className="flex md:flex-col justify-between items-center md:items-start ">
                 {item.price && (
-                  <p className="text-xl font-poppins font-semibold text-orange-500 md:mb-2">
+                  <p className="text-xl font-roboto-flex font-[500] text-orange-500 md:mb-2">
                     ₽{item.price}
                   </p>
                 )}

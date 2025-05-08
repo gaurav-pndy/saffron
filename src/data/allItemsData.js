@@ -364,8 +364,8 @@ const allItems = [
     price: 820,
   },
   {
-    name: "menu.categories.nonveg.item7.name",
-    desc: "menu.categories.nonveg.item7.desc",
+    name: "menu.categories.nonveg.item11.name",
+    desc: "menu.categories.nonveg.item11.desc",
 
     category: "menu.categories.nonveg.heading",
     image:

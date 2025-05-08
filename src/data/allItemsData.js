@@ -336,6 +336,42 @@ const allItems = [
       "https://static.wixstatic.com/media/df6cc5_cbf94f4e070b4ec88a29df377dfb1695~mv2.jpg",
     price: 650,
   },
+  {
+    name: "menu.categories.nonveg.item8.name",
+    desc: "menu.categories.nonveg.item8.desc",
+
+    category: "menu.categories.nonveg.heading",
+    image:
+      "https://static.wixstatic.com/media/df6cc5_7dd86a05e923406083c231a93281f7f0~mv2.jpg",
+    price: 750,
+  },
+  {
+    name: "menu.categories.nonveg.item9.name",
+    desc: "menu.categories.nonveg.item9.desc",
+
+    category: "menu.categories.nonveg.heading",
+    image:
+      "https://static.wixstatic.com/media/df6cc5_f95bc9c184174d1fa792c02d47a75c96~mv2.jpg",
+    price: 790,
+  },
+  {
+    name: "menu.categories.nonveg.item10.name",
+    desc: "menu.categories.nonveg.item10.desc",
+
+    category: "menu.categories.nonveg.heading",
+    image:
+      "https://static.wixstatic.com/media/df6cc5_4fd1d0b72bee4b139c436703179e8d81~mv2.jpg",
+    price: 820,
+  },
+  {
+    name: "menu.categories.nonveg.item7.name",
+    desc: "menu.categories.nonveg.item7.desc",
+
+    category: "menu.categories.nonveg.heading",
+    image:
+      "https://static.wixstatic.com/media/df6cc5_36feca4fd0f445cc8bc9551275f60ec0~mv2.jpg",
+    price: 690,
+  },
 
   //sides
 

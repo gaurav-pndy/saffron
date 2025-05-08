@@ -104,7 +104,12 @@
         "item4": { "name": "Mutton Vindaloo", "desc": "Juicy mutton  with potatoes in sauce"},
         "item5": { "name": "Butter Chicken", "desc": "Baked tandoor chicken, cooked   in tomato and vegetable sauce  with cream"},
         "item6": { "name": "Prawns Masala", "desc": "Shrimps in spicy sauce"},
-        "item7": { "name": "Chicken Curry", "desc": "Chicken fillet in vegetable curry sauce"}
+        "item7": { "name": "Chicken Curry", "desc": "Chicken fillet in vegetable curry sauce"},
+        "item8": { "name": "Chicken Korma", "desc": "Delicate cashew and coconut cream sauce with Chicken"},
+        "item9": { "name": "Chicken Tikka Masala", "desc": "Baked chicken in spicy tomato sauce marsala"},
+        "item10": { "name": "Sea-food Curry", "desc": "Seafood in curry sauce"},
+        "item11": { "name": "Chicken Vindaloo", "desc": "Juicy chicken with potatoes in sauce"}
+       
       
       },
       "sides" :{

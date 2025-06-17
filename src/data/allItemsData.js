@@ -61,6 +61,13 @@ const allItems = [
       "https://static.wixstatic.com/media/df6cc5_76c923d016e6436f843b18262ab00221~mv2.jpg",
     price: 950,
   },
+  {
+    name: "menu.categories.tandoor.item8",
+
+    category: "menu.categories.tandoor.heading",
+    image: "/menu/tandoor8.jpg",
+    price: 890,
+  },
 
   // Snacks
   {
@@ -108,6 +115,21 @@ const allItems = [
     image:
       "https://static.wixstatic.com/media/df6cc5_496bec4c00fd4d79abdee6d9cf0b00c0~mv2.jpg",
     price: 390,
+  },
+  {
+    name: "menu.categories.snacks.item7.name",
+    desc: "menu.categories.snacks.item7.desc",
+    category: "menu.categories.snacks.heading",
+    image: "/menu/snack7.jpg",
+
+    price: 590,
+  },
+  {
+    name: "menu.categories.snacks.item8.name",
+    desc: "menu.categories.snacks.item8.desc",
+    category: "menu.categories.snacks.heading",
+    image: "/menu/snack8.jpg",
+    price: 590,
   },
 
   // Veg
@@ -166,6 +188,30 @@ const allItems = [
     image:
       "https://static.wixstatic.com/media/df6cc5_750ac0f99e9d4cc7abefb0cc3eee1819~mv2.jpg",
     price: 550,
+  },
+  {
+    name: "menu.categories.veg.item8",
+    category: "menu.categories.veg.heading",
+    image: "/menu/veg8.jpg",
+    price: 590,
+  },
+  {
+    name: "menu.categories.veg.item9",
+    category: "menu.categories.veg.heading",
+    image: "/menu/veg9.jpg",
+    price: 590,
+  },
+  {
+    name: "menu.categories.veg.item10",
+    category: "menu.categories.veg.heading",
+    image: "/menu/veg10.jpg",
+    price: 570,
+  },
+  {
+    name: "menu.categories.veg.item11",
+    category: "menu.categories.veg.heading",
+    image: "/menu/veg11.jpg",
+    price: 590,
   },
 
   //biryani
@@ -273,7 +319,7 @@ const allItems = [
     price: 350,
   },
 
-  //hotter
+  //nonveg
   {
     name: "menu.categories.nonveg.item1.name",
     desc: "menu.categories.nonveg.item1.desc",
@@ -370,6 +416,27 @@ const allItems = [
     category: "menu.categories.nonveg.heading",
     image:
       "https://static.wixstatic.com/media/df6cc5_36feca4fd0f445cc8bc9551275f60ec0~mv2.jpg",
+    price: 690,
+  },
+  {
+    name: "menu.categories.nonveg.item12",
+
+    category: "menu.categories.nonveg.heading",
+    image: "/menu/nonveg12.jpg",
+    price: 750,
+  },
+  {
+    name: "menu.categories.nonveg.item13",
+
+    category: "menu.categories.nonveg.heading",
+    image: "/menu/nonveg13.jpg",
+    price: 690,
+  },
+  {
+    name: "menu.categories.nonveg.item14",
+
+    category: "menu.categories.nonveg.heading",
+    image: "/menu/nonveg14.jpg",
     price: 690,
   },
 
@@ -557,6 +624,20 @@ const allItems = [
     image:
       "https://static.wixstatic.com/media/df6cc5_1cf80df2c2a74b96a3b20157fbca571e~mv2.jpg",
     price: 2190,
+  },
+
+  //noodles
+  {
+    name: "menu.categories.noodles.item1",
+    category: "menu.categories.noodles.heading",
+    image: "/menu/noodles1.jpg",
+    price: 490,
+  },
+  {
+    name: "menu.categories.noodles.item2",
+    category: "menu.categories.noodles.heading",
+    image: "/menu/noodles2.jpg",
+    price: 590,
   },
 ];
 

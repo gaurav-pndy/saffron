@@ -75,20 +75,25 @@ const Menu = () => {
       name: t("menu.categories.sides.heading"),
       image:
         "https://static.wixstatic.com/media/df6cc5_ce54de88e7d8420d9bac8dd14886edfe~mv2.jpg",
-      col: "lg:col-span-4",
+      col: "lg:col-span-6",
     },
     {
       name: t("menu.categories.naan.heading"),
       image:
         "https://static.wixstatic.com/media/df6cc5_fd74b822faae48279d0b0823b50a1d7a~mv2.jpg",
-      col: "lg:col-span-4",
+      col: "lg:col-span-6",
     },
 
     {
       name: t("menu.categories.thali.heading"),
       image:
         "https://static.wixstatic.com/media/df6cc5_33255e335df04b01938721d0c5b001ff~mv2.jpg",
-      col: "col-span-2 lg:col-span-4",
+      col: "lg:col-span-5",
+    },
+    {
+      name: t("menu.categories.noodles.heading"),
+      image: "/menu/noodles1.jpg",
+      col: "lg:col-span-7",
     },
   ];
   const [showAll, setShowAll] = useState(false);

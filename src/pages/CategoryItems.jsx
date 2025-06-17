@@ -38,6 +38,8 @@ const CategoryItems = () => {
     (category) => category !== currentCategory
   );
 
+  const lastCategory = otherCategories[otherCategories.length - 1];
+
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
     setIsMenuOpen(false);
@@ -101,7 +103,7 @@ const CategoryItems = () => {
             </Link>
           ))}
         </div>
-        <div className="grid grid-cols-6 gap-2">
+        <div className="grid grid-cols-6 gap-2 mb-2">
           {secondRowCategories.map((category, index) => (
             <Link
               key={index}
@@ -111,6 +113,14 @@ const CategoryItems = () => {
               {t(category)}
             </Link>
           ))}
+        </div>
+        <div className="grid grid-cols-6 gap-2">
+          <Link
+            to={`/menu/${t(lastCategory).toLowerCase()}`}
+            className="text-center py-2 px-1 rounded-lg border border-gray-300 text-gray-700 transition-all hover:bg-[#CFA247] hover:text-white hover:border-[#CFA247] font-poppins"
+          >
+            {t(lastCategory)}
+          </Link>
         </div>
       </div>
 

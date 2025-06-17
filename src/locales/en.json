@@ -47,7 +47,8 @@
         "item4": { "name": "Afghani Chicken", "desc": "Marinated in cashews, cardamom and cream"},
         "item5": { "name": "Saffron Salmon Tandoori", "desc": "Baked salmon on a skewer. Served with salad and sauce  chutney"},
         "item6": { "name": "Saffron Chicken Tikka", "desc": "Baked tandoor chicken potatoes S. V. S. V. saffron sauce"},
-        "item7": { "name": "Seabas Tandoori", "desc": "Whole fish baked in tandoor.  Served with lemon, salad and sauce"}
+        "item7": { "name": "Seabas Tandoori", "desc": "Whole fish baked in tandoor.  Served with lemon, salad and sauce"},
+        "item8": "Saffron mutton Tikka"
        
       },
       "snacks":{
@@ -57,7 +58,9 @@
 "item3": "Chicken Lollipop",
 "item4": "Indian French Fries",
 "item5": {"name":"Squid Pakoda", "desc": "Squid Pakoda" },
-"item6": {"name": "Mushroom Tikka", "desc": "Mushroom Tikka"}
+"item6": {"name": "Mushroom Tikka", "desc": "Mushroom Tikka"},
+"item7": {"name": "Paneer Pakoda", "desc": "Paneer Pakoda"},
+"item8": {"name": "Paneer Chilli", "desc": "Paneer Chilli"}
        
       },
       "veg":{
@@ -68,7 +71,11 @@
         "item4": { "name": "Bhara Baingan", "desc": "Baked eggplant A dish from the chef"},
         "item5": { "name": "Chole Masala", "desc": "ТStewed chickpeas with masala sauce"},
         "item6": { "name": "Dal Makhani", "desc": "Dal, black mash, beans in a delicate sauce"},
-        "item7": { "name": "Veg Curry", "desc": "Cauliflower, green peas, green beans in vegetable curry sauce"}
+        "item7": { "name": "Veg Curry", "desc": "Cauliflower, green peas, green beans in vegetable curry sauce"},
+        "item8": "Malai Kofta",
+        "item9": "Baingan Butter Masala",
+        "item10": "Matter Paneer",
+        "item11": "Kadai Paneer"
       
       },
       "biryani":{
@@ -108,7 +115,10 @@
         "item8": { "name": "Chicken Korma", "desc": "Delicate cashew and coconut cream sauce with Chicken"},
         "item9": { "name": "Chicken Tikka Masala", "desc": "Baked chicken in spicy tomato sauce marsala"},
         "item10": { "name": "Sea-food Curry", "desc": "Seafood in curry sauce"},
-        "item11": { "name": "Chicken Vindaloo", "desc": "Juicy chicken with potatoes in sauce"}
+        "item11": { "name": "Chicken Vindaloo", "desc": "Juicy chicken with potatoes in sauce"},
+        "item12": "Chicken Korma",
+        "item13": "Palak Chicken",
+        "item14": "Kadai Chicken"
        
       
       },
@@ -150,6 +160,11 @@
         "heading": "Thali",
         "item1": "Royal Thali Non veg",
         "item2": "Royal Thali Veg"
+            },
+            "noodles": {
+        "heading": "Noodles",
+        "item1": "Ceylon Noodles Chicken",
+        "item2": "Ceylon Noodles Prawns"
             }
     }
   },

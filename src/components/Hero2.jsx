@@ -39,7 +39,7 @@ export default function Hero() {
     >
       {/* Background image */}
       <img
-        src="https://static.wixstatic.com/media/df6cc5_84c45673f1c74fadabb7878490fdf1a8~mv2.png"
+        src="/heroImg.jpg"
         alt="Hero"
         className="w-full h-auto lg:h-full brightness-[0.6]"
       />

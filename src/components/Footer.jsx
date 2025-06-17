@@ -22,7 +22,7 @@ const Footer = () => {
         <div className="md:col-span-2 lg:col-span-1">
           <img src="/dark-logo.png" alt="Saffron Logo" className="h-10 mb-4" />
 
-          <div className=" text-sm md:mt-12 font-[300] space-y-1">
+          <div className=" text-sm md:mt-6 font-[300] space-y-1">
             <nav className="flex gap-6 font-medium">
               {["home", "menu", "about", "contact"].map((key) => (
                 <span
@@ -35,6 +35,11 @@ const Footer = () => {
               ))}
             </nav>
           </div>
+
+          <div
+            className=" text-[0.8rem] mt-4 pr-10 md:pr-20 md:mt-6 font-[300] space-y-1 font-quicksand text-gray-400"
+            dangerouslySetInnerHTML={{ __html: t("footer.address") }}
+          ></div>
         </div>
 
         {/* Contact Info */}

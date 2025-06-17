@@ -21,8 +21,7 @@ const allItems = [
     desc: "menu.categories.tandoor.item3.desc",
 
     category: "menu.categories.tandoor.heading",
-    image:
-      "https://static.wixstatic.com/media/df6cc5_00e5b7a78b20468799e25e216a215806~mv2.jpg",
+    image: "/menu/tandoor3.jpg",
     price: 790,
   },
   {
@@ -218,8 +217,7 @@ const allItems = [
   {
     name: "menu.categories.biryani.item1",
     category: "menu.categories.biryani.heading",
-    image:
-      "https://static.wixstatic.com/media/df6cc5_16f50f103add46c89b5e4dbce92b551f~mv2.jpg",
+    image: "/menu/biryani1.jpg",
     price: 750,
   },
   {
@@ -246,8 +244,7 @@ const allItems = [
   {
     name: "menu.categories.biryani.item5",
     category: "menu.categories.biryani.heading",
-    image:
-      "https://static.wixstatic.com/media/df6cc5_9d8f5356cc7f4df9854def973d938430~mv2.png",
+    image: "/menu/biryani5.jpg",
     price: 250,
   },
 

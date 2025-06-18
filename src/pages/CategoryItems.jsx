@@ -77,11 +77,15 @@ const CategoryItems = () => {
 
         {isMenuOpen && (
           <div className="mt-2 bg-white shadow-lg rounded-lg p-2 absolute z-10 left-4 right-4">
-            {otherCategories.map((category, index) => (
+            {allCategories.map((category, index) => (
               <Link
                 key={index}
                 to={`/menu/${t(category).toLowerCase()}`}
-                className="block py-2 px-4 font-poppins hover:bg-gray-100 rounded-md"
+                className={`block py-2 px-4 font-poppins ${
+                  currentCategory === category
+                    ? "bg-[#CFA247] text-white border-[#CFA247]"
+                    : "hover:bg-gray-200"
+                }  rounded-md`}
                 onClick={() => setIsMenuOpen(false)}
               >
                 {t(category)}
@@ -93,17 +97,21 @@ const CategoryItems = () => {
 
       <div className="hidden md:block mb-8">
         <div className="grid grid-cols-6 gap-2 mb-2">
-          {firstRowCategories.map((category, index) => (
+          {allCategories.map((category, index) => (
             <Link
               key={index}
               to={`/menu/${t(category).toLowerCase()}`}
-              className="text-center py-2 px-1 rounded-lg border border-gray-300 text-gray-700 transition-all hover:bg-[#CFA247] hover:text-white hover:border-[#CFA247] font-poppins"
+              className={`text-center py-2 px-1 rounded-lg border border-gray-300 text-gray-700 transition-all ${
+                currentCategory === category
+                  ? "bg-[#CFA247] text-white border-[#CFA247]"
+                  : "hover:bg-gray-200"
+              }  font-poppins`}
             >
               {t(category)}
             </Link>
           ))}
         </div>
-        <div className="grid grid-cols-6 gap-2 mb-2">
+        {/* <div className="grid grid-cols-6 gap-2 mb-2">
           {secondRowCategories.map((category, index) => (
             <Link
               key={index}
@@ -121,7 +129,7 @@ const CategoryItems = () => {
           >
             {t(lastCategory)}
           </Link>
-        </div>
+        </div> */}
       </div>
 
       <h2 className="text-4xl md:text-5xl font-bold mb-10 text-[#CFA247] font-roboto-flex capitalize">

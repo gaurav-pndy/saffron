@@ -70,7 +70,7 @@ const Footer = () => {
             <div
               ref={buttonRef}
               onClick={() => setShowPopup((prev) => !prev)}
-              className="mt-5 text-sm hover:text-gray-200 transition-all duration-300  font-quicksand md:mt-6 cursor-pointer select-none inline-block"
+              className="mt-5 text-sm hover:text-gray-200 transition-all underline duration-300  font-quicksand md:mt-6 cursor-pointer select-none inline-block"
             >
               {t("footer.addressButton")}
             </div>

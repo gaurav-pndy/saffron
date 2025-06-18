@@ -384,8 +384,7 @@ const allItems = [
     desc: "menu.categories.nonveg.item8.desc",
 
     category: "menu.categories.nonveg.heading",
-    image:
-      "https://static.wixstatic.com/media/df6cc5_7dd86a05e923406083c231a93281f7f0~mv2.jpg",
+    image: "/menu/nonveg8.jpg",
     price: 750,
   },
   {
@@ -415,13 +414,13 @@ const allItems = [
       "https://static.wixstatic.com/media/df6cc5_36feca4fd0f445cc8bc9551275f60ec0~mv2.jpg",
     price: 690,
   },
-  {
-    name: "menu.categories.nonveg.item12",
+  // {
+  //   name: "menu.categories.nonveg.item12",
 
-    category: "menu.categories.nonveg.heading",
-    image: "/menu/nonveg12.jpg",
-    price: 750,
-  },
+  //   category: "menu.categories.nonveg.heading",
+  //   image: "/menu/nonveg12.jpg",
+  //   price: 750,
+  // },
   {
     name: "menu.categories.nonveg.item13",
 
@@ -602,7 +601,7 @@ const allItems = [
     name: "menu.categories.desserts.item4.name",
     desc: "menu.categories.desserts.item4.desc",
     category: "menu.categories.desserts.heading",
-    // image: "/images/veg.jpg",
+    image: "/menu/dessert4.jpg",
     price: 350,
   },
 

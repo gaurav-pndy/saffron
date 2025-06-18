@@ -65,6 +65,7 @@ const ImageBox = ({ images, layout }) => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 1, ease: "easeInOut" }}
           className="w-full h-full object-cover absolute top-0 left-0"
         />

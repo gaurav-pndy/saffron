@@ -116,7 +116,7 @@ export default function ReviewsCarousel() {
           <motion.h2
             initial={{ opacity: 0, filter: "blur(8px)" }}
             whileInView={{ opacity: 1, filter: "blur(0px)" }}
-            viewport={{ amount: 0.3 }}
+            viewport={{ amount: 0.3, once: true }}
             transition={{
               duration: 0.8,
               ease: "easeInOut",
@@ -133,7 +133,7 @@ export default function ReviewsCarousel() {
         <motion.div
           initial={{ x: 50, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
-          viewport={{ amount: 0.5 }}
+          viewport={{ amount: 0.5, once: true }}
           transition={{
             duration: 0.7,
             ease: [0.25, 0.1, 0.25, 1],

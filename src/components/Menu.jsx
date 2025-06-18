@@ -146,7 +146,7 @@ const Menu = () => {
       <motion.h2
         initial={{ opacity: 0, filter: "blur(8px)" }}
         whileInView={{ opacity: 1, filter: "blur(0px)" }}
-        viewport={{ amount: 0.4 }}
+        viewport={{ amount: 0.4, once: true }}
         transition={{
           duration: 0.8,
           ease: "easeInOut",
@@ -164,6 +164,7 @@ const Menu = () => {
             initial={index % 2 === 0 ? "hiddenLeft" : "hiddenRight"}
             whileInView="visible"
             variants={slideVariants}
+            viewport={{ once: true }}
           >
             <div
               onClick={() => handleClick(category.name)}

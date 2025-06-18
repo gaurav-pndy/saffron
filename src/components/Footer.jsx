@@ -1,9 +1,23 @@
 import { useTranslation } from "react-i18next";
 import { FaFacebookF, FaInstagram, FaYoutube, FaVk } from "react-icons/fa";
 import { FaCircleArrowUp } from "react-icons/fa6";
+import { useState, useRef, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Footer = () => {
   const { t } = useTranslation();
+  const [showPopup, setShowPopup] = useState(false);
+  const buttonRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (buttonRef.current && !buttonRef.current.contains(event.target)) {
+        setShowPopup(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
@@ -17,10 +31,10 @@ const Footer = () => {
 
   return (
     <footer className="bg-[#18191b] text-[#D4D5D9] px-6 py-10 lg:px-8">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1fr_1fr_1fr] gap-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1fr_1fr_1fr] gap-10 ">
         {/* Logo & Links */}
         <div className="md:col-span-2 lg:col-span-1">
-          <img src="/dark-logo.png" alt="Saffron Logo" className="h-10 mb-4" />
+          <img src="/dark-logo.png" alt="Saffron Logo" className="h-10 mb-5" />
 
           <div className=" text-sm md:mt-6 font-[300] space-y-1">
             <nav className="flex gap-6 font-medium">
@@ -36,10 +50,31 @@ const Footer = () => {
             </nav>
           </div>
 
-          <div
-            className=" text-[0.8rem] mt-4 pr-10 md:pr-20 md:mt-6 font-[300] space-y-1 font-quicksand text-gray-400"
-            dangerouslySetInnerHTML={{ __html: t("footer.address") }}
-          ></div>
+          <div className="relative  pr-10 md:pr-20   text-gray-400">
+            <AnimatePresence>
+              {showPopup && (
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.95, y: -5 }}
+                  animate={{ opacity: 1, scale: 1, y: 20 }}
+                  exit={{ opacity: 0, scale: 0.95, y: -5 }}
+                  transition={{ duration: 0.2 }}
+                  className="absolute bottom-full left-0 z-10 w-72 p-3 rounded-lg shadow-lg bg-white border text-black"
+                >
+                  <div
+                    dangerouslySetInnerHTML={{ __html: t("footer.address") }}
+                    className="text-[0.8rem] font-quicksand leading-relaxed"
+                  />
+                </motion.div>
+              )}
+            </AnimatePresence>
+            <div
+              ref={buttonRef}
+              onClick={() => setShowPopup((prev) => !prev)}
+              className="mt-5 text-sm hover:text-gray-200 transition-all duration-300  font-quicksand md:mt-6 cursor-pointer select-none inline-block"
+            >
+              {t("footer.addressButton")}
+            </div>
+          </div>
         </div>
 
         {/* Contact Info */}

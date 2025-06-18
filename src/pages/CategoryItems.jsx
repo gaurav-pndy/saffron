@@ -141,7 +141,7 @@ const CategoryItems = () => {
           <motion.div
             initial={{ scale: 0.7, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
-            viewport={{ amount: 0.3 }}
+            viewport={{ amount: 0.3, once: true }}
             transition={{
               duration: 0.6,
               ease: [0.25, 0.1, 0.25, 1],

@@ -13,7 +13,7 @@ const About = () => {
           <motion.h2
             initial={{ opacity: 0, filter: "blur(8px)" }}
             whileInView={{ opacity: 1, filter: "blur(0px)" }}
-            viewport={{ amount: 0.3 }}
+            viewport={{ amount: 0.3, once: true }}
             transition={{
               duration: 0.8,
               ease: "easeInOut",
@@ -26,7 +26,7 @@ const About = () => {
           <motion.h3
             initial={{ scale: 0.7, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
-            viewport={{ amount: 0.2 }}
+            viewport={{ amount: 0.2, once: true }}
             transition={{
               duration: 0.7,
               ease: [0.25, 0.1, 0.25, 1],
@@ -39,7 +39,7 @@ const About = () => {
           <motion.p
             initial={{ scale: 0.7, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
-            viewport={{ amount: 0 }}
+            viewport={{ amount: 0, once: true }}
             transition={{
               duration: 0.7,
               ease: [0.25, 0.1, 0.25, 1],
@@ -53,7 +53,7 @@ const About = () => {
         <motion.div
           initial={{ scale: 0.7, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
-          viewport={{ amount: 0.2 }}
+          viewport={{ amount: 0.2, once: true }}
           transition={{
             duration: 0.7,
             ease: [0.25, 0.1, 0.25, 1],

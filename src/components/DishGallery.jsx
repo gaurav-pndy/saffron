@@ -100,11 +100,12 @@ const DishGallery = () => {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
         >
           <motion.div
             initial={{ opacity: 0, filter: "blur(8px)" }}
             whileInView={{ opacity: 1, filter: "blur(0px)" }}
-            viewport={{ amount: 0.4 }}
+            viewport={{ amount: 0.4, once: true }}
             transition={{
               duration: 0.8,
               ease: "easeInOut",
@@ -116,6 +117,7 @@ const DishGallery = () => {
             </h3>
 
             <motion.h2
+              viewport={{ once: true }}
               className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-cinzel font-medium text-[#CFA247] leading-tight"
               dangerouslySetInnerHTML={{ __html: t("dishGallery.title") }}
             />
@@ -124,6 +126,7 @@ const DishGallery = () => {
             className="w-20 md:w-24 h-1 bg-[#CFA247] mx-auto mt-3 md:mt-4 rounded"
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
+            viewport={{ once: true }}
             transition={{ delay: 0.3, duration: 0.8 }}
           />
         </motion.div>
@@ -140,6 +143,7 @@ const DishGallery = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.7, delay: 0.4 }}
+            viewport={{ once: true }}
           >
             <video
               ref={videoRef}
@@ -162,6 +166,7 @@ const DishGallery = () => {
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.8 }}
+              viewport={{ once: true }}
             >
               {!isMuted && (
                 <motion.input
@@ -176,6 +181,7 @@ const DishGallery = () => {
                   animate={{ opacity: 1, width: 80 }}
                   exit={{ opacity: 0, width: 0 }}
                   transition={{ duration: 0.2 }}
+                  viewport={{ once: true }}
                 />
               )}
 
@@ -220,6 +226,7 @@ const DishGallery = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.9 }}
+              viewport={{ once: true }}
             ></motion.div>
           </motion.div>
         </div>

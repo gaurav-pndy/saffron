@@ -1,17 +1,8 @@
-// components/LandingRevealSplit.tsx
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 
 const LandingReveal = () => {
   const [startAnimation, setStartAnimation] = useState(false);
-
-  // useEffect(() => {
-  //   setStartAnimation(true);
-  //   const timeout = setTimeout(() => {
-  //     onComplete();
-  //   }, 2500);
-  //   return () => clearTimeout(timeout);
-  // }, [onComplete]);
 
   const gradientStyle =
     "bg-gradient-to-tr from-[#26140a] via-[#4d240f] to-[#793c11]";

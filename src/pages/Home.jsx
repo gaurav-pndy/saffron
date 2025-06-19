@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Hero2 from "../components/Hero2";
 import DishGallery from "../components/DishGallery";
 import Menu from "../components/Menu";
@@ -8,8 +8,27 @@ import Reviews from "../components/Reviews";
 import Contact from "../components/Contact";
 import LandingReveal from "../components/LandingReveal";
 import SEO from "../components/SEO";
+import { useLocation } from "react-router";
 
 const Home = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.state?.scrollTo) {
+      const id = location.state.scrollTo;
+
+      // Wait for DOM to be ready
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        if (element) {
+          const yOffset = -80;
+          const y =
+            element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+          window.scrollTo({ top: y, behavior: "smooth" });
+        }
+      }, 100); // slight delay ensures DOM is mounted
+    }
+  }, [location.state]);
   return (
     <div>
       <SEO

@@ -7,6 +7,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { PiWhatsappLogoBold } from "react-icons/pi";
 import { LiaTelegramPlane } from "react-icons/lia";
 import { FaWhatsapp } from "react-icons/fa";
+import { useLocation, useNavigate } from "react-router";
 
 export default function Header() {
   const { t } = useTranslation();
@@ -51,10 +52,21 @@ export default function Header() {
     setMobileMenuOpen((prev) => !prev);
   };
 
+  const location = useLocation();
+  const navigate = useNavigate();
+
   const scrollToSection = (id) => {
+    if (location.pathname !== "/") {
+      navigate("/", { state: { scrollTo: id } });
+    } else {
+      scrollNow(id);
+    }
+  };
+
+  const scrollNow = (id) => {
     const element = document.getElementById(id);
     if (element) {
-      const yOffset = -80; // Adjust based on header height
+      const yOffset = -80;
       const y =
         element.getBoundingClientRect().top + window.pageYOffset + yOffset;
       window.scrollTo({ top: y, behavior: "smooth" });

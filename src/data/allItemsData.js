@@ -626,13 +626,13 @@ const allItems = [
   {
     name: "menu.categories.noodles.item1",
     category: "menu.categories.noodles.heading",
-    image: "/menu/noodles1.jpg",
+    image: "/menu/noodles2.jpg",
     price: 490,
   },
   {
     name: "menu.categories.noodles.item2",
     category: "menu.categories.noodles.heading",
-    image: "/menu/noodles2.jpg",
+    image: "/menu/noodles1.jpg",
     price: 590,
   },
 ];

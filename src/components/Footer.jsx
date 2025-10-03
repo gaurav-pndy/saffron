@@ -93,16 +93,19 @@ const Footer = () => {
               <p className="font-quicksand text-[#D4D5D9]">+7(985)-231-11-72</p>
             </div>
             <div>
-              <p className="text-sm text-gray-400 font-quicksand mb-2">
-                {t("footer.email")}
-              </p>
-              <p className="font-quicksand text-[#D4D5D9]">
-                saffronmoscow@mail.ru
-              </p>
-              <p className="font-quicksand text-[#D4D5D9]">
-                info@saffronmoscow.ru
-              </p>
-            </div>
+  <p className="text-sm text-gray-400 font-quicksand mb-2">
+    {t("footer.email")}
+  </p>
+  <p className="font-quicksand text-[#D4D5D9]">
+    <span className="font-quicksand text-gray-400 text-xs mr-1">{t("footer.forOrders")}</span> 
+    saffronmoscow@mail.ru
+  </p>
+  <p className="font-quicksand text-[#D4D5D9]">
+    <span className="font-quicksand text-gray-400 text-xs mr-1">{t("footer.forQuries")}</span> 
+    info@saffronmoscow.ru
+  </p>
+</div>
+
           </div>
           {/* <div className="md:hidden">
             <img
@@ -153,6 +156,31 @@ const Footer = () => {
             </a>
           </div>
         </div>
+
+        {/* Payment Methods */}
+<div className="text-sm space-y-3">
+  <p className="text-sm text-gray-400 font-quicksand mb-2">
+    {t("footer.paymentOptions") || "Payment Options"}
+  </p>
+  <div className="flex space-x-6 mt-2">
+    <img
+      src="/mir-pay.png"
+      alt="MIR"
+      className="h-6 w-auto hover:scale-110 transition-transform duration-300"
+    />
+    <img
+      src="/visa-card.png"
+      alt="VISA"
+      className="h-6 w-auto hover:scale-110 transition-transform duration-300"
+    />
+    <img
+      src="mastercard.png"
+      alt="Mastercard"
+      className="h-6 w-auto hover:scale-110 transition-transform duration-300"
+    />
+  </div>
+</div>
+
 
         {/* Copyright */}
         <div className="flex flex-col justify-center h-full space-y-6 lg:space-y-0 text-sm  ">

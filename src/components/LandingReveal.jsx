@@ -2,18 +2,32 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 
 const LandingReveal = () => {
-  const [startAnimation, setStartAnimation] = useState(false);
+  const [showAnimation, setShowAnimation] = useState(false);
 
-  const gradientStyle =
-    "bg-gradient-to-tr from-[#26140a] via-[#4d240f] to-[#793c11]";
+  useEffect(() => {
+    // Check if animation has already played
+    const hasPlayed = sessionStorage.getItem("landingAnimationPlayed");
+
+    if (!hasPlayed) {
+      setShowAnimation(true);
+
+      // Mark as played so it won’t trigger again in this session
+      sessionStorage.setItem("landingAnimationPlayed", "true");
+
+      // Hide after animation finishes
+      const timer = setTimeout(() => setShowAnimation(false), 3000); // adjust duration
+      return () => clearTimeout(timer);
+    }
+  }, []);
+
+  if (!showAnimation) return null; // Don’t render if already played
 
   return (
     <AnimatePresence>
-      {/* {startAnimation && ( */}
       <>
         {/* Top reveal */}
         <motion.div
-          className={`fixed flex items-end justify-center pb-4 top-0 left-0 w-full h-[50svh] z-[100] bg-gradient-to-t from-white to-[#f9f07b]`}
+          className="fixed flex items-end justify-center pb-4 top-0 left-0 w-full h-[50svh] z-[100] bg-gradient-to-t from-white to-[#f9f07b]"
           initial={{ y: 0 }}
           animate={{ y: "-100%" }}
           exit={{ y: "-100%" }}
@@ -35,7 +49,7 @@ const LandingReveal = () => {
 
         {/* Bottom reveal */}
         <motion.div
-          className={`fixed flex items-start justify-center pt-4 bottom-0 left-0 w-full h-[50svh] z-[100] bg-gradient-to-b from-white to-[#f9f07b]`}
+          className="fixed flex items-start justify-center pt-4 bottom-0 left-0 w-full h-[50svh] z-[100] bg-gradient-to-b from-white to-[#f9f07b]"
           initial={{ y: 0 }}
           animate={{ y: "100%" }}
           exit={{ y: "100%" }}
@@ -55,7 +69,6 @@ const LandingReveal = () => {
           />
         </motion.div>
       </>
-      {/* )} */}
     </AnimatePresence>
   );
 };

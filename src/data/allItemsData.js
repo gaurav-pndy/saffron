@@ -49,7 +49,7 @@ const allItems = [
     category: "menu.categories.tandoor.heading",
     image:
       "https://static.wixstatic.com/media/df6cc5_3d9d0f6529b94245968784bef14f4972~mv2.jpg",
-    price: 790,
+    price: 770,
   },
   {
     name: "menu.categories.tandoor.item7.name",
@@ -394,7 +394,7 @@ const allItems = [
     category: "menu.categories.nonveg.heading",
     image:
       "https://static.wixstatic.com/media/df6cc5_f95bc9c184174d1fa792c02d47a75c96~mv2.jpg",
-    price: 790,
+    price: 690,
   },
   {
     name: "menu.categories.nonveg.item10.name",
@@ -403,7 +403,7 @@ const allItems = [
     category: "menu.categories.nonveg.heading",
     image:
       "https://static.wixstatic.com/media/df6cc5_4fd1d0b72bee4b139c436703179e8d81~mv2.jpg",
-    price: 820,
+    price: 690,
   },
   {
     name: "menu.categories.nonveg.item11.name",

@@ -93,18 +93,22 @@ const Footer = () => {
               <p className="font-quicksand text-[#D4D5D9]">+7(985)-231-11-72</p>
             </div>
             <div>
-  <p className="text-sm text-gray-400 font-quicksand mb-2">
-    {t("footer.email")}
+  <p className="font-quicksand text-gray-400 text-xs mb-1">
+    {t("footer.forOrders")}
   </p>
-  <p className="font-quicksand text-[#D4D5D9]">
-    <span className="font-quicksand text-gray-400 text-xs mr-1">{t("footer.forOrders")}</span> 
+  <p className="font-quicksand font-bold text-base text-[#D4D5D9] mb-2">
     saffronmoscow@mail.ru
   </p>
-  <p className="font-quicksand text-[#D4D5D9]">
-    <span className="font-quicksand text-gray-400 text-xs mr-1">{t("footer.forQuries")}</span> 
+
+  <p className="font-quicksand text-gray-400 text-xs mb-1">
+    {t("footer.forQuries")}
+  </p>
+  <p className="font-quicksand font-bold text-base text-[#D4D5D9]">
     info@saffronmoscow.ru
   </p>
 </div>
+
+
 
           </div>
           {/* <div className="md:hidden">

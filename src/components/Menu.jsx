@@ -90,11 +90,11 @@ const Menu = () => {
         "https://static.wixstatic.com/media/df6cc5_33255e335df04b01938721d0c5b001ff~mv2.jpg",
       col: "lg:col-span-5",
     },
-    {
-      name: t("menu.categories.noodles.heading"),
-      image: "/menu/noodles1.jpg",
-      col: "lg:col-span-7",
-    },
+    // {
+    //   name: t("menu.categories.noodles.heading"),
+    //   image: "/menu/noodles1.jpg",
+    //   col: "lg:col-span-7",
+    // },
   ];
   const [showAll, setShowAll] = useState(false);
   const navigate = useNavigate();

@@ -46,9 +46,10 @@
         "item3": { "name": "Prawns Tandoori", "desc": "Spicy shrimp, baked on a skewer. Served with chutney sauce"},
         "item4": { "name": "Afghani Chicken", "desc": "Marinated in cashews, cardamom and cream"},
         "item5": { "name": "Salmon Tandoori", "desc": "Baked salmon on a skewer. Served with salad and sauce  chutney"},
-        "item6": { "name": "Saffron Chicken Tikka", "desc": "Baked tandoor chicken potatoes S. V. S. V. saffron sauce"},
+        "item6": { "name": "Saffron Chicken Tikka", "desc": "Baked tandoor chicken with potatoes in saffron sauce"},
         "item7": { "name": "Seabas Tandoori", "desc": "Whole fish baked in tandoor.  Served with lemon, salad and sauce"},
-        "item8": {"name": "Saffron Mutton Tikka", "desc": "Juicy lamb with vegetables and potatoes. Served with salad and sweet chili sauce"}
+        "item8": {"name": "Saffron Mutton Tikka", "desc": "Juicy lamb with vegetables and potatoes. Served with salad and sweet chili sauce"},
+        "item9": {"name": "Lamb Chops", "desc": "Juicy lamb loin with French fries and sauce Chutney"}
        
       },
       "snacks":{
@@ -56,12 +57,14 @@
 "item3": {"name": "Chicken Lollipop", "desc": "Breaded wings"},
 
 "item1": { "name": "Samosa", "desc": "Spicy pies  with potatoes and cashews"},
-"item2": { "name": "Prawns Pakoda / Paneer Pakoda", "desc": "Shrimp or Indian-style tempera cheese"},
+"item2": { "name": "Prawns Pakoda", "desc": "Prawns Pakoda"},
 "item4": "Indian French Fries",
 "item5": {"name":"Squid Pakoda", "desc": "Squid Pakoda" },
 "item6": {"name": "Mushroom Tikka", "desc": "Mushroom Tikka"},
 "item7": {"name": "Paneer Pakoda", "desc": "Paneer Pakoda"},
-"item8": {"name": "Prawns Chilli / Chicken Chilli", "desc": "Shrimp or chicken in sweet chili sauce"}
+"item8": {"name": "Prawns Chilli", "desc": "Shrimp in sweet chili sauce"},
+
+"item9": {"name": "Chicken Chilli", "desc": "Chicken in sweet chili sauce"}
        
       },
       "veg":{
@@ -109,25 +112,26 @@
         "heading": "Non Veg",
         "item1": { "name": "Kerala Fish Molly", "desc": "Tender salmon fillet cooked in Kerala with coconut"},
         "item2": { "name": "Rogan Josh", "desc": "Stewed lamb in vegetable sauce. Served with rice"},
-        "item3": { "name": "Prawns Korma / Chicken Korma", "desc": "Shrimp in cashew and coconut cream sauce. Served with saffron rice"},
-        "item4": { "name": "Mutton Vindaloo / Chicken Vindaloo", "desc": "Juicy lamb or chicken with potatoes in sauce"},
+        "item3": { "name": "Prawns Korma", "desc": "Shrimp in cashew and coconut cream sauce. Served with saffron rice"},
+        "item4": { "name": "Mutton Vindaloo", "desc": "Juicy lamb  with potatoes in sauce"},
         "item5": { "name": "Butter Chicken", "desc": "Baked tandoor chicken, cooked   in tomato and vegetable sauce  with cream"},
-        "item6": { "name": "Prawns Masala / Chicken Tikka Masala", "desc": "Shrimp or chicken in a spicy aromatic sauce"},
-        "item7": { "name": "Chicken Curry / Seafood Curry", "desc": "Chicken fillet in vegetable curry sauce"},
+        "item6": { "name": "Prawns Masala", "desc": "Shrimp in a spicy aromatic sauce"},
+        "item7": { "name": "Chicken Curry", "desc": "Chicken fillet in vegetable curry sauce"},
         "item8": { "name": "Chicken Korma", "desc": "Delicate cashew and coconut cream sauce with Chicken"},
-        "item9": { "name": "Chicken Tikka Masala", "desc": "Baked chicken in spicy tomato sauce marsala"},
+        "item9": { "name": "Chicken Tikka Masala", "desc": "Baked chicken in spicy tomato sauce masala"},
         "item10": { "name": "Sea-food Curry", "desc": "Seafood in curry sauce"},
         "item11": { "name": "Chicken Vindaloo", "desc": "Juicy chicken with potatoes in sauce"},
         "item12": "Chicken Korma",
         "item13": "Palak Chicken",
         "item14": "Kadai Chicken",
         "item15": {"name": "Indiski Breakfast", "desc": "Tandoor flatbread, egg and salad"},
-                "item16": {"name": "Mushroom Noodles / Prawns Noodles", "desc": "Spicy noodles with mushrooms or shrimp"},
-                "item17": {"name": "Mutton Noodles / Chicken Noodles", "desc": "Noodles with spicy sauce and lamb or chicken"},
-                "item18": {"name": "Marry Me Chicken / Marry Me Prawns", "desc": "Cheese sauce with spinach and chicken or with shrimp"},
-                "item19": {"name": "Lamb Chops", "desc": "Juicy lamb loin with French fries and sauce Chutney"},
-                "item20": "Mutton Mushroom Curry / Chicken Mushroom Curry",
-                "item21": {"name": "Bhara Baingan", "desc": "Baked eggplant A dish from the chef"}
+               
+                "item18": {"name": "Marry Me Chicken", "desc": "Cheese sauce with spinach and chicken"},
+                "item19": {"name": "Marry Me Prawns", "desc": "Cheese sauce with spinach and shrimp"},
+                
+                "item20": "Mutton Mushroom Curry",
+                "item21": "Chicken Mushroom Curry"
+                
                
           
        
@@ -170,14 +174,18 @@
         "item4": {"name": "Saffron Special", "desc": "Chef's special"}      },
       "thali" :{
         "heading": "Thali",
-        "item1": "Royal Thali Non veg / Veg",
+        "item1": "Royal Thali Non veg",
         "item2": "Royal Thali Veg",
         "item3": "Snack set"
             },
             "noodles": {
         "heading": "Noodles",
         "item1": "Ceylon Noodles Chicken",
-        "item2": "Ceylon Noodles Prawns"
+        "item2": "Ceylon Noodles Prawns",
+         "item3": {"name": "Mushroom Noodles", "desc": "Spicy noodles with mushrooms"},
+         "item4": {"name": "Prawns Noodles", "desc": "Spicy noodles with shrimp"},
+                "item5": {"name": "Mutton Noodles", "desc": "Noodles with spicy sauce and lamb"},
+                "item6": {"name": "Chicken Noodles", "desc": "Noodles with spicy sauce and chicken"}
             }
     }
   },

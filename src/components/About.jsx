@@ -1,6 +1,9 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
+import "swiper/css";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, EffectFade } from "swiper/modules";
 
 const About = () => {
   const { t } = useTranslation();
@@ -50,6 +53,7 @@ const About = () => {
         </motion.div>
 
         {/* Image */}
+        {/* Image Slideshow */}
         <motion.div
           initial={{ scale: 0.7, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
@@ -59,13 +63,32 @@ const About = () => {
             ease: [0.25, 0.1, 0.25, 1],
             delay: 0.5,
           }}
-          className="md:w-[38%] "
+          className="md:w-[38%] rounded max-w-screen overflow-hidden px-4 md:p-0"
         >
-          <img
-            src="/collage/aboutus.webp" // update path as per your file
-            alt="Team behind Saffron restaurant"
-            className="rounded h-[30rem] md:h-[35rem] object-cover w-auto"
-          />
+          <Swiper
+            modules={[Autoplay]}
+            autoplay={{ delay: 3000, disableOnInteraction: false }}
+            loop={true}
+            spaceBetween={0}
+            slidesPerView={1}
+            className="w-full"
+          >
+            <SwiperSlide>
+              <img
+                src="/collage/aboutus.webp"
+                alt="Team behind Saffron restaurant"
+                className="rounded h-[30rem] md:h-[35rem] object-cover w-full"
+              />
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <img
+                src="/about-2.jpg"
+                alt="Saffron restaurant ambience"
+                className="rounded h-[30rem] md:h-[35rem] object-cover w-full"
+              />
+            </SwiperSlide>
+          </Swiper>
         </motion.div>
       </div>
     </section>

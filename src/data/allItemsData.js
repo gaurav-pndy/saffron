@@ -143,7 +143,7 @@ const allItems = [
     name: "menu.categories.snacks.item9.name",
     desc: "menu.categories.snacks.item9.desc",
     category: "menu.categories.snacks.heading",
-    image: "/menu/snack8.jpg",
+    image: "/menu/chicken-chilli.jpg",
     price: 590,
   },
 

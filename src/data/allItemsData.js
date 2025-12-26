@@ -5,7 +5,7 @@ const allItems = [
     category: "menu.categories.tandoor.heading",
     image:
       "https://static.wixstatic.com/media/df6cc5_5aa9c66a4b824310992df0779fc0d36b~mv2.jpg",
-    price: 590,
+    price: 620,
   },
   {
     name: "menu.categories.tandoor.item2.name",
@@ -14,7 +14,7 @@ const allItems = [
     category: "menu.categories.tandoor.heading",
     image:
       "https://static.wixstatic.com/media/df6cc5_349bf4b5bb0b4c819e3620e0b8288dfb~mv2.jpg",
-    price: 750,
+    price: 770,
   },
   {
     name: "menu.categories.tandoor.item3.name",
@@ -49,7 +49,7 @@ const allItems = [
     category: "menu.categories.tandoor.heading",
     image:
       "https://static.wixstatic.com/media/df6cc5_3d9d0f6529b94245968784bef14f4972~mv2.jpg",
-    price: 770,
+    price: 790,
   },
   {
     name: "menu.categories.tandoor.item7.name",
@@ -91,7 +91,7 @@ const allItems = [
     desc: "menu.categories.snacks.item2.desc",
     category: "menu.categories.snacks.heading",
     image: "/menu/prawn-pakoda.jpg",
-    price: 590,
+    price: 620,
   },
   {
     name: "menu.categories.snacks.item3.name",
@@ -99,7 +99,7 @@ const allItems = [
     category: "menu.categories.snacks.heading",
     image:
       "https://static.wixstatic.com/media/df6cc5_bcf8e68e97824971857dd7ae77e9d6ae~mv2.jpg",
-    price: 550,
+    price: 570,
   },
   {
     name: "menu.categories.snacks.item4",
@@ -137,7 +137,7 @@ const allItems = [
     desc: "menu.categories.snacks.item8.desc",
     category: "menu.categories.snacks.heading",
     image: "/menu/snack8.jpg",
-    price: 590,
+    price: 620,
   },
   {
     name: "menu.categories.snacks.item9.name",
@@ -154,7 +154,7 @@ const allItems = [
     category: "menu.categories.veg.heading",
     image:
       "https://static.wixstatic.com/media/df6cc5_50568d18f0cf4722879bfb59c981e8e9~mv2.jpg",
-    price: 550,
+    price: 590,
   },
   {
     name: "menu.categories.veg.item2.name",
@@ -162,7 +162,7 @@ const allItems = [
     category: "menu.categories.veg.heading",
     image:
       "https://static.wixstatic.com/media/df6cc5_390bd97612364e54a6f6b0347a8381e7~mv2.jpg",
-    price: 590,
+    price: 620,
   },
   {
     name: "menu.categories.veg.item3.name",
@@ -170,7 +170,7 @@ const allItems = [
     category: "menu.categories.veg.heading",
     image:
       "https://static.wixstatic.com/media/df6cc5_5e9f2d28973f4e808b361cee272ae913~mv2.jpg",
-    price: 570,
+    price: 590,
   },
   {
     name: "menu.categories.veg.item4.name",
@@ -178,7 +178,7 @@ const allItems = [
     category: "menu.categories.veg.heading",
     image:
       "https://static.wixstatic.com/media/df6cc5_6a547529a9274a3abaef2b49dab5d7bf~mv2.jpg",
-    price: 490,
+    price: 550,
   },
   {
     name: "menu.categories.veg.item5.name",
@@ -279,14 +279,14 @@ const allItems = [
     category: "menu.categories.salads.heading",
     image:
       "https://static.wixstatic.com/media/df6cc5_cc8d7abd1c714d3691e5e56e67210b7b~mv2.jpg",
-    price: 350,
+    price: 390,
   },
   {
     name: "menu.categories.salads.item2",
     category: "menu.categories.salads.heading",
     image:
       "https://static.wixstatic.com/media/df6cc5_7065aa6e45914261b964195071c32dca~mv2.jpg",
-    price: 390,
+    price: 420,
   },
   {
     name: "menu.categories.salads.item3",
@@ -300,7 +300,7 @@ const allItems = [
     category: "menu.categories.salads.heading",
     image:
       "https://static.wixstatic.com/media/df6cc5_7945968945a94a81bc2a1764a19d79ac~mv2.jpg",
-    price: 550,
+    price: 570,
   },
   {
     name: "menu.categories.salads.item5",
@@ -317,14 +317,14 @@ const allItems = [
     category: "menu.categories.soups.heading",
     image:
       "https://static.wixstatic.com/media/df6cc5_c28aafc0d28e405f93983c9fe4424d63~mv2.jpg",
-    price: 390,
+    price: 440,
   },
   {
     name: "menu.categories.soups.item2",
     category: "menu.categories.soups.heading",
     image:
       "https://static.wixstatic.com/media/df6cc5_8474905862984f73aed0a71d2fb654a8~mv2.jpg",
-    price: 590,
+    price: 630,
   },
   {
     name: "menu.categories.soups.item3",
@@ -338,7 +338,7 @@ const allItems = [
     category: "menu.categories.soups.heading",
     image:
       "https://static.wixstatic.com/media/df6cc5_c7f4fa2ea540402384202159841cb781~mv2.jpg",
-    price: 420,
+    price: 450,
   },
 
   //nonveg
@@ -357,7 +357,7 @@ const allItems = [
     category: "menu.categories.nonveg.heading",
     image:
       "https://static.wixstatic.com/media/df6cc5_e0cc2c1ec3b54fd4b807d3236a19b1b9~mv2.jpg",
-    price: 770,
+    price: 790,
   },
   {
     name: "menu.categories.nonveg.item3.name",
@@ -384,7 +384,7 @@ const allItems = [
     category: "menu.categories.nonveg.heading",
     image:
       "https://static.wixstatic.com/media/df6cc5_cce6970703334f3e806752ec5e4b1f3f~mv2.jpg",
-    price: 690,
+    price: 720,
   },
   {
     name: "menu.categories.nonveg.item6.name",
@@ -393,7 +393,7 @@ const allItems = [
     category: "menu.categories.nonveg.heading",
     image:
       "https://static.wixstatic.com/media/df6cc5_7f27db67a2694efb86f11544652c7b72~mv2.jpg",
-    price: "720",
+    price: "740",
   },
   {
     name: "menu.categories.nonveg.item7.name",
@@ -402,7 +402,7 @@ const allItems = [
     category: "menu.categories.nonveg.heading",
     image:
       "https://static.wixstatic.com/media/df6cc5_cbf94f4e070b4ec88a29df377dfb1695~mv2.jpg",
-    price: "650",
+    price: "690",
   },
   {
     name: "menu.categories.nonveg.item8.name",
@@ -419,7 +419,7 @@ const allItems = [
     category: "menu.categories.nonveg.heading",
     image:
       "https://static.wixstatic.com/media/df6cc5_f95bc9c184174d1fa792c02d47a75c96~mv2.jpg",
-    price: 690,
+    price: 720,
   },
   {
     name: "menu.categories.nonveg.item10.name",
@@ -428,7 +428,7 @@ const allItems = [
     category: "menu.categories.nonveg.heading",
     image:
       "https://static.wixstatic.com/media/df6cc5_4fd1d0b72bee4b139c436703179e8d81~mv2.jpg",
-    price: 690,
+    price: 720,
   },
   {
     name: "menu.categories.nonveg.item11.name",
@@ -437,7 +437,7 @@ const allItems = [
     category: "menu.categories.nonveg.heading",
     image:
       "https://static.wixstatic.com/media/df6cc5_36feca4fd0f445cc8bc9551275f60ec0~mv2.jpg",
-    price: 690,
+    price: 720,
   },
   // {
   //   name: "menu.categories.nonveg.item12",
@@ -451,7 +451,7 @@ const allItems = [
 
     category: "menu.categories.nonveg.heading",
     image: "/menu/nonveg13.jpg",
-    price: 690,
+    price: 720,
   },
   {
     name: "menu.categories.nonveg.item14",
@@ -534,42 +534,42 @@ const allItems = [
     category: "menu.categories.naan.heading",
     image:
       "https://static.wixstatic.com/media/df6cc5_fd74b822faae48279d0b0823b50a1d7a~mv2.jpg",
-    price: 190,
+    price: 220,
   },
   {
     name: "menu.categories.naan.item2",
     category: "menu.categories.naan.heading",
     image:
       "https://static.wixstatic.com/media/df6cc5_b4b1ce3e3d114bea9a586ba5bd5d8456~mv2.jpg",
-    price: 230,
+    price: 250,
   },
   {
     name: "menu.categories.naan.item3",
     category: "menu.categories.naan.heading",
     image:
       "https://static.wixstatic.com/media/df6cc5_ffe67a973ae34fdbad933b75a091905e~mv2.jpg",
-    price: 230,
+    price: 250,
   },
   {
     name: "menu.categories.naan.item4",
     category: "menu.categories.naan.heading",
     image:
       "https://static.wixstatic.com/media/df6cc5_fd74b822faae48279d0b0823b50a1d7a~mv2.jpg",
-    price: 230,
+    price: 250,
   },
   {
     name: "menu.categories.naan.item5",
     category: "menu.categories.naan.heading",
     image:
       "https://static.wixstatic.com/media/df6cc5_b4b1ce3e3d114bea9a586ba5bd5d8456~mv2.jpg",
-    price: 250,
+    price: 270,
   },
   {
     name: "menu.categories.naan.item6",
     category: "menu.categories.naan.heading",
     image:
       "https://static.wixstatic.com/media/df6cc5_ffe67a973ae34fdbad933b75a091905e~mv2.jpg",
-    price: 250,
+    price: 270,
   },
 
   //cold
@@ -579,28 +579,28 @@ const allItems = [
     category: "menu.categories.cold.heading",
     image:
       "https://static.wixstatic.com/media/df6cc5_f11e3c3bd3944191a296bfb99e36e4ab~mv2.jpg",
-    price: "390/490",
+    price: "440/490",
   },
   {
     name: "menu.categories.cold.item2",
     category: "menu.categories.cold.heading",
     image:
       "https://static.wixstatic.com/media/df6cc5_d787639456c2486abd4c6f2c06a25907~mv2.jpg",
-    price: "390/490",
+    price: "440/490",
   },
   {
     name: "menu.categories.cold.item3",
     category: "menu.categories.cold.heading",
     image:
       "https://static.wixstatic.com/media/df6cc5_d88f6e190c4445ffb817720bf52de8a2~mv2.jpg",
-    price: "300/350",
+    price: "350/390",
   },
   {
     name: "menu.categories.cold.item4",
     category: "menu.categories.cold.heading",
     image:
       "https://static.wixstatic.com/media/df6cc5_f11e3c3bd3944191a296bfb99e36e4ab~mv2.jpg",
-    price: "350/450",
+    price: "390/450",
   },
 
   //tea
@@ -696,18 +696,18 @@ const allItems = [
   },
 
   // noodles
-  {
-    name: "menu.categories.noodles.item1",
-    category: "menu.categories.noodles.heading",
-    image: "/menu/noodles2.jpg",
-    price: 550,
-  },
-  {
-    name: "menu.categories.noodles.item2",
-    category: "menu.categories.noodles.heading",
-    image: "/menu/noodles1.jpg",
-    price: 590,
-  },
+  // {
+  //   name: "menu.categories.noodles.item1",
+  //   category: "menu.categories.noodles.heading",
+  //   image: "/menu/noodles2.jpg",
+  //   price: 550,
+  // },
+  // {
+  //   name: "menu.categories.noodles.item2",
+  //   category: "menu.categories.noodles.heading",
+  //   image: "/menu/noodles1.jpg",
+  //   price: 590,
+  // },
   {
     name: "menu.categories.noodles.item3.name",
     desc: "menu.categories.noodles.item3.desc",
